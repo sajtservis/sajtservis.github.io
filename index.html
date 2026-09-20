@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<script>document.documentElement.classList.add('js')</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sajt Servis — izrada sajtova za male biznise</title>
+<meta name="description" content="Pravimo sajtove za male biznise u Srbiji i regionu. Napravimo sajt, vi ga pogledate, pa odlučite. Bez avansa.">
+<link rel="canonical" href="https://sajtservis.github.io/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%23E85A1E%22/><text x=%2216%22 y=%2223%22 font-size=%2220%22 text-anchor=%22middle%22 fill=%22white%22>S</text></svg>">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sajtservis.github.io/">
+<meta property="og:title" content="Sajt Servis — izrada sajtova za male biznise">
+<meta property="og:description" content="Napravimo sajt, vi ga pogledate, pa odlučite. Bez avansa.">
+<meta property="og:image" content="https://sajtservis.github.io/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sajt Servis — izrada sajtova za male biznise">
+<meta name="twitter:description" content="Napravimo sajt, vi ga pogledate, pa odlučite. Bez avansa.">
+<meta name="twitter:image" content="https://sajtservis.github.io/og-image.jpg">
+<meta name="theme-color" content="#E85A1E">
+<meta name="color-scheme" content="light">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Sajt Servis","description":"Izrada sajtova za male biznise u Srbiji i regionu.","email":"sajtservis.rs@gmail.com","telephone":"+381621088760","areaServed":"RS","url":"https://sajtservis.github.io/"}
+</script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,400..800&family=Manrope:wght@400;500;600;800&display=swap">
+<style>
+:root{
+  --bela:#FFFFFF;
+  --pozadina:#F4F3F1;
+  --ivica:#E3E0DB;
+  --tekst:#171614;
+  --sporedni:#5C5852;
+  --narandzasta:#E85A1E;
+  --narandzasta-tamna:#A8472B;
+  --potvrda:#2E7D4F;
+  --greska:#B93F29;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+[id]{scroll-margin-top:88px}
+body{
+  background:var(--bela);
+  color:var(--tekst);
+  font-family:Manrope,system-ui,-apple-system,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:Archivo,system-ui,sans-serif;font-weight:800;line-height:1.05;letter-spacing:-0.02em;text-wrap:balance}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--narandzasta);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.tanko{max-width:62ch}
+
+/* ===== DUGMAD ===== */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-family:Manrope,sans-serif;font-weight:700;font-size:15.5px;
+  padding:13px 22px;border:2px solid var(--narandzasta);
+  background:var(--narandzasta);color:var(--tekst);cursor:pointer;text-decoration:none;
+  border-radius:6px;transition:background .15s,border-color .15s,transform .1s,color .15s;
+}
+.btn:hover{background:var(--narandzasta-tamna);border-color:var(--narandzasta-tamna);color:#fff}
+.btn:active{transform:translateY(1px)}
+.btn.linija{background:transparent;color:var(--tekst);border-color:var(--ivica)}
+.btn.linija:hover{background:var(--pozadina);border-color:var(--sporedni)}
+.btn.mala{padding:9px 15px;font-size:14px}
+.btn.puna{width:100%}
+
+/* ===== NAVIGACIJA ===== */
+nav{
+  position:sticky;top:0;z-index:70;background:var(--bela);
+  border-bottom:1px solid var(--ivica);
+}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+.znak{display:flex;align-items:center;gap:9px;font-family:Archivo,sans-serif;font-weight:800;font-size:19px;letter-spacing:-0.02em;text-decoration:none}
+.znak svg{width:28px;height:28px;flex:none;margin-right:9px}
+.znak-tekst{font-weight:inherit;font-family:inherit}
+.znak span{color:var(--narandzasta)}
+.veze{display:flex;gap:24px;font-size:15px;font-weight:600;margin-left:auto;margin-right:8px}
+.veze a{text-decoration:none;color:var(--sporedni);white-space:nowrap}
+.veze a:hover{color:var(--tekst)}
+.hamburger{display:none;flex:none;width:40px;height:40px;border:1px solid var(--ivica);border-radius:7px;background:var(--bela);align-items:center;justify-content:center;cursor:pointer;color:var(--tekst)}
+.hamburger svg{width:22px;height:22px}
+@media(max-width:900px){
+  .nav-cta{display:none}
+  .hamburger{display:flex}
+  .veze{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    flex-direction:column;gap:0;margin:0;padding:8px 0;
+    background:var(--bela);border-bottom:1px solid var(--ivica);
+    box-shadow:0 12px 24px -16px rgba(23,22,20,.25);
+  }
+  .veze.otvoren{display:flex}
+  .veze a{padding:14px 24px;white-space:normal}
+  .veze a:hover{background:var(--pozadina)}
+  nav{position:relative}
+}
+
+/* ===== HERO ===== */
+.hero{padding:72px 0 84px;border-bottom:1px solid var(--ivica)}
+.hero .wrap{display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(38px,5.2vw,60px)}
+.hero .uvod{margin-top:22px;font-size:18.5px;color:var(--sporedni);max-width:40ch}
+.hero .radnje{margin-top:32px;display:flex;gap:12px;flex-wrap:wrap}
+.hero .sitno{margin-top:20px;font-size:14.5px;color:var(--sporedni)}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:44px}}
+
+/* prozor sa primerom */
+.prozor{border:1px solid var(--ivica);border-radius:10px;overflow:hidden;background:var(--bela)}
+.prozor .traka{display:flex;align-items:center;gap:7px;padding:11px 14px;background:var(--pozadina);border-bottom:1px solid var(--ivica)}
+.tacka{width:10px;height:10px;border-radius:50%;background:var(--ivica)}
+.prozor .adresa{margin-left:8px;font-size:12.5px;color:var(--sporedni);font-weight:600}
+.ekran{position:relative;height:340px;overflow:hidden}
+.slajd{position:absolute;inset:0;opacity:0;transition:opacity .55s ease;pointer-events:none}
+.slajd.aktivan{opacity:1;pointer-events:auto}
+.tacke-red{display:flex;align-items:center;justify-content:center;gap:14px;padding:13px;border-top:1px solid var(--ivica);background:var(--pozadina)}
+.tacke{display:flex;gap:7px}
+.dugme-pauza{width:26px;height:26px;border:none;background:transparent;color:var(--sporedni);cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:5px}
+.dugme-pauza:hover{color:var(--tekst);background:var(--ivica)}
+.dugme-pauza svg{width:15px;height:15px}
+.tacke button{width:8px;height:8px;border-radius:50%;border:0;background:var(--ivica);cursor:pointer;padding:0}
+.tacke button[aria-current="true"]{background:var(--narandzasta);width:22px;border-radius:4px}
+
+/* minijature u prozoru */
+.mini{height:100%;padding:20px;font-size:11px;line-height:1.4}
+.mini .m-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.mini .m-logo{font-family:Archivo,sans-serif;font-weight:800;font-size:13px}
+.mini .m-links{display:flex;gap:10px;font-size:9.5px;opacity:.6}
+.mini .m-h{font-family:Archivo,sans-serif;font-weight:800;font-size:23px;line-height:1.05;margin-bottom:8px}
+.mini .m-p{font-size:10.5px;opacity:.7;margin-bottom:14px;max-width:30ch}
+.mini .m-btn{display:inline-block;padding:7px 13px;border-radius:4px;font-weight:700;font-size:10px;color:#fff}
+.mini .m-grid{display:grid;gap:8px;margin-top:16px}
+.mini .m-box{border-radius:5px;height:52px}
+
+/* ===== SEKCIJE ===== */
+section{padding:clamp(80px,12vw,160px) 0;border-bottom:1px solid var(--ivica)}
+section.siva{background:var(--pozadina)}
+.zaglavlje{margin-bottom:44px}
+.zaglavlje h2{font-size:clamp(27px,3.5vw,40px)}
+.zaglavlje p{margin-top:13px;color:var(--sporedni);max-width:58ch;font-size:17px}
+
+/* ===== ZAŠTO MI ===== */
+.razlozi{display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
+@media(max-width:800px){.razlozi{grid-template-columns:1fr}}
+.razlog{padding:26px 0;border-top:1px solid var(--ivica)}
+.razlog h3{font-size:19.5px;display:flex;align-items:center;gap:10px}
+.razlog h3 svg{width:21px;height:21px;color:var(--narandzasta);flex:none}
+.razlog p{margin-top:8px;color:var(--sporedni);font-size:15.5px}
+
+/* ===== PAKETI ===== */
+.ponuda{
+  margin-bottom:32px;padding:16px 20px;border-radius:8px;
+  background:#FCEDE5;border:1px solid #F3C9B3;
+  display:flex;gap:14px;align-items:flex-start;font-size:15.5px;
+}
+.ponuda svg{width:22px;height:22px;color:var(--narandzasta);flex:none;margin-top:2px}
+.ponuda strong{display:block;font-family:Archivo,sans-serif;font-weight:700;margin-bottom:2px}
+
+.paketi{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.paketi{grid-template-columns:1fr}}
+.paket{border:1px solid var(--ivica);border-radius:10px;padding:26px 24px;background:var(--bela);display:flex;flex-direction:column}
+.paket.istaknut{border-color:var(--narandzasta);border-width:2px}
+.paket h3{font-size:21px}
+.paket .za{font-size:13.5px;color:var(--sporedni);margin-top:5px;min-height:38px}
+.paket .cena{font-family:Archivo,sans-serif;font-weight:800;font-size:38px;margin:16px 0 2px;letter-spacing:-0.03em;font-variant-numeric:tabular-nums}
+.paket .cena small{font-size:15px;font-weight:600;color:var(--sporedni);letter-spacing:0}
+.paket .prva{font-size:13.5px;color:var(--narandzasta-tamna);font-weight:700;margin-bottom:18px}
+.paket ul{list-style:none;margin-bottom:22px;flex:1}
+.paket li{padding:7px 0 7px 25px;position:relative;font-size:15px;border-top:1px solid var(--ivica)}
+.paket li:first-child{border-top:0}
+.paket li::before{content:"";position:absolute;left:2px;top:15px;width:11px;height:6px;border-left:2px solid var(--narandzasta);border-bottom:2px solid var(--narandzasta);transform:rotate(-45deg)}
+.pomeri{margin-top:26px;padding:20px 24px;border:1px dashed var(--ivica);border-radius:10px;display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap}
+.pomeri p{font-size:15.5px;color:var(--sporedni)}
+.pomeri strong{color:var(--tekst)}
+
+/* ===== PRIMERI ===== */
+.primeri{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media(max-width:1040px){.primeri{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.primeri{grid-template-columns:1fr}}
+.primer{
+  border:1px solid var(--ivica);border-radius:10px;overflow:hidden;background:var(--bela);
+  text-align:left;font:inherit;color:inherit;cursor:pointer;padding:0;
+  transition:transform .18s,border-color .18s;
+}
+.primer:hover{transform:translateY(-3px);border-color:var(--sporedni)}
+.primer .slika{height:172px;overflow:hidden;border-bottom:1px solid var(--ivica);position:relative}
+.primer .slika .mini{padding:16px;transform:scale(.92);transform-origin:top left;width:109%}
+.primer .opis{padding:18px 20px 22px}
+.primer .p-naslov{font-family:Archivo,system-ui,sans-serif;font-weight:800;line-height:1.05;letter-spacing:-0.02em;font-size:18.5px;display:block}
+.primer .grana{font-size:13.5px;color:var(--sporedni);margin-top:4px}
+.primer .otvori{margin-top:14px;font-size:14px;font-weight:700;color:var(--narandzasta-tamna)}
+.napomena-primeri{margin-top:26px;font-size:14.5px;color:var(--sporedni);padding-left:16px;border-left:3px solid var(--ivica)}
+
+/* ===== QR ===== */
+.qr{display:grid;grid-template-columns:1.15fr .85fr;gap:52px;align-items:center}
+@media(max-width:860px){.qr{grid-template-columns:1fr;gap:36px}}
+.qr h2{font-size:clamp(26px,3.2vw,36px)}
+.qr p{margin-top:14px;color:var(--sporedni)}
+.qr ul{list-style:none;margin-top:20px}
+.qr li{padding:9px 0 9px 26px;position:relative;font-size:15.5px;border-top:1px solid var(--ivica)}
+.qr li::before{content:"";position:absolute;left:2px;top:17px;width:11px;height:6px;border-left:2px solid var(--narandzasta);border-bottom:2px solid var(--narandzasta);transform:rotate(-45deg)}
+.qr-cena{margin-top:24px;display:flex;gap:26px;align-items:baseline;flex-wrap:wrap}
+.qr-cena .b{font-family:Archivo,sans-serif;font-weight:800;font-size:30px}
+.qr-cena .s{font-size:14.5px;color:var(--sporedni)}
+.telefon-okvir{
+  max-width:250px;margin:0 auto;border:9px solid #171614;border-radius:28px;
+  overflow:hidden;background:#fff;
+}
+.telefon-okvir .m-meni{padding:18px 16px;font-size:12px}
+.tm-h{font-family:Archivo,sans-serif;font-weight:800;font-size:17px;text-align:center;margin-bottom:3px}
+.tm-s{text-align:center;font-size:10.5px;color:var(--sporedni);margin-bottom:16px}
+.tm-grupa{font-family:Archivo,sans-serif;font-weight:700;font-size:11px;color:var(--narandzasta-tamna);margin:14px 0 7px;padding-bottom:5px;border-bottom:1px solid var(--ivica)}
+.tm-red{display:flex;justify-content:space-between;gap:12px;padding:4px 0;font-size:11.5px}
+.tm-red span:last-child{font-weight:700;white-space:nowrap}
+
+/* ===== KORACI ===== */
+.koraci{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+@media(max-width:900px){.koraci{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.koraci{grid-template-columns:1fr}}
+.korak{border-top:3px solid var(--narandzasta);padding-top:16px}
+.korak .br{font-family:Archivo,sans-serif;font-weight:800;font-size:14px;color:var(--narandzasta-tamna)}
+.korak h3{font-size:18px;margin-top:5px}
+.korak p{margin-top:7px;color:var(--sporedni);font-size:15px}
+
+/* ===== ODRŽAVANJE ===== */
+.odrzavanje{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+@media(max-width:860px){.odrzavanje{grid-template-columns:1fr;gap:34px}}
+.cena-blok{border:2px solid var(--narandzasta);border-radius:10px;padding:26px 24px;background:var(--bela)}
+.cena-blok .red{display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-top:1px solid var(--ivica)}
+.cena-blok .red:first-of-type{border-top:0}
+.cena-blok .red .v{font-family:Archivo,sans-serif;font-weight:800;font-size:25px}
+.cena-blok .red .v small{font-size:14px;font-weight:600;color:var(--sporedni)}
+.ulazi{list-style:none}
+.ulazi li{padding:10px 0 10px 26px;position:relative;border-top:1px solid var(--ivica);font-size:15.5px}
+.ulazi li::before{content:"";position:absolute;left:2px;top:18px;width:11px;height:6px;border-left:2px solid var(--narandzasta);border-bottom:2px solid var(--narandzasta);transform:rotate(-45deg)}
+.vazno{margin-top:22px;padding:16px 18px;background:var(--pozadina);border-radius:8px;font-size:15px}
+.vazno strong{font-family:Archivo,sans-serif}
+
+/* ===== KONTAKT ===== */
+.kontakt{display:grid;grid-template-columns:.9fr 1.1fr;gap:52px}
+@media(max-width:860px){.kontakt{grid-template-columns:1fr;gap:36px}}
+.brzo{margin-top:24px;display:flex;flex-direction:column;gap:10px;max-width:340px}
+.brzo a{
+  display:flex;align-items:center;gap:11px;padding:13px 17px;border:1px solid var(--ivica);
+  border-radius:8px;text-decoration:none;font-weight:600;font-size:15.5px;background:var(--bela);
+}
+.brzo a:hover{border-color:var(--sporedni)}
+.brzo svg{width:21px;height:21px;flex:none}
+.brzo .sitnije{display:block;font-size:12.5px;font-weight:500;color:var(--sporedni);margin-top:1px}
+.brzo-red{display:flex;align-items:stretch;gap:8px}
+.brzo-red a{flex:1;min-width:0}
+.kopiraj{
+  flex:none;width:46px;border:1px solid var(--ivica);border-radius:8px;background:var(--bela);
+  cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--sporedni);
+  transition:border-color .15s,color .15s;
+}
+.kopiraj:hover{border-color:var(--sporedni);color:var(--tekst)}
+.kopiraj.kopirano{border-color:var(--potvrda);color:var(--potvrda)}
+.kopiraj svg{width:18px;height:18px}
+.polje{margin-bottom:15px}
+.polje label{display:block;font-size:14px;font-weight:700;margin-bottom:6px}
+.polje input,.polje textarea,.polje select{
+  width:100%;padding:12px 14px;border:1px solid var(--ivica);border-radius:7px;
+  font:inherit;font-size:15.5px;background:var(--bela);color:var(--tekst);
+}
+.polje textarea{min-height:118px;resize:vertical}
+.polje input:focus-visible,.polje textarea:focus-visible,.polje select:focus-visible{border-color:var(--narandzasta)}
+.poruka-status{margin-top:14px;padding:13px 16px;border-radius:7px;font-size:15px;display:none}
+.poruka-status.vidi{display:block}
+.poruka-status.ok{border:1px solid var(--potvrda);color:var(--potvrda);background:#F0F8F3}
+.poruka-status.los{border:1px solid var(--greska);color:var(--greska);background:#FCF1EE}
+
+/* ===== PODNOŽJE ===== */
+footer{padding:40px 0;font-size:14.5px;color:var(--sporedni)}
+footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
+
+/* ===== PREKLOP SA PRIMEROM ===== */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.sakriveno-polje{position:absolute;left:-9999px}
+.mt-22{margin-top:22px}
+.mt-24{margin-top:24px}
+.mb-0{margin-bottom:0}
+.h3-kompaktan{font-size:19px;margin-bottom:6px}
+.napomena-privatnost{font-size:13px;color:var(--sporedni);margin-top:10px}
+.link-tamna{color:var(--narandzasta-tamna)}
+.link-podnozje{text-decoration:none;font-weight:600}
+.sirina-62{width:62%}
+.sirina-78{width:78%}
+.sirina-45{width:45%}
+.tacka-plava{background:#1B4D7A}
+.tacka-zelena{background:#2E6B4F}
+.tacka-narandzasta{background:var(--narandzasta-tamna)}
+.tacka-roze{background:#B0416B}
+.preklop{position:fixed;inset:0;z-index:100;background:rgba(23,22,20,.72);display:none;padding:22px}
+.preklop.otvoren{display:flex;align-items:center;justify-content:center}
+.preklop .ram{
+  width:100%;max-width:940px;max-height:92vh;background:var(--bela);
+  border-radius:11px;overflow:hidden;display:flex;flex-direction:column;
+}
+.preklop .traka{display:flex;align-items:center;gap:7px;padding:12px 15px;background:var(--pozadina);border-bottom:1px solid var(--ivica)}
+.preklop .adresa{margin-left:8px;font-size:13px;color:var(--sporedni);font-weight:600;flex:1}
+.preklop .telo{overflow-y:auto;flex:1}
+.preklop .noga{
+  padding:15px 22px;border-top:1px solid var(--ivica);background:var(--pozadina);
+  display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+}
+.preklop .noga p{font-size:14.5px;color:var(--sporedni)}
+
+/* ===== SADRŽAJ PRIMERA ===== */
+.demo{font-size:15px}
+.demo .d-nav{display:flex;justify-content:space-between;align-items:center;padding:16px 30px;border-bottom:1px solid rgba(0,0,0,.09)}
+.demo .d-logo{font-family:Archivo,sans-serif;font-weight:800;font-size:17px}
+.demo .d-links{display:flex;gap:16px;font-size:13px;opacity:.72}
+.demo .d-hero{padding:44px 30px}
+.demo .d-hero h4{font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(26px,4vw,36px);line-height:1.05;letter-spacing:-0.02em}
+.demo .d-hero p{margin-top:12px;font-size:15px;opacity:.75;max-width:46ch}
+.demo .d-cta{display:inline-block;margin-top:20px;padding:11px 20px;border-radius:5px;font-weight:700;font-size:14px;color:#fff}
+.demo .d-sek{padding:34px 30px;border-top:1px solid rgba(0,0,0,.09)}
+.demo .d-sek h5{font-family:Archivo,sans-serif;font-weight:700;font-size:19px;margin-bottom:16px}
+.demo .d-cene{display:grid;gap:0}
+.demo .d-cena{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-top:1px solid rgba(0,0,0,.08);font-size:14.5px}
+.demo .d-cena:first-child{border-top:0}
+.demo .d-cena b{white-space:nowrap}
+.demo .d-galerija{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media(max-width:600px){.demo .d-galerija{grid-template-columns:repeat(2,1fr)}}
+.demo .d-slika{aspect-ratio:4/3;border-radius:6px;display:flex;align-items:flex-end;padding:9px;font-size:11px;font-weight:700;color:#fff}
+.demo .d-info{display:grid;grid-template-columns:1fr 1fr;gap:26px;font-size:14.5px}
+@media(max-width:600px){.demo .d-info{grid-template-columns:1fr}}
+.demo .d-info .oznaka{font-weight:700;font-size:12.5px;opacity:.6;margin-bottom:4px}
+.demo .d-noga{padding:20px 30px;font-size:12.5px;opacity:.6;border-top:1px solid rgba(0,0,0,.09)}
+.demo .d-termini{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.demo .d-termin{padding:8px 13px;border-radius:5px;font-size:13px;font-weight:600;border:1px solid rgba(0,0,0,.14)}
+
+/* ===== PITANJA I ODGOVORI ===== */
+.pitanja{max-width:800px}
+.pitanje{border-top:1px solid var(--ivica)}
+.pitanje:last-child{border-bottom:1px solid var(--ivica)}
+.pitanje summary{
+  padding:20px 40px 20px 0;cursor:pointer;position:relative;list-style:none;
+  font-family:Archivo,sans-serif;font-weight:700;font-size:18px;letter-spacing:-0.01em;
+}
+.pitanje summary::-webkit-details-marker{display:none}
+.pitanje summary::after{
+  content:"";position:absolute;right:8px;top:29px;width:11px;height:11px;
+  border-right:2.5px solid var(--narandzasta);border-bottom:2.5px solid var(--narandzasta);
+  transform:rotate(45deg);transition:transform .18s;
+}
+.pitanje[open] summary::after{transform:rotate(-135deg);top:33px}
+.pitanje summary:hover{color:var(--narandzasta)}
+.pitanje .odgovor{padding:0 20px 22px 0;color:var(--sporedni);font-size:16px}
+.pitanje .odgovor p+p{margin-top:12px}
+
+/* traka za izbor dizajna i boja */
+.birac{
+  display:flex;gap:26px;padding:13px 18px;border-bottom:1px solid var(--ivica);
+  background:var(--bela);flex-wrap:wrap;align-items:center;
+}
+.birac-grupa{display:flex;align-items:center;gap:11px}
+.birac-oznaka{font-size:12.5px;font-weight:700;color:var(--sporedni)}
+.birac-dugmad{display:flex;gap:6px}
+.birac-dugmad button{
+  padding:7px 13px;border:1px solid var(--ivica);background:var(--bela);border-radius:6px;
+  font:inherit;font-size:13.5px;font-weight:600;cursor:pointer;color:var(--sporedni);
+}
+.birac-dugmad button:hover{border-color:var(--sporedni);color:var(--tekst)}
+.birac-dugmad button[aria-pressed="true"]{background:var(--tekst);border-color:var(--tekst);color:#fff}
+.birac-boje{display:flex;gap:6px}
+.birac-boje button{width:27px;height:27px;border-radius:6px;border:2px solid var(--ivica);cursor:pointer;padding:0}
+.birac-boje button[aria-pressed="true"]{border-color:var(--tekst)}
+@media(max-width:640px){.birac{gap:14px}.birac-grupa{width:100%}}
+
+/* raspored: podeljen */
+.demo .d-podela{display:grid;grid-template-columns:1.05fr .95fr;align-items:stretch}
+@media(max-width:640px){.demo .d-podela{grid-template-columns:1fr}}
+.demo .d-podela-tekst{padding:42px 30px}
+.demo .d-podela-tekst h4{font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(24px,3.6vw,33px);line-height:1.05;letter-spacing:-0.02em}
+.demo .d-podela-tekst p{margin-top:12px;font-size:15px;opacity:.75}
+.demo .d-podela-slika{min-height:230px;display:flex;align-items:flex-end;padding:18px;color:#fff;font-weight:700;font-size:13px}
+
+/* raspored: sažet */
+.demo .d-sazet-vrh{padding:46px 30px;text-align:center}
+.demo .d-sazet-vrh .d-logo{font-size:14px;letter-spacing:.08em;margin-bottom:18px;opacity:.9}
+.demo .d-sazet-vrh h4{font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(25px,4vw,35px);line-height:1.05;letter-spacing:-0.02em}
+.demo .d-sazet-vrh p{margin-top:12px;font-size:15px;max-width:44ch;margin-left:auto;margin-right:auto}
+.demo .d-sazet-vrh .d-cta{margin-top:22px}
+
+/* raspored: meni po grupama */
+.demo .d-meni{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+@media(max-width:640px){.demo .d-meni{grid-template-columns:1fr;gap:18px}}
+.demo .d-meni-naslov{font-family:Archivo,sans-serif;font-weight:700;font-size:13px;letter-spacing:.04em;padding-bottom:6px;margin-bottom:5px;border-bottom:1.5px solid}
+.demo .d-meni-grupa .d-cena{border-top:0;padding:6px 0;font-size:14px}
+
+/* raspored: sa trakom */
+.demo .d-traka{height:150px;display:flex;align-items:flex-end;padding:18px 30px;color:#fff;font-weight:700;font-size:13px}
+
+/* raspored: kartice */
+.demo .d-kartice{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:640px){.demo .d-kartice{grid-template-columns:1fr}}
+.demo .d-kartica{border:1.5px solid;border-radius:8px;padding:15px 16px}
+.demo .d-kartica-tacka{display:block;width:22px;height:5px;border-radius:3px;margin-bottom:10px}
+.demo .d-kartica b{display:block;font-family:Archivo,sans-serif;font-size:15px}
+.demo .d-kartica small{display:block;font-size:12.5px;opacity:.65;margin-top:3px}
+
+/* ===== STA SE TRAZI OD VAS ===== */
+.trazi{margin-top:44px;padding-top:34px;border-top:1px solid var(--ivica);max-width:760px}
+.trazi h3{font-size:20px;margin-bottom:18px}
+.trazi-red{display:grid;grid-template-columns:190px 1fr;gap:20px;padding:15px 0;border-top:1px solid var(--ivica)}
+@media(max-width:700px){.trazi-red{grid-template-columns:1fr;gap:5px}}
+.trazi-oznaka{font-family:Archivo,sans-serif;font-weight:700;font-size:14px;color:var(--narandzasta-tamna)}
+.trazi-red p{color:var(--sporedni);font-size:15.5px}
+
+/* ===== PUNI PRIMERI ===== */
+.puni-primeri{
+  margin-top:34px;padding:30px 32px;border:2px solid var(--tekst);border-radius:12px;
+  display:grid;grid-template-columns:.85fr 1.15fr;gap:36px;align-items:center;
+}
+@media(max-width:900px){.puni-primeri{grid-template-columns:1fr;gap:24px;padding:26px 24px}}
+.pp-uvod h3{font-size:24px}
+.pp-uvod p{margin-top:9px;color:var(--sporedni);font-size:15.5px}
+.pp-veze{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:620px){.pp-veze{grid-template-columns:1fr}}
+.pp-veza{
+  display:block;padding:20px 22px;border:1px solid var(--ivica);border-radius:9px;
+  text-decoration:none;background:var(--bela);transition:border-color .15s,transform .15s;
+}
+.pp-veza:hover{border-color:var(--narandzasta);transform:translateY(-2px)}
+.pp-ime{display:block;font-family:Archivo,sans-serif;font-weight:800;font-size:18px}
+.pp-opis{display:block;font-size:14px;color:var(--sporedni);margin-top:4px}
+.pp-strelica{display:block;font-size:14px;font-weight:700;color:var(--narandzasta-tamna);margin-top:14px}
+
+/* ===== PRESKOČI NA SADRŽAJ ===== */
+.preskoci{
+  position:absolute;left:-9999px;top:0;z-index:200;
+  background:var(--tekst);color:#fff;padding:14px 22px;border-radius:0 0 8px 0;
+  font-weight:700;text-decoration:none;font-size:15px;
+}
+.preskoci:focus{left:0}
+
+/* ===== PLUTAJUĆA DUGMAD ===== */
+.plutajuce{position:fixed;right:20px;bottom:20px;z-index:80;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+.plutajuce-dugme{
+  width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 20px -6px rgba(23,22,20,.35);border:none;cursor:pointer;text-decoration:none;
+  transition:transform .15s,opacity .15s;
+}
+.plutajuce-dugme:hover{transform:translateY(-2px)}
+.plutajuce-dugme.kontakt{background:#25D366}
+.plutajuce-dugme.vrh{background:var(--bela);border:1.5px solid var(--ivica);color:var(--tekst);opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .15s,transform .15s,visibility 0s .15s}
+.plutajuce-dugme.vrh.vidi{visibility:visible;opacity:1;pointer-events:auto;transform:translateY(0);transition:opacity .15s,transform .15s,visibility 0s}
+.plutajuce-dugme svg{width:25px;height:25px}
+@media(max-width:480px){.plutajuce{right:14px;bottom:14px}.plutajuce-dugme{width:50px;height:50px}}
+@media(prefers-reduced-motion:reduce){.plutajuce-dugme{transition:none}}
+
+/* ===== POZIV NA UPITNIK ===== */
+.upitnik-poziv{display:grid;grid-template-columns:1.15fr .85fr;gap:52px;align-items:center}
+@media(max-width:860px){.upitnik-poziv{grid-template-columns:1fr;gap:36px}}
+.upitnik-poziv h2{font-size:clamp(26px,3.4vw,38px)}
+.upitnik-poziv p{margin-top:14px;color:var(--sporedni)}
+.upitnik-poziv .sitnije{font-size:14.5px;margin-top:9px}
+.upitnik-slika{background:var(--bela);border:1px solid var(--ivica);border-radius:11px;padding:24px}
+.up-red{display:flex;align-items:center;gap:11px;margin-bottom:11px}
+.up-tacka{width:15px;height:15px;border-radius:50%;border:2px solid var(--ivica);flex:none}
+.up-tacka.puna{border-color:var(--narandzasta);background:var(--narandzasta)}
+.up-linija{height:8px;border-radius:4px;background:var(--pozadina)}
+.up-boje{display:flex;gap:7px;margin:18px 0 4px}
+.up-boje i{width:30px;height:30px;border-radius:6px}
+.up-strelica{display:flex;justify-content:center;color:var(--narandzasta);margin:6px 0}
+.up-strelica svg{width:24px;height:24px}
+.up-prozor{border:1px solid var(--ivica);border-radius:8px;overflow:hidden}
+.up-traka{display:flex;gap:5px;padding:8px 11px;background:var(--pozadina);border-bottom:1px solid var(--ivica)}
+.up-traka i{width:7px;height:7px;border-radius:50%;background:var(--ivica)}
+.up-telo{padding:16px}
+.up-naslov{font-family:Archivo,sans-serif;font-weight:800;font-size:17px;margin-bottom:9px}
+.up-tekst{height:7px;border-radius:4px;background:var(--pozadina);margin-bottom:6px}
+.up-tekst.kratko{width:64%}
+.up-dugme{margin-top:13px;width:88px;height:26px;border-radius:5px;background:var(--narandzasta)}
+
+/* Bez JavaScripta: prikaži rezervni sadržaj umesto praznih sekcija */
+.bez-js{padding:28px 24px;background:var(--pozadina);border:1px solid var(--ivica);border-radius:9px;font-size:15.5px;color:var(--sporedni)}
+.bez-js strong{display:block;font-family:Archivo,sans-serif;font-weight:700;color:var(--tekst);margin-bottom:6px;font-size:17px}
+.js .bez-js{display:none}
+.ekran .bez-js{border:0;border-radius:0;height:100%;display:flex;flex-direction:column;justify-content:center}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<a class="preskoci" href="#glavni">Preskoči na sadržaj</a>
+
+<nav>
+  <div class="wrap">
+    <a class="znak" href="#">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect x="3" y="5" width="26" height="22" rx="3" fill="#E85A1E"/>
+        <path d="M3 11.5h26" stroke="#fff" stroke-width="2.4"/>
+        <circle cx="7.5" cy="8.2" r="1.4" fill="#fff"/>
+        <circle cx="12" cy="8.2" r="1.4" fill="#fff"/>
+        <path d="M20 14.5a3.6 3.6 0 0 0-4.6 4.6l-3.8 3.8 2.6 2.6 3.8-3.8a3.6 3.6 0 0 0 4.6-4.6l-2.2 2.2-2.4-2.4z" fill="#fff"/>
+      </svg>
+      <b class="znak-tekst">Sajt <span>Servis</span></b>
+    </a>
+    <div class="veze" id="vezeMeni">
+      <a href="#paketi">Cene</a>
+      <a href="#primeri">Primeri</a>
+      <a href="#qr">QR meni</a>
+      <a href="#pitanja">Pitanja</a>
+    </div>
+    <a class="btn mala nav-cta" href="#kontakt">Zatražite sajt</a>
+    <button type="button" class="hamburger" id="dugmeMeni" aria-expanded="false" aria-controls="vezeMeni" aria-label="Otvorite meni">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</nav>
+
+<main id="glavni">
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Napravimo sajt.<br>Vi ga pogledate.<br>Pa odlučite.</h1>
+      <p class="uvod">Pravimo sajtove za male biznise u Srbiji i regionu. Prvo napravimo, pa vi vidite šta ste dobili — bez avansa i bez obaveze.</p>
+      <div class="radnje">
+        <a class="btn" href="#kontakt">Zatražite sajt</a>
+        <a class="btn linija" href="#primeri">Pogledajte primere</a>
+      </div>
+      <p class="sitno">Ako vam se ne svidi, ne plaćate ništa.</p>
+    </div>
+
+    <div class="prozor">
+      <div class="traka">
+        <span class="tacka"></span><span class="tacka"></span><span class="tacka"></span>
+        <span class="adresa" id="adresaSlajda">autoservis-primer.rs</span>
+      </div>
+      <div class="ekran" id="ekran">
+        <div class="bez-js">
+          <strong>Pravimo sajtove za male biznise</strong>
+          Auto servisi, saloni, zanatlije i ugostiteljstvo. Pozovite nas na 062&nbsp;108&nbsp;8760 i recite šta vam treba.
+        </div>
+      </div>
+      <div class="tacke-red">
+        <div class="tacke" id="tackeSlajda"></div>
+        <button type="button" class="dugme-pauza" id="dugmePauza" aria-label="Pauziraj automatsku smenu primera">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="zasto">
+  <div class="wrap">
+    <div class="zaglavlje">
+      <h2>Zašto baš mi</h2>
+      <p>Četiri stvari koje nas razlikuju od agencije — i razlog zašto ne rizikujete ništa.</p>
+    </div>
+    <div class="razlozi">
+      <div class="razlog">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg> Vidite sajt pre nego što platite</h3>
+        <p>Ne tražimo avans ni potpis unapred. Napravimo prvu verziju, pošaljemo vam link, i tek onda razgovaramo o novcu.</p>
+      </div>
+      <div class="razlog">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg> Ne plaćate ako vam se ne svidi</h3>
+        <p>Menjamo dok ne bude kako treba. Ako ni tada ne budete zadovoljni, razilazimo se bez ijednog dinara troška.</p>
+      </div>
+      <div class="razlog">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg> Nemamo kancelariju ni režije</h3>
+        <p>Zato je cena manja nego kod agencije — ne zato što je posao slabiji, nego zato što nemamo šta da pokrivamo iz vaše uplate.</p>
+      </div>
+      <div class="razlog">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg> Javljamo se istog dana</h3>
+        <p>Na poruku odgovaramo isti dan kad stigne. Ne za nedelju dana i ne „kad stignemo”.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="paketi" class="siva">
+  <div class="wrap">
+    <div class="zaglavlje">
+      <h2>Cene</h2>
+      <p>Sve cene stoje ovde, javno. Nema skrivenih troškova i nema različite cene za različite ljude.</p>
+    </div>
+
+    <div class="ponuda">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 21V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+      <span>
+        <strong>Prvih pet klijenata — pola cene</strong>
+        U zamenu tražimo samo dozvolu da gotov sajt prikažemo među našim radovima.
+      </span>
+    </div>
+
+    <div class="paketi">
+      <div class="paket">
+        <h3>Jednostrani sajt</h3>
+        <p class="za">Za auto servise, majstore i manje radnje</p>
+        <div class="cena">150 €<small> jednokratno</small></div>
+        <div class="prva">Prvih pet: 75 €</div>
+        <ul>
+          <li>Sve na jednoj strani</li>
+          <li>Usluge i cenovnik</li>
+          <li>Radno vreme i mapa</li>
+          <li>Broj telefona na jedan klik</li>
+          <li>Prijava na Google pretragu</li>
+        </ul>
+        <a class="btn linija puna" href="#kontakt">Zatražite</a>
+      </div>
+
+      <div class="paket istaknut">
+        <h3>Sajt sa galerijom</h3>
+        <p class="za">Za stolare, salone, tetovaže i fotografe</p>
+        <div class="cena">250 €<small> jednokratno</small></div>
+        <div class="prva">Prvih pet: 125 €</div>
+        <ul>
+          <li>Više strana</li>
+          <li>Galerija radova po kategorijama</li>
+          <li>Cenovnik</li>
+          <li>Forma za upit</li>
+          <li>Prijava na Google pretragu</li>
+        </ul>
+        <a class="btn puna" href="#kontakt">Zatražite</a>
+      </div>
+
+      <div class="paket">
+        <h3>Sajt sa zakazivanjem</h3>
+        <p class="za">Za frizere, kozmetiku i ordinacije</p>
+        <div class="cena">400 €<small> jednokratno</small></div>
+        <div class="prva">Prvih pet: 200 €</div>
+        <ul>
+          <li>Sve iz prethodnog paketa</li>
+          <li>Kalendar sa slobodnim terminima</li>
+          <li>Obaveštenje na mejl kad neko zakaže</li>
+          <li>Otkazivanje i pomeranje termina</li>
+          <li>Povezano sa vašim Google kalendarom</li>
+        </ul>
+        <a class="btn linija puna" href="#kontakt">Zatražite</a>
+      </div>
+    </div>
+
+    <div class="pomeri">
+      <p><strong>Svaki sajt prilagođavamo vama.</strong> Birate dizajn i boje, a sadržaj, raspored sekcija i fotografije podešavamo prema vašem poslu. Nema dodatnih troškova za prilagođavanje — to je deo posla, a ne dodatak.</p>
+    </div>
+  </div>
+</section>
+
+<section id="primeri">
+  <div class="wrap">
+    <div class="zaglavlje">
+      <h2>Primeri</h2>
+      <p>Za svaki paket smo pripremili pet dizajna i šest paleta boja. Otvorite bilo koji i prelistajte varijante — ovako biramo izgled i za vas.</p>
+    </div>
+    <div class="primeri" id="listaPrimera"></div>
+    <div class="bez-js">
+      <strong>Primeri se ne prikazuju u vašem pregledaču</strong>
+      Pozovite nas na 062&nbsp;108&nbsp;8760 ili pišite na WhatsApp — pošaljemo vam primere direktno.
+    </div>
+    <div class="puni-primeri">
+      <div class="pp-uvod">
+        <h3>Dva kompletna sajta</h3>
+        <p>Ovo nisu isečci nego cele stranice — otvorite ih i prođite kroz njih kao da ste klijent.</p>
+      </div>
+      <div class="pp-veze"><a class="pp-veza" href="https://sajtservis.github.io/egzampl/radovi/jednostrani/klasican/" target="_blank" rel="noopener"><span class="pp-ime">Vunena Nit</span><span class="pp-opis">Krojački atelje · usluge i cenovnik</span><span class="pp-strelica">Otvorite sajt →</span></a><a class="pp-veza" href="https://sajtservis.github.io/egzampl/radovi/jednostrani/tamni/" target="_blank" rel="noopener"><span class="pp-ime">Kovač</span><span class="pp-opis">Auto detailing · tretmani i termini</span><span class="pp-strelica">Otvorite sajt →</span></a><a class="pp-veza" href="https://sajtservis.github.io/egzampl/radovi/blagoje/" target="_blank" rel="noopener"><span class="pp-ime">Blagoje Bistro</span><span class="pp-opis">Stranica lokala · 10 jezika</span><span class="pp-strelica">Otvorite sajt →</span></a><a class="pp-veza" href="https://sajtservis.github.io/egzampl/" target="_blank" rel="noopener"><span class="pp-ime">Svi radovi</span><span class="pp-opis">Ceo spisak primera sa cenama</span><span class="pp-strelica">Pogledajte →</span></a></div>
+    </div>
+
+    <p class="napomena-primeri">Ovo su primeri koje smo napravili da pokažemo kako radimo — nisu stvarni klijenti. Biznisi u njima su izmišljeni.</p>
+  </div>
+</section>
+
+<section id="upitnik" class="siva">
+  <div class="wrap">
+    <div class="upitnik-poziv">
+      <div>
+        <h2>Niste sigurni šta vam treba?</h2>
+        <p>Odgovorite na šest kratkih pitanja i odmah vidite predlog sajta za svoj biznis — sa vašim imenom, vašim bojama i vašom lokacijom na mapi. Zatim izmenite šta god želite.</p>
+        <p class="sitnije">Traje oko dva minuta. Ne tražimo podatke unapred.</p>
+        <a class="btn mt-22" href="upitnik.html">Napravite predlog sajta</a>
+      </div>
+      <div class="upitnik-slika" aria-hidden="true">
+        <div class="up-red"><span class="up-tacka"></span><span class="up-linija sirina-62"></span></div>
+        <div class="up-red"><span class="up-tacka puna"></span><span class="up-linija sirina-78"></span></div>
+        <div class="up-red"><span class="up-tacka"></span><span class="up-linija sirina-45"></span></div>
+        <div class="up-boje">
+          <i class="tacka-plava"></i><i class="tacka-zelena"></i>
+          <i class="tacka-narandzasta"></i><i class="tacka-roze"></i>
+        </div>
+        <div class="up-strelica">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 4v16M5 13l7 7 7-7"/></svg>
+        </div>
+        <div class="up-prozor">
+          <div class="up-traka"><i></i><i></i><i></i></div>
+          <div class="up-telo">
+            <div class="up-naslov">Vaš biznis</div>
+            <div class="up-tekst"></div>
+            <div class="up-tekst kratko"></div>
+            <div class="up-dugme"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="qr" class="siva">
+  <div class="wrap">
+    <div class="qr">
+      <div>
+        <h2>QR meni za kafiće i restorane</h2>
+        <p>Gost skenira kod sa stola i otvara vaš meni na telefonu. Kad promenite cene, ne štampate ništa — pošaljete nam novi cenovnik i izmena je gotova isti dan.</p>
+        <ul>
+          <li>Meni podeljen po grupama</li>
+          <li>Izmene cena rešavamo mi — pošaljete poruku ili sliku novog cenovnika</li>
+          <li>Jedna izmena važi za sve stolove odjednom</li>
+          <li>QR kod dobijate digitalno, štampu radite gde vam odgovara</li>
+        </ul>
+        <div class="qr-cena">
+          <div><div class="b">30 €</div><div class="s">izrada</div></div>
+          <div><div class="b">15 €</div><div class="s">mesečno održavanje</div></div>
+        </div>
+        <a class="btn mt-24" href="#kontakt">Zatražite QR meni</a>
+      </div>
+
+      <div class="telefon-okvir">
+        <div class="m-meni">
+          <div class="tm-h">Kafe Dorćol</div>
+          <div class="tm-s">Primer menija · Skopljanska 12</div>
+          <div class="tm-grupa">Topli napici</div>
+          <div class="tm-red"><span>Espreso</span><span>150 din</span></div>
+          <div class="tm-red"><span>Makijato</span><span>180 din</span></div>
+          <div class="tm-red"><span>Domaća kafa</span><span>140 din</span></div>
+          <div class="tm-grupa">Hladni napici</div>
+          <div class="tm-red"><span>Limunada</span><span>260 din</span></div>
+          <div class="tm-red"><span>Ledeni čaj</span><span>240 din</span></div>
+          <div class="tm-grupa">Pivo</div>
+          <div class="tm-red"><span>Točeno 0,3</span><span>220 din</span></div>
+          <div class="tm-red"><span>Flaširano</span><span>250 din</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kako">
+  <div class="wrap">
+    <div class="zaglavlje">
+      <h2>Kako radimo</h2>
+      <p>Četiri koraka od prve poruke do sajta koji je uživo.</p>
+    </div>
+    <div class="koraci">
+      <div class="korak">
+        <div class="br">Korak 1</div>
+        <h3>Razgovor</h3>
+        <p>Kažete čime se bavite i šta vam treba. Petnaest minuta, telefonom ili porukom.</p>
+      </div>
+      <div class="korak">
+        <div class="br">Korak 2</div>
+        <h3>Prva verzija</h3>
+        <p>Napravimo sajt i pošaljemo vam link. U ovoj fazi ne plaćate ništa.</p>
+      </div>
+      <div class="korak">
+        <div class="br">Korak 3</div>
+        <h3>Izmene</h3>
+        <p>Kažete šta vam ne odgovara. Menjamo dok ne bude kako treba.</p>
+      </div>
+      <div class="korak">
+        <div class="br">Korak 4</div>
+        <h3>Puštanje</h3>
+        <p>Sajt ide na vaš domen i vidljiv je na Google pretrazi.</p>
+      </div>
+    </div>
+    <div class="trazi">
+      <h3>Šta se traži od vas</h3>
+      <div class="trazi-red">
+        <div class="trazi-oznaka">Za sve pakete</div>
+        <p>Pošaljete tekst o tome čime se bavite i fotografije ako ih imate. To je sve — ostalo radimo mi.</p>
+      </div>
+      <div class="trazi-red">
+        <div class="trazi-oznaka">Uz sajt sa zakazivanjem</div>
+        <p>Pomažemo vam da napravite nalog za kalendar i povežete ga sa svojim Google kalendarom. Traje desetak minuta i prolazimo kroz to zajedno, telefonom. Posle toga termini padaju direktno u vaš telefon, a zauzeti sati se ne nude.</p>
+      </div>
+      <div class="trazi-red">
+        <div class="trazi-oznaka">Uz QR meni</div>
+        <p>Pošaljete nam cenovnik. Kada se cene promene, pošaljete nov — poruku ili fotografiju — i mi ga ubacimo isti dan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="odrzavanje" class="siva">
+  <div class="wrap">
+    <div class="zaglavlje">
+      <h2>Održavanje</h2>
+      <p>Sajt nije nešto što se napravi i zaboravi. Za jednu mesečnu cenu pokrivamo sve što ide posle.</p>
+    </div>
+
+    <div class="odrzavanje">
+      <div>
+        <div class="cena-blok">
+          <div class="red"><span>Sajtovi</span><span class="v">25 €<small> /mesec</small></span></div>
+          <div class="red"><span>QR meni</span><span class="v">15 €<small> /mesec</small></span></div>
+        </div>
+        <div class="vazno">
+          <strong>Domen ostaje vaš.</strong> Registrujemo ga na vaše ime, ne na naše. Ako se jednog dana razidjemo, odlazite sa svojim domenom i bez ijednog pitanja.
+        </div>
+      </div>
+
+      <div>
+        <h3 class="h3-kompaktan">Šta ulazi u cenu</h3>
+        <ul class="ulazi">
+          <li>Domen i hosting — ništa ne plaćate posebno</li>
+          <li>Redovna sigurnosna kopija</li>
+          <li>Izmene teksta i cena kad god zatreba</li>
+          <li>Dodavanje novih fotografija</li>
+          <li>Podrška kad nešto zapne</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pitanja">
+  <div class="wrap">
+    <div class="zaglavlje">
+      <h2>Pitanja koja najčešće dobijamo</h2>
+      <p>Ako vam nešto nije jasno, pitajte — odgovorićemo isto ovako otvoreno.</p>
+    </div>
+
+    <div class="pitanja">
+      <details class="pitanje">
+        <summary>Šta ako mi se sajt ne svidi?</summary>
+        <div class="odgovor">
+          <p>Izmene radimo dok ne budete zadovoljni rešenjem. Ukoliko ni nakon toga sajt ne ispuni vaša očekivanja, saradnju prekidamo bez ikakvih troškova za vas.</p>
+          <p>Ne tražimo avans niti bilo kakvu uplatu pre nego što vidite gotovu prvu verziju.</p>
+        </div>
+      </details>
+
+      <details class="pitanje">
+        <summary>Već imamo sajt. Da li nam je ovo uopšte potrebno?</summary>
+        <div class="odgovor">
+          <p>Ukoliko vaš postojeći sajt ispunjava svoju svrhu, nema razloga da ga menjate i nećemo vas u to ubeđivati.</p>
+          <p>Ako se sporo učitava, nije prilagođen mobilnim uređajima ili nemate mogućnost da samostalno izmenite osnovne podatke, javite se — pogledaćemo o čemu se radi i predložiti rešenje.</p>
+        </div>
+      </details>
+
+      <details class="pitanje">
+        <summary>Da li će mi sajt doneti veliki broj nepotrebnih poziva?</summary>
+        <div class="odgovor">
+          <p>Do toga dolazi kada sajt sadrži premalo informacija. Ako su cene, radno vreme i uslovi poslovanja jasno navedeni, klijenti se javljaju tek kada su spremni da zakažu ili dođu.</p>
+          <p>Sadržaj pripremamo tako da unapred odgovori na najčešća pitanja i time smanji broj suvišnih poziva.</p>
+        </div>
+      </details>
+
+      <details class="pitanje">
+        <summary>Da li je potrebno predznanje da bih koristio sajt?</summary>
+        <div class="odgovor">
+          <p>Nije. Dovoljno je da nam opišete čime se bavite i dostavite fotografije ukoliko ih imate.</p>
+          <p>Sve tehničke poslove preuzimamo mi, uključujući i naknadne izmene — pošaljete nam poruku sa onim što treba promeniti, a mi to sprovedemo.</p>
+        </div>
+      </details>
+
+      <details class="pitanje">
+        <summary>Koliko traje izrada sajta?</summary>
+        <div class="odgovor">
+          <p>Jednostrani sajt izrađujemo za dva do četiri dana, sajt sa galerijom za pet do osam dana, a sajt sa zakazivanjem za osam do četrnaest dana.</p>
+          <p>Rok se računa od trenutka kada primimo tekst i fotografije.</p>
+        </div>
+      </details>
+
+      <details class="pitanje">
+        <summary>Zašto su vaše cene niže nego kod agencija?</summary>
+        <div class="odgovor">
+          <p>Ne izdvajamo sredstva za kancelarijski prostor, prodajni tim ni marketinški budžet, pa te stavke ne opterećuju cenu vaše usluge.</p>
+          <p>Sarađujemo sa vama neposredno, bez posrednika u komunikaciji.</p>
+        </div>
+      </details>
+
+      <details class="pitanje">
+        <summary>Šta ako želim da prekinem održavanje?</summary>
+        <div class="odgovor">
+          <p>Održavanje možete otkazati u bilo kom trenutku, bez otkaznog roka i bez dodatnih obaveza.</p>
+          <p>Domen je registrovan na vaše ime i ostaje u vašem vlasništvu, a sve fajlove sajta predajemo vama na dalje raspolaganje.</p>
+        </div>
+      </details>
+
+      <details class="pitanje">
+        <summary>Da li je moguće plaćanje na rate?</summary>
+        <div class="odgovor">
+          <p>Jeste, dogovaramo se u skladu sa vašim mogućnostima. Budući da plaćate tek nakon što vidite gotov sajt, većini klijenata to nije potrebno — ali ako vam odgovara podela iznosa, recite nam unapred.</p>
+        </div>
+      </details>
+
+      <details class="pitanje">
+        <summary>Da li ćemo biti vidljivi na Google pretrazi?</summary>
+        <div class="odgovor">
+          <p>Sajt prijavljujemo Google-u i pripremamo ga tako da se pojavljuje u rezultatima kada neko pretražuje vašu delatnost u vašem gradu.</p>
+          <p>Pozicija u rezultatima zavisi od konkurencije i ne može se garantovati — svako ko obeća prvo mesto ne govori istinu.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="wrap">
+    <div class="kontakt">
+      <div>
+        <div class="zaglavlje mb-0">
+          <h2>Zatražite sajt</h2>
+          <p>Napišite čime se bavite. Javljamo se istog dana, a prvu verziju sajta dobijate za nekoliko dana — besplatno i bez obaveze.</p>
+        </div>
+
+        <div class="brzo">
+          <div class="brzo-red">
+            <a href="mailto:sajtservis.rs@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--narandzasta)" stroke-width="2.2" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg>
+              <span>sajtservis.rs@gmail.com<span class="sitnije">Odgovaramo isti dan</span></span>
+            </a>
+            <button type="button" class="kopiraj" data-kopiraj="sajtservis.rs@gmail.com" aria-label="Kopirajte mejl adresu">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg>
+            </button>
+          </div>
+          <div class="brzo-red">
+            <a href="tel:+381621088760">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--narandzasta)" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.4 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+              <span>062&nbsp;108&nbsp;8760<span class="sitnije">Pozovite ili pošaljite SMS</span></span>
+            </a>
+            <button type="button" class="kopiraj" data-kopiraj="062 108 8760" aria-label="Kopirajte broj telefona">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg>
+            </button>
+          </div>
+          <a href="https://wa.me/381621088760">
+            <svg viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1a12 12 0 0 1-5.9-5.1c-.4-.7-.7-1.5-.7-2.3 0-.8.4-1.3.6-1.5.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .5.4l.8 1.8c0 .2 0 .3-.1.5l-.4.5c-.1.2-.3.3-.1.6.4.7 1 1.3 1.6 1.8.5.4 1 .6 1.2.7.2.1.4 0 .5-.1l.7-.8c.2-.2.3-.2.5-.1l1.8.9c.2.1.4.2.4.3v.7z"/></svg>
+            WhatsApp
+          </a>
+          <a href="viber://chat?number=%2B381621088760">
+            <svg viewBox="0 0 24 24" fill="#7360F2" aria-hidden="true"><path d="M12 2C6.5 2 3 5.2 3 10.2c0 2.6 1 4.7 2.7 6.1v3.9l3.3-1.9c1 .2 2 .3 3 .3 5.5 0 9-3.2 9-8.4S17.5 2 12 2z"/></svg>
+            <span>Viber<span class="sitnije">Otvara se samo na telefonu</span></span>
+          </a><a href="https://ig.me/m/sajt_servis.rs" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#E1306C" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2a3.9 3.9 0 0 1-2.3 2.3c-.4.2-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4a3.9 3.9 0 0 1-2.3-2.3c-.2-.4-.3-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2A3.9 3.9 0 0 1 4.9 2.7c.4-.2 1-.3 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 3.4a6.4 6.4 0 1 0 0 12.8 6.4 6.4 0 0 0 0-12.8zm0 10.5a4.1 4.1 0 1 1 0-8.2 4.1 4.1 0 0 1 0 8.2zm6.6-10.8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/></svg> <span>Instagram<span class="sitnije">Piše vam se direktno u DM</span></span></a>
+        </div>
+      </div>
+
+      <div>
+        
+        <form id="forma" action="#" method="POST">
+          <div class="polje">
+            <label for="pIme">Ime i biznis</label>
+            <input id="pIme" name="ime" type="text" required placeholder="Marko, Auto servis Marko">
+          </div>
+          <div class="polje">
+            <label for="pKontakt">Telefon ili mejl</label>
+            <input id="pKontakt" name="kontakt" type="text" required placeholder="060 123 4567">
+          </div>
+          <div class="polje">
+            <label for="pPaket">Šta vas zanima</label>
+            <select id="pPaket" name="paket">
+              <option>Još ne znam, javite mi šta predlažete</option>
+              <option>Jednostrani sajt — 150 €</option>
+              <option>Sajt sa galerijom — 250 €</option>
+              <option>Sajt sa zakazivanjem — 400 €</option>
+              <option>QR meni — 30 €</option>
+            </select>
+          </div>
+          <div class="polje">
+            <label for="pPoruka">Čime se bavite</label>
+            <textarea id="pPoruka" name="poruka" placeholder="Držim auto servis na Voždovcu. Trebao bi mi sajt sa cenovnikom i radnim vremenom."></textarea>
+          </div>
+          <div class="sakriveno-polje" aria-hidden="true">
+            <label for="pSajt">Ostavite prazno</label>
+            <input id="pSajt" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <button class="btn puna" type="submit">Pošaljite upit</button>
+          <p class="napomena-privatnost">
+            Slanjem upita prihvatate da vam odgovorimo na dati kontakt. Ne delimo podatke trećim licima —
+            <a href="uslovi.html#podaci" class="link-tamna">detalji o obradi podataka</a>.
+          </p>
+          <div class="poruka-status" id="statusPoruke" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Sajt Servis — izrada sajtova za male biznise</span>
+    <span><a href="uslovi.html" class="link-podnozje">Uslovi saradnje</a> · Srbija i region</span>
+  </div>
+</footer>
+
+<div class="plutajuce">
+  <button type="button" class="plutajuce-dugme vrh" id="dugmeVrh" aria-label="Nazad na vrh strane">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+  <a class="plutajuce-dugme kontakt" href="https://wa.me/381621088760" target="_blank" rel="noopener" aria-label="Pošaljite poruku na WhatsApp">
+    <svg viewBox="0 0 24 24" fill="#171614" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1a12 12 0 0 1-5.9-5.1c-.4-.7-.7-1.5-.7-2.3 0-.8.4-1.3.6-1.5.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .5.4l.8 1.8c0 .2 0 .3-.1.5l-.4.5c-.1.2-.3.3-.1.6.4.7 1 1.3 1.6 1.8.5.4 1 .6 1.2.7.2.1.4 0 .5-.1l.7-.8c.2-.2.3-.2.5-.1l1.8.9c.2.1.4.2.4.3v.7z"/></svg>
+  </a>
+</div>
+
+<div class="preklop" id="preklop" role="dialog" aria-modal="true" aria-labelledby="naslovPreklopa">
+  <h2 id="naslovPreklopa" class="sr-only">Pregled primera sajta</h2>
+  <div class="ram">
+    <div class="traka">
+      <span class="tacka"></span><span class="tacka"></span><span class="tacka"></span>
+      <span class="adresa" id="adresaPreklopa"></span>
+      <button type="button" class="btn linija mala" id="dugmeZatvori">Zatvori</button>
+    </div>
+    <div class="birac">
+      <div class="birac-grupa">
+        <span class="birac-oznaka">Dizajn</span>
+        <div class="birac-dugmad" id="biracDizajna"></div>
+      </div>
+      <div class="birac-grupa">
+        <span class="birac-oznaka">Boje</span>
+        <div class="birac-boje" id="biracBoja"></div>
+      </div>
+    </div>
+    <div class="telo" id="teloPreklopa"></div>
+    <div class="noga">
+      <p><span id="nazivPaketa"></span> · primer, nije stvaran klijent</p>
+      <a class="btn mala" href="#kontakt" data-zatvori>Hoću ovakav sajt</a>
+    </div>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   DUGME NAZAD NA VRH
+   ========================================================= */
+const manjeAnimacijeGlobal = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* =========================================================
+   HAMBURGER MENI (mobilna navigacija)
+   ========================================================= */
+const dugmeMeni = document.getElementById('dugmeMeni');
+const vezeMeni = document.getElementById('vezeMeni');
+function zatvoriMeni(){
+  vezeMeni.classList.remove('otvoren');
+  dugmeMeni.setAttribute('aria-expanded','false');
+}
+dugmeMeni.addEventListener('click', () => {
+  const otvoren = vezeMeni.classList.toggle('otvoren');
+  dugmeMeni.setAttribute('aria-expanded', String(otvoren));
+});
+vezeMeni.addEventListener('click', e => { if(e.target.tagName === 'A') zatvoriMeni(); });
+document.addEventListener('click', e => {
+  if(!vezeMeni.classList.contains('otvoren')) return;
+  if(!vezeMeni.contains(e.target) && e.target !== dugmeMeni && !dugmeMeni.contains(e.target)) zatvoriMeni();
+});
+document.addEventListener('keydown', e => { if(e.key === 'Escape') zatvoriMeni(); });
+window.matchMedia('(min-width:901px)').addEventListener('change', zatvoriMeni);
+const dugmeVrh = document.getElementById('dugmeVrh');
+window.addEventListener('scroll', () => {
+  dugmeVrh.classList.toggle('vidi', window.scrollY > 500);
+}, { passive: true });
+dugmeVrh.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: manjeAnimacijeGlobal ? 'auto' : 'smooth' });
+});
+
+/* =========================================================
+   KOPIRAJ U CLIPBOARD
+   ========================================================= */
+document.querySelectorAll('.kopiraj').forEach(dugme => {
+  dugme.addEventListener('click', async () => {
+    const tekst = dugme.dataset.kopiraj;
+    try {
+      await navigator.clipboard.writeText(tekst);
+    } catch (e) {
+      const polje = document.createElement('textarea');
+      polje.value = tekst;
+      polje.style.position = 'fixed';
+      polje.style.opacity = '0';
+      document.body.appendChild(polje);
+      polje.select();
+      document.execCommand('copy');
+      document.body.removeChild(polje);
+    }
+    const izvorniSadrzaj = dugme.innerHTML;
+    dugme.classList.add('kopirano');
+    dugme.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>';
+    setTimeout(() => {
+      dugme.classList.remove('kopirano');
+      dugme.innerHTML = izvorniSadrzaj;
+    }, 1800);
+  });
+});
+
+/* =========================================================
+   PRIMERI — 3 paketa × 3 dizajna × izbor palete
+   ========================================================= */
+const PALETE_PRIMERA = [
+  {id:'plava',  naziv:'Plava',  glavna:'#1B4D7A', druga:'#5B93BF', pozadina:'#FFFFFF', tekst:'#132430', blaga:'#EFF4F8'},
+  {id:'zelena', naziv:'Zelena', glavna:'#2E6B4F', druga:'#7CB295', pozadina:'#FCFDFC', tekst:'#152420', blaga:'#EDF4F0'},
+  {id:'topla',  naziv:'Topla',  glavna:'#A8472B', druga:'#D48C6E', pozadina:'#FFFCFA', tekst:'#241813', blaga:'#F8EEE9'},
+  {id:'roze',   naziv:'Roze',   glavna:'#B0416B', druga:'#D98BA8', pozadina:'#FFFBFC', tekst:'#2B1A21', blaga:'#F9EDF1'},
+  {id:'drvo',   naziv:'Drvo',   glavna:'#7A5230', druga:'#B99168', pozadina:'#FDFBF7', tekst:'#241C13', blaga:'#F3ECE1'},
+  {id:'tamna',  naziv:'Tamna',  glavna:'#2C2A28', druga:'#7A7671', pozadina:'#FBFAF9', tekst:'#171614', blaga:'#F0EEEB'}
+];
+
+const DIZAJNI = [
+  {id:'klasican', naziv:'Klasičan'},
+  {id:'podeljen', naziv:'Podeljen'},
+  {id:'sazet',    naziv:'Sažet'},
+  {id:'traka',    naziv:'Sa trakom'},
+  {id:'kartice',  naziv:'Kartice'}
+];
+
+const PAKETI_PRIMERA = [
+  {
+    id:'jednostrani',
+    paket:'Jednostrani sajt',
+    cena:'150 €',
+    naziv:'Auto servis Kula',
+    grana:'Auto servis, perionica, vulkanizer',
+    adresa:'autoservis-kula-primer.rs',
+    logo:'AUTO SERVIS KULA',
+    naslov:'Servis u koji se vraćate.',
+    opis:'Dijagnostika, redovno održavanje i kočnice. Cenu znate pre nego što počnemo, a ne diramo ono što ne mora da se dira.',
+    cta:'Pozovite 011 000 0000',
+    zadrzana:'plava',
+    veze:['Usluge','Cenovnik','Kontakt'],
+    cene:[['Kompjuterska dijagnostika','2.500 din'],['Zamena ulja i filtera','od 6.500 din'],['Zamena pločica','od 3.500 din'],['Punjenje klime','4.500 din'],['Auto-elektrika','od 3.000 din']],
+    radovi:['Servis motora','Kočnice','Klima uređaji','Auto-elektrika','Dijagnostika','Ispitivanje'],
+    sekcije:['cenovnik','kontakt']
+  },
+  {
+    id:'galerija',
+    paket:'Sajt sa galerijom',
+    cena:'250 €',
+    naziv:'Stolarija Vuk',
+    grana:'Stolar, moler, keramičar, fotograf',
+    adresa:'stolarija-vuk-primer.rs',
+    logo:'STOLARIJA VUK',
+    naslov:'Nameštaj po meri, od 1998.',
+    opis:'Kuhinje, plakari, police i radni stolovi. Dolazimo na merenje, crtamo predlog, pa tek onda pravimo.',
+    cta:'Zakažite merenje',
+    zadrzana:'drvo',
+    veze:['Radovi','O nama','Kontakt'],
+    cene:[['Izlazak na merenje','besplatno'],['Plakar po meri','od 42.000 din'],['Kuhinja','po dogovoru'],['Police i komode','od 12.000 din']],
+    radovi:['Kuhinja — hrast','Plakar u hodniku','Police po meri','Radni sto','Kuhinja — bela','Komoda'],
+    sekcije:['galerija','cenovnik','kontakt']
+  },
+  {
+    id:'zakazivanje',
+    paket:'Sajt sa zakazivanjem',
+    cena:'400 €',
+    naziv:'Studio Lana',
+    grana:'Frizer, kozmetika, ordinacija',
+    adresa:'studio-lana-primer.rs',
+    logo:'STUDIO LANA',
+    naslov:'Zakažite termin za dva klika.',
+    opis:'Nokti, trepavice i obrve. Bez čekanja na odgovor u porukama — vidite slobodne termine i birate sami.',
+    cta:'Vidite slobodne termine',
+    zadrzana:'roze',
+    veze:['Radovi','Cenovnik','Zakazivanje'],
+    cene:[['Gel nokti — nadogradnja','2.800 din'],['Korekcija','2.200 din'],['Trepavice 2D','2.500 din'],['Obrve — oblikovanje','900 din']],
+    radovi:['Gel nokti','Frenč','Trepavice 2D','Obrve','Nadogradnja','Manikir'],
+    sekcije:['zakazivanje','galerija','cenovnik']
+  },
+  {
+    id:'ugostiteljstvo',
+    paket:'QR meni',
+    cena:'30 €',
+    naziv:'Kafe Dorćol',
+    grana:'Kafić, restoran, pekara',
+    adresa:'kafe-dorcol-primer.rs',
+    logo:'KAFE DORĆOL',
+    naslov:'Svratite kod nas.',
+    opis:'Domaća kafa, kolači pravljeni svakog jutra i bašta u mirnoj ulici. Meni skenirate sa stola.',
+    cta:'Pogledajte meni',
+    zadrzana:'tamna',
+    veze:['Meni','Galerija','Kontakt'],
+    cene:[['Espreso','150 din'],['Makijato','180 din'],['Domaća kafa','140 din'],['Limunada','260 din'],['Ledeni čaj','240 din'],['Točeno pivo 0,3','220 din']],
+    meni:[
+      ['Topli napici', [['Espreso','150 din'],['Makijato','180 din'],['Domaća kafa','140 din'],['Topla čokolada','220 din']]],
+      ['Hladni napici', [['Limunada','260 din'],['Ledeni čaj','240 din'],['Ceđena pomorandža','300 din']]],
+      ['Iz kuhinje', [['Kolač dana','280 din'],['Sendvič','390 din'],['Doručak','520 din']]]
+    ],
+    radovi:['Bašta','Doručak','Kolači','Kafa','Sala','Veče'],
+    sekcije:['meni','galerija','kontakt']
+  }
+];
+
+/* ---------- minijatura za karticu ---------- */
+function minijatura(p, boja){
+  const b = PALETE_PRIMERA.find(x=>x.id===boja);
+  return `<span class="mini" style="background:${b.pozadina};color:${b.tekst};display:block">
+    <span class="m-nav" style="display:flex"><span class="m-logo">${p.logo}</span></span>
+    <span class="m-h" style="display:block">${p.naslov}</span>
+    <span class="m-p" style="display:block">${p.opis.split('.')[0]}.</span>
+    <span class="m-btn" style="background:${b.glavna}">${p.cta}</span>
+  </span>`;
+}
+
+/* ---------- pojedini delovi sajta ---------- */
+function delCene(p, b){
+  return `<div class="d-sek" style="background:${b.blaga}">
+    <h5>Cenovnik</h5>
+    ${p.cene.map(([n,c])=>`<div class="d-cena"><span>${n}</span><b>${c}</b></div>`).join('')}
+    <p style="margin-top:13px;font-size:12.5px;opacity:.6">Cene su primer — zamenjujemo ih vašim.</p>
+  </div>`;
+}
+function delGalerija(p, b){
+  return `<div class="d-sek">
+    <h5>Naši radovi</h5>
+    <div class="d-galerija">
+      ${p.radovi.map((r,i)=>`<div class="d-slika" style="background:linear-gradient(0deg,rgba(0,0,0,.55),rgba(0,0,0,0) 65%),linear-gradient(145deg,${b.glavna} ${18+i*7}%,${b.druga} 100%)">${r}</div>`).join('')}
+    </div>
+  </div>`;
+}
+function delTermini(p, b){
+  return `<div class="d-termini">
+    <span class="d-termin" style="border-color:${b.glavna};color:${b.glavna}">Danas 16:00</span>
+    <span class="d-termin" style="border-color:${b.glavna};color:${b.glavna}">Danas 17:30</span>
+    <span class="d-termin" style="border-color:${b.glavna};color:${b.glavna}">Sutra 10:00</span>
+    <span class="d-termin" style="opacity:.4">Sutra 12:00</span>
+  </div>`;
+}
+function delMeni(p, b){
+  return `<div class="d-sek" style="background:${b.blaga}">
+    <h5>Meni</h5>
+    <div class="d-meni">
+      ${p.meni.map(([grupa, stavke])=>`
+        <div class="d-meni-grupa">
+          <div class="d-meni-naslov" style="color:${b.glavna};border-color:${b.glavna}">${grupa}</div>
+          ${stavke.map(([n,c])=>`<div class="d-cena"><span>${n}</span><b>${c}</b></div>`).join('')}
+        </div>`).join('')}
+    </div>
+    <p style="margin-top:14px;font-size:12.5px;opacity:.6">Gost ovo otvara skeniranjem QR koda sa stola.</p>
+  </div>`;
+}
+function delKontakt(p, b, siva){
+  return `<div class="d-sek"${siva?` style="background:${b.blaga}"`:''}>
+    <h5>Gde smo i kad radimo</h5>
+    <div class="d-info">
+      <div>
+        <div class="oznaka">ADRESA</div>
+        <div>Ustanička 120, Voždovac<br>Beograd</div>
+        <div class="oznaka" style="margin-top:15px">TELEFON</div>
+        <div>011 000 0000</div>
+      </div>
+      <div>
+        <div class="oznaka">RADNO VREME</div>
+        <div>Ponedeljak – petak &nbsp; 08–18h<br>Subota &nbsp; 08–14h<br>Nedelja &nbsp; zatvoreno</div>
+      </div>
+    </div>
+  </div>`;
+}
+
+/* ---------- tri dizajna ---------- */
+function crtajPrimer(p, dizajnId, bojaId){
+  const b = PALETE_PRIMERA.find(x=>x.id===bojaId);
+  const ima = s => p.sekcije.includes(s);
+  let telo = '';
+
+  const nav = `<div class="d-nav"><span class="d-logo">${p.logo}</span>
+    <span class="d-links">${p.veze.map(v=>`<span>${v}</span>`).join('')}</span></div>`;
+
+  if(dizajnId === 'klasican'){
+    telo = nav + `
+      <div class="d-hero">
+        <h4>${p.naslov}</h4>
+        <p>${p.opis}</p>
+        <span class="d-cta" style="background:${b.glavna}">${p.cta}</span>
+        ${ima('zakazivanje') ? delTermini(p,b) : ''}
+      </div>
+      ${ima('meni') ? delMeni(p,b) : ''}
+      ${ima('cenovnik') ? delCene(p,b) : ''}
+      ${ima('galerija') ? delGalerija(p,b) : ''}
+      ${ima('kontakt') ? delKontakt(p,b,true) : ''}`;
+  }
+
+  if(dizajnId === 'podeljen'){
+    telo = nav + `
+      <div class="d-podela">
+        <div class="d-podela-tekst">
+          <h4>${p.naslov}</h4>
+          <p>${p.opis}</p>
+          <span class="d-cta" style="background:${b.glavna}">${p.cta}</span>
+        </div>
+        <div class="d-podela-slika" style="background:linear-gradient(0deg,rgba(0,0,0,.55),rgba(0,0,0,0) 60%),linear-gradient(150deg,${b.glavna},${b.druga})">
+          <span>${p.radovi[0]}</span>
+        </div>
+      </div>
+      ${ima('zakazivanje') ? `<div class="d-sek" style="background:${b.blaga}"><h5>Slobodni termini</h5>${delTermini(p,b)}</div>` : ''}
+      ${ima('galerija') ? delGalerija(p,b) : ''}
+      ${ima('meni') ? delMeni(p,b) : ''}
+      ${ima('cenovnik') ? delCene(p,b) : ''}
+      ${ima('kontakt') ? delKontakt(p,b,false) : ''}`;
+  }
+
+  if(dizajnId === 'sazet'){
+    telo = `<div class="d-sazet-vrh" style="background:${b.glavna}">
+        <div class="d-logo" style="color:#fff">${p.logo}</div>
+        <h4 style="color:#fff">${p.naslov}</h4>
+        <p style="color:#fff;opacity:.9">${p.opis}</p>
+        <span class="d-cta" style="background:#fff;color:${b.glavna}">${p.cta}</span>
+      </div>
+      ${ima('zakazivanje') ? `<div class="d-sek" style="text-align:center"><h5>Slobodni termini</h5><div style="display:flex;justify-content:center">${delTermini(p,b)}</div></div>` : ''}
+      ${ima('meni') ? delMeni(p,b) : ''}
+      ${ima('cenovnik') ? delCene(p,b) : ''}
+      ${ima('galerija') ? delGalerija(p,b) : ''}
+      ${ima('kontakt') ? delKontakt(p,b,true) : ''}`;
+  }
+
+  if(dizajnId === 'traka'){
+    telo = nav + `
+      <div class="d-traka" style="background:linear-gradient(0deg,rgba(0,0,0,.55),rgba(0,0,0,0) 60%),linear-gradient(120deg,${b.glavna},${b.druga})">
+        <span>${p.radovi[0]}</span>
+      </div>
+      <div class="d-hero" style="padding-top:32px">
+        <h4>${p.naslov}</h4>
+        <p>${p.opis}</p>
+        <span class="d-cta" style="background:${b.glavna}">${p.cta}</span>
+        ${ima('zakazivanje') ? delTermini(p,b) : ''}
+      </div>
+      ${ima('meni') ? delMeni(p,b) : ''}
+      ${ima('cenovnik') ? delCene(p,b) : ''}
+      ${ima('galerija') ? delGalerija(p,b) : ''}
+      ${ima('kontakt') ? delKontakt(p,b,true) : ''}`;
+  }
+
+  if(dizajnId === 'kartice'){
+    telo = nav + `
+      <div class="d-hero">
+        <h4>${p.naslov}</h4>
+        <p>${p.opis}</p>
+        <span class="d-cta" style="background:${b.glavna}">${p.cta}</span>
+      </div>
+      <div class="d-sek" style="background:${b.blaga}">
+        <h5>Šta radimo</h5>
+        <div class="d-kartice">
+          ${p.radovi.slice(0,4).map(r=>`
+            <div class="d-kartica" style="border-color:${b.glavna}22">
+              <span class="d-kartica-tacka" style="background:${b.glavna}"></span>
+              <b>${r}</b>
+              <small>Kratak opis usluge ide ovde.</small>
+            </div>`).join('')}
+        </div>
+      </div>
+      ${ima('zakazivanje') ? `<div class="d-sek"><h5>Slobodni termini</h5>${delTermini(p,b)}</div>` : ''}
+      ${ima('meni') ? delMeni(p,b) : ''}
+      ${ima('cenovnik') ? delCene(p,b) : ''}
+      ${ima('kontakt') ? delKontakt(p,b,false) : ''}`;
+  }
+
+  return `<div class="demo" style="background:${b.pozadina};color:${b.tekst}">
+    ${telo}
+    <div class="d-noga">${p.naziv} · primer sajta</div>
+  </div>`;
+}
+
+/* =========================================================
+   HERO — SMENJIVANJE PRIMERA
+   ========================================================= */
+const ekran = document.getElementById('ekran');
+const tackeSlajda = document.getElementById('tackeSlajda');
+const adresaSlajda = document.getElementById('adresaSlajda');
+let aktivni = 0;
+
+ekran.innerHTML = PAKETI_PRIMERA.map((p,i)=>
+  `<div class="slajd${i===0?' aktivan':''}" data-i="${i}" aria-hidden="${i!==0}">${minijatura(p, p.zadrzana)}</div>`).join('');
+
+tackeSlajda.innerHTML = PAKETI_PRIMERA.map((p,i)=>
+  `<button type="button" aria-current="${i===0}" aria-label="Primer ${i+1}: ${p.paket}" data-i="${i}"></button>`).join('');
+
+adresaSlajda.textContent = PAKETI_PRIMERA[0].adresa;
+
+function pokaziSlajd(i){
+  aktivni = i;
+  ekran.querySelectorAll('.slajd').forEach(s=>{
+    const jeAktivan = +s.dataset.i===i;
+    s.classList.toggle('aktivan', jeAktivan);
+    s.setAttribute('aria-hidden', jeAktivan ? 'false' : 'true');
+  });
+  tackeSlajda.querySelectorAll('button').forEach(b=>b.setAttribute('aria-current', +b.dataset.i===i));
+  adresaSlajda.textContent = PAKETI_PRIMERA[i].adresa;
+}
+tackeSlajda.addEventListener('click', e=>{
+  const b = e.target.closest('button');
+  if(b){ pokaziSlajd(+b.dataset.i); zaustaviAuto(); }
+});
+
+let auto = null;
+const manjeAnimacije = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function pokreniAuto(){ if(!manjeAnimacije) auto = setInterval(()=>pokaziSlajd((aktivni+1)%PAKETI_PRIMERA.length), 4200); }
+function zaustaviAuto(){ if(auto){ clearInterval(auto); auto = null; } }
+pokreniAuto();
+document.querySelector('.prozor').addEventListener('mouseenter', zaustaviAuto);
+
+/* Dugme za rucnu pauzu/nastavak (WCAG 2.2.2 - pokretan sadrzaj mora imati kontrolu) */
+const dugmePauza = document.getElementById('dugmePauza');
+const ikonaPauza = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
+const ikonaPusti = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg>';
+let rucnoPauzirano = manjeAnimacije;
+if(manjeAnimacije){ dugmePauza.innerHTML = ikonaPusti; dugmePauza.setAttribute('aria-label','Pokreni automatsku smenu primera'); }
+dugmePauza.addEventListener('click', ()=>{
+  rucnoPauzirano = !rucnoPauzirano;
+  if(rucnoPauzirano){
+    zaustaviAuto();
+    dugmePauza.innerHTML = ikonaPusti;
+    dugmePauza.setAttribute('aria-label','Pokreni automatsku smenu primera');
+  } else {
+    pokreniAuto();
+    dugmePauza.innerHTML = ikonaPauza;
+    dugmePauza.setAttribute('aria-label','Pauziraj automatsku smenu primera');
+  }
+});
+
+/* =========================================================
+   KARTICE PRIMERA
+   ========================================================= */
+document.getElementById('listaPrimera').innerHTML = PAKETI_PRIMERA.map(p=>`
+  <button type="button" class="primer" data-id="${p.id}">
+    <span class="slika">${minijatura(p, p.zadrzana)}</span>
+    <span class="opis">
+      <span class="p-naslov">${p.paket} — ${p.cena}</span>
+      <span class="grana">${p.grana}</span>
+      <span class="otvori">5 dizajna · 6 paleta boja</span>
+    </span>
+  </button>`).join('');
+
+/* =========================================================
+   PREKLOP SA BIRAČEM DIZAJNA I BOJA
+   ========================================================= */
+const preklop = document.getElementById('preklop');
+const teloPreklopa = document.getElementById('teloPreklopa');
+let vracanjeFokusa = null;
+let tekuciPaket = null;
+let tekuciDizajn = 'klasican';
+let tekucaBoja = 'plava';
+
+function osveziPreklop(){
+  teloPreklopa.innerHTML = crtajPrimer(tekuciPaket, tekuciDizajn, tekucaBoja);
+  document.querySelectorAll('#biracDizajna button').forEach(b=>
+    b.setAttribute('aria-pressed', b.dataset.d === tekuciDizajn));
+  document.querySelectorAll('#biracBoja button').forEach(b=>
+    b.setAttribute('aria-pressed', b.dataset.b === tekucaBoja));
+}
+
+document.getElementById('listaPrimera').addEventListener('click', e=>{
+  const kartica = e.target.closest('.primer');
+  if(!kartica) return;
+
+  tekuciPaket = PAKETI_PRIMERA.find(x=>x.id===kartica.dataset.id);
+  tekuciDizajn = 'klasican';
+  tekucaBoja = tekuciPaket.zadrzana;
+  vracanjeFokusa = kartica;
+
+  document.getElementById('adresaPreklopa').textContent = tekuciPaket.adresa;
+  document.getElementById('nazivPaketa').textContent = tekuciPaket.paket;
+  document.getElementById('naslovPreklopa').textContent = 'Pregled primera: ' + tekuciPaket.paket;
+
+  document.getElementById('biracDizajna').innerHTML = DIZAJNI.map(d=>
+    `<button type="button" data-d="${d.id}" aria-pressed="false">${d.naziv}</button>`).join('');
+  document.getElementById('biracBoja').innerHTML = PALETE_PRIMERA.map(b=>
+    `<button type="button" data-b="${b.id}" aria-pressed="false" style="background:${b.glavna}" title="${b.naziv}" aria-label="Paleta ${b.naziv}"></button>`).join('');
+
+  osveziPreklop();
+  teloPreklopa.scrollTop = 0;
+  preklop.classList.add('otvoren');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('dugmeZatvori').focus();
+});
+
+document.getElementById('biracDizajna').addEventListener('click', e=>{
+  const b = e.target.closest('button'); if(!b) return;
+  tekuciDizajn = b.dataset.d;
+  osveziPreklop();
+  teloPreklopa.scrollTop = 0;
+});
+document.getElementById('biracBoja').addEventListener('click', e=>{
+  const b = e.target.closest('button'); if(!b) return;
+  tekucaBoja = b.dataset.b;
+  osveziPreklop();
+});
+
+function zatvoriPreklop(){
+  preklop.classList.remove('otvoren');
+  document.body.style.overflow = '';
+  if(vracanjeFokusa) vracanjeFokusa.focus();
+}
+document.getElementById('dugmeZatvori').addEventListener('click', zatvoriPreklop);
+preklop.addEventListener('click', e=>{
+  if(e.target === preklop || e.target.hasAttribute('data-zatvori')) zatvoriPreklop();
+});
+
+/* Zarobljavanje fokusa unutar modala + Escape za zatvaranje */
+preklop.addEventListener('keydown', e=>{
+  if(!preklop.classList.contains('otvoren')) return;
+  if(e.key === 'Escape'){ zatvoriPreklop(); return; }
+  if(e.key !== 'Tab') return;
+  const fokusabilni = preklop.querySelectorAll(
+    'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])'
+  );
+  if(fokusabilni.length === 0) return;
+  const prvi = fokusabilni[0], poslednji = fokusabilni[fokusabilni.length - 1];
+  if(e.shiftKey && document.activeElement === prvi){
+    e.preventDefault(); poslednji.focus();
+  } else if(!e.shiftKey && document.activeElement === poslednji){
+    e.preventDefault(); prvi.focus();
+  }
+});
+document.addEventListener('keydown', e=>{
+  if(e.key === 'Escape' && preklop.classList.contains('otvoren')) zatvoriPreklop();
+});
+
+/* =========================================================
+   FORMA
+   ========================================================= */
+const forma = document.getElementById('forma');
+const status = document.getElementById('statusPoruke');
+
+forma.addEventListener('submit', e=>{
+  e.preventDefault();
+  const v = id => ((document.getElementById(id)||{}).value || '').trim();
+  if(v('pSajt')) return;
+  const ime = v('pIme'), kontakt = v('pKontakt');
+  if(!ime || !kontakt){
+    status.className = 'poruka-status vidi los';
+    status.textContent = 'Popunite ime i kontakt, pa saljemo.';
+    return;
+  }
+  const redovi = ['Upit sa sajta', 'Ime i biznis: ' + ime, 'Kontakt: ' + kontakt, 'Zanima me: ' + v('pPaket')];
+  const opis = v('pPoruka');
+  if(opis) redovi.push('Cime se bavi: ' + opis);
+  window.open('https://wa.me/381621088760?text=' + encodeURIComponent(redovi.join('\n')), '_blank', 'noopener');
+  status.className = 'poruka-status vidi ok';
+  status.textContent = 'Otvara se WhatsApp sa vasim upitom. Posaljite poruku i javljamo se jos danas.';
+  forma.reset();
+});
+</script>
+</body>
+</html>
