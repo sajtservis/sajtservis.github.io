@@ -1,0 +1,77 @@
+/* =====================================================================
+   Sajt Servis — premium kit (CSS)
+   Pravila:
+   1. Sadržaj je UVEK vidljiv bez JS-a. Skrivanje radi samo JS, i to tek
+      kad su biblioteke sigurno učitane.
+   2. .pm-pending (dodaje ga inline skripta u <head>) sakriva samo
+      [data-reveal] elemente, najduže 2.5s — posle toga se vide sami.
+   3. prefers-reduced-motion: bez skrola, bez marquee pokreta, bez reveal-a.
+   Boje: --pm-accent (akcenat), --pm-ink (tekst), --pm-line (linije).
+   ===================================================================== */
+:root{--pm-accent:#E85A1E;--pm-ink:currentColor;--pm-line:rgba(127,127,127,.28)}
+
+/* ---- Lenis (smooth scroll) ---- */
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}
+.lenis.lenis-stopped{overflow:clip}
+.lenis.lenis-smooth iframe{pointer-events:none}
+
+/* ---- reveal: kratko sakrivanje dok se JS ne javi (nikad trajno) ---- */
+.pm-pending [data-reveal]{opacity:0}
+[data-reveal="words"] .pm-w{display:inline-block;will-change:transform}
+[data-reveal="words"] .pm-wm{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+
+/* ---- marquee traka ---- */
+/* [data-marquee] dobija isti raspored i PRE nego što JS doda klasu —
+   inače se traka prvo prelomi u više redova pa skupi (CLS skok sadržaja ispod). */
+[data-marquee]>*{display:flex;flex:none;gap:var(--pm-gap,2.5rem);padding-right:var(--pm-gap,2.5rem)}
+[data-marquee],.pm-marquee{overflow:hidden;white-space:nowrap;display:flex;user-select:none;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+          mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.pm-marquee-track{display:flex;flex:none;gap:var(--pm-gap,2.5rem);padding-right:var(--pm-gap,2.5rem);
+  animation:pm-marquee var(--pm-speed,28s) linear infinite}
+.pm-marquee:hover .pm-marquee-track{animation-play-state:paused}
+.pm-marquee-track>*{flex:none}
+@keyframes pm-marquee{to{transform:translateX(-100%)}}
+
+/* ---- ugaoni okvir za naslove sekcija ---- */
+.pm-frame{position:relative;display:inline-block;padding:.55em 1.1em;--c:var(--pm-accent);--s:14px;--w:2px;
+  background:
+    linear-gradient(var(--c),var(--c)) top left/var(--s) var(--w),
+    linear-gradient(var(--c),var(--c)) top left/var(--w) var(--s),
+    linear-gradient(var(--c),var(--c)) top right/var(--s) var(--w),
+    linear-gradient(var(--c),var(--c)) top right/var(--w) var(--s),
+    linear-gradient(var(--c),var(--c)) bottom left/var(--s) var(--w),
+    linear-gradient(var(--c),var(--c)) bottom left/var(--w) var(--s),
+    linear-gradient(var(--c),var(--c)) bottom right/var(--s) var(--w),
+    linear-gradient(var(--c),var(--c)) bottom right/var(--w) var(--s);
+  background-repeat:no-repeat}
+
+/* ---- pill oznake ---- */
+.pm-pill{display:inline-flex;align-items:center;gap:.4em;padding:.42em .95em;border-radius:999px;
+  border:1.5px solid var(--pm-line);font-size:.85em;font-weight:600;line-height:1.2;white-space:nowrap}
+.pm-pill.is-accent{border-color:var(--pm-accent);color:var(--pm-accent)}
+
+/* ---- traka napretka skrola ---- */
+.pm-progress{position:fixed;left:0;top:0;height:3px;width:100%;z-index:200;pointer-events:none;
+  background:var(--pm-accent);transform:scaleX(0);transform-origin:0 50%}
+
+/* ---- scroll-scrub sekvenca (rotirajući objekat) ---- */
+.pm-scrub{position:relative;height:var(--pm-pin,170vh)}
+.pm-scrub-pin{position:sticky;top:0;height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.pm-scrub canvas{display:block;width:min(var(--pm-scrub-w,420px),78vw);height:auto;aspect-ratio:var(--pm-ratio,3/4)}
+.pm-scrub .pm-scrub-poster{width:min(var(--pm-scrub-w,420px),78vw);height:auto}
+.pm-scrub.is-live .pm-scrub-poster{display:none}
+.pm-scrub:not(.is-live) canvas{display:none}
+
+/* ---- sitni detalji ---- */
+.pm-lift{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.pm-lift:hover{transform:translateY(-4px)}
+.pm-img-wrap{overflow:hidden}
+
+@media (prefers-reduced-motion:reduce){
+  .pm-marquee-track{animation:none}
+  .pm-pending [data-reveal]{opacity:1}
+  .pm-lift:hover{transform:none}
+}

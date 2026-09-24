@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<script>document.documentElement.classList.add('js','pm-pending');setTimeout(function(){document.documentElement.classList.remove('pm-pending')},2500)</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QR meni za kafiće i restorane — Sajt Servis</title>
+<meta name="description" content="QR meni za 30 €: gost skenira kod sa stola i otvara meni na telefonu. Tri jezika, pretraga, alergeni. Nove cene ubacujemo isti dan.">
+<link rel="canonical" href="https://sajtservis.github.io/qr-meni.html">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sajt Servis">
+<meta property="og:locale" content="sr_RS">
+<meta property="og:url" content="https://sajtservis.github.io/qr-meni.html">
+<meta property="og:title" content="QR meni za kafiće i restorane — Sajt Servis">
+<meta property="og:description" content="QR meni za 30 €: gost skenira kod sa stola i otvara meni na telefonu. Tri jezika, pretraga, alergeni. Nove cene ubacujemo isti dan.">
+<meta property="og:image" content="https://sajtservis.github.io/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="QR meni za kafiće i restorane — Sajt Servis">
+<meta name="twitter:description" content="QR meni za 30 €: gost skenira kod sa stola i otvara meni na telefonu. Tri jezika, pretraga, alergeni. Nove cene ubacujemo isti dan.">
+<meta name="twitter:image" content="https://sajtservis.github.io/og-image.jpg">
+<meta name="theme-color" content="#E85A1E">
+<meta name="color-scheme" content="light">
+<link rel="preload" href="assets/premium/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/premium/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/premium/fonts/fonts.css">
+<link rel="stylesheet" href="assets/premium/premium.css">
+<link rel="stylesheet" href="assets/sajt.css">
+<script type="speculationrules">{"prerender":[{"source":"document","where":{"href_matches":"/*.html"},"eagerness":"moderate"}]}</script>
+</head>
+<body>
+<a class="preskoci" href="#glavni">Preskoči na sadržaj</a>
+<div class="pm-progress" aria-hidden="true"></div>
+
+<nav aria-label="Glavni meni">
+  <div class="wrap">
+    <a class="znak" href="index.html" aria-label="Sajt Servis — početna">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect x="3" y="5" width="26" height="22" rx="3" fill="#E85A1E"/>
+        <path d="M3 11.5h26" stroke="#fff" stroke-width="2.4"/>
+        <circle cx="7.5" cy="8.2" r="1.4" fill="#fff"/>
+        <circle cx="12" cy="8.2" r="1.4" fill="#fff"/>
+        <path d="M20 14.5a3.6 3.6 0 0 0-4.6 4.6l-3.8 3.8 2.6 2.6 3.8-3.8a3.6 3.6 0 0 0 4.6-4.6l-2.2 2.2-2.4-2.4z" fill="#fff"/>
+      </svg>
+      <b class="znak-tekst">Sajt <span>Servis</span></b>
+    </a>
+    <div class="veze" id="vezeMeni">
+      <a href="index.html" class="samo-mob">Početna</a>
+      <a href="cene.html">Cene</a>
+      <a href="primeri.html">Primeri</a>
+      <a href="qr-meni.html" aria-current="page">QR meni</a>
+      <a href="pitanja.html">Pitanja</a>
+      <a href="kontakt.html" class="samo-mob">Kontakt</a>
+    </div>
+    <a class="btn mala nav-cta" href="kontakt.html">Zatražite sajt</a>
+    <button type="button" class="hamburger" id="dugmeMeni" aria-expanded="false" aria-controls="vezeMeni" aria-label="Otvorite meni">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</nav>
+
+<main id="glavni">
+<header class="strana-vrh">
+  <div class="wrap">
+    <span class="oznaka-sek pm-frame">QR meni</span>
+    <h1>Meni koji se <span class="nar">ne štampa.</span></h1>
+    <p class="uvod" data-reveal>Gost skenira kod sa stola i otvara vaš meni na telefonu. Kad promenite cene, pošaljete nam poruku — izmena je gotova isti dan, na svim stolovima odjednom.</p>
+    <div class="radnje" data-reveal><a class="btn" href="kontakt.html?paket=qr">Zatražite QR meni</a><a class="btn linija" href="/egzampl/radovi/lipa/">Otvorite primer</a></div>
+  </div>
+</header>
+
+<section id="uzivo" class="siva">
+  <div class="wrap qr-uzivo">
+    <div>
+      <span class="oznaka-sek pm-frame" data-reveal>Probajte odmah</span>
+      <h2 class="h2-veliki" data-reveal="words">Ovo je pravi meni, ne slika.</h2>
+      <p class="uvod-sek" data-reveal>Listajte ga u telefonu desno, promenite jezik ili potražite nešto. Ili skenirajte kod svojim telefonom — tačno ovako ga vide gosti kafića „Lipa” (izmišljen lokal).</p>
+      <div class="qr-kod" data-reveal>
+        <img src="assets/img/qr-lipa.svg" alt="QR kod koji otvara primer menija kafića Lipa" width="112" height="112" loading="lazy">
+        <p><strong>Skenirajte kamerom telefona</strong>Otvara primer menija na vašem telefonu.</p>
+      </div>
+      <div class="qr-cena" data-reveal>
+        <div><div class="b">30 €</div><div class="s">izrada</div></div>
+        <div><div class="b">15 €</div><div class="s">mesečno održavanje</div></div>
+      </div>
+    </div>
+    <div class="telefon-uzivo" data-reveal="scale">
+      <img class="poster" src="assets/img/primeri/lipa-tel.webp" alt="" width="480" height="1040" loading="lazy">
+      <iframe data-src="/egzampl/radovi/lipa/?ugradjeno=1" title="Primer QR menija kafića Lipa" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<section id="sta-dobijate">
+  <div class="wrap">
+    <div class="zaglavlje">
+      <span class="oznaka-sek pm-frame" data-reveal>Šta dobijate</span>
+      <h2 data-reveal="words">Sve što gost traži, bez aplikacije.</h2>
+    </div>
+    <div class="funkcije">
+      <div class="funkcija" data-reveal><h3>Meni po grupama</h3><p>Topli napici, doručak, kolači — gost skače na grupu jednim dodirom, a traka sa grupama ga prati dok lista.</p></div>
+      <div class="funkcija" data-reveal><h3>Tri jezika</h3><p>Srpski, engleski i nemački. Strani gosti ne moraju da pitaju konobara šta piše.</p></div>
+      <div class="funkcija" data-reveal><h3>Pretraga i alergeni</h3><p>Gost ukuca „kafa” ili „bez glutena” i odmah vidi šta može da naruči.</p></div>
+      <div class="funkcija" data-reveal><h3>Izmene isti dan</h3><p>Pošaljete nam poruku ili sliku novog cenovnika — mi ubacimo, vi ne dirate ništa.</p></div>
+      <div class="funkcija" data-reveal><h3>Jedan kod za sve stolove</h3><p>QR kod dobijate digitalno, štampu radite gde vam odgovara. Kod se nikad ne menja.</p></div>
+      <div class="funkcija" data-reveal><h3>Radi na svakom telefonu</h3><p>Bez instaliranja i bez registracije. Učitava se za sekundu i na slabom signalu u bašti.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="poziv-sek">
+  <div class="wrap">
+    <div class="poziv" data-reveal>
+      <div>
+        <h2>Hoćete QR meni do vikenda?</h2>
+        <p>Pošaljite nam fotografiju sadašnjeg menija — pravimo ga za dva dana, a plaćate tek kad ga vidite.</p>
+      </div>
+      <div class="radnje">
+        <a class="btn" href="kontakt.html">Zatražite sajt</a>
+        <a class="btn linija" href="https://wa.me/381621088760" target="_blank" rel="noopener">Pišite na WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="podnozje">
+      <div>
+        <a class="znak" href="index.html"><b class="znak-tekst">Sajt <span>Servis</span></b></a>
+        <p class="moto">Sajtovi i QR meniji za male biznise u Srbiji i regionu. Napravimo sajt, vi ga pogledate, pa odlučite.</p>
+      </div>
+      <div>
+        <h2>Stranice</h2>
+        <ul>
+          <li><a href="cene.html">Cene</a></li>
+          <li><a href="primeri.html">Primeri</a></li>
+          <li><a href="qr-meni.html">QR meni</a></li>
+          <li><a href="pitanja.html">Pitanja</a></li>
+          <li><a href="upitnik.html">Predlog sajta za 2 minuta</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Kontakt</h2>
+        <ul>
+          <li><a href="tel:+381621088760">062&nbsp;108&nbsp;8760</a></li>
+          <li><a href="mailto:sajtservis.rs@gmail.com">sajtservis.rs@gmail.com</a></li>
+          <li><a href="https://wa.me/381621088760" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://instagram.com/sajt_servis.rs" target="_blank" rel="noopener">@sajt_servis.rs</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="podnozje-dno">
+      <span>Sajt Servis — izrada sajtova za male biznise · Srbija i region</span>
+      <span><a href="uslovi.html">Uslovi saradnje i privatnost</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="plutajuce">
+  <button type="button" class="plutajuce-dugme vrh" id="dugmeVrh" aria-label="Nazad na vrh strane">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+  <a class="plutajuce-dugme kontakt" href="https://wa.me/381621088760" target="_blank" rel="noopener" aria-label="Pošaljite poruku na WhatsApp">
+    <svg viewBox="0 0 24 24" fill="#171614" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1a12 12 0 0 1-5.9-5.1c-.4-.7-.7-1.5-.7-2.3 0-.8.4-1.3.6-1.5.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .5.4l.8 1.8c0 .2 0 .3-.1.5l-.4.5c-.1.2-.3.3-.1.6.4.7 1 1.3 1.6 1.8.5.4 1 .6 1.2.7.2.1.4 0 .5-.1l.7-.8c.2-.2.3-.2.5-.1l1.8.9c.2.1.4.2.4.3v.7z"/></svg>
+  </a>
+</div>
+<script defer src="assets/sajt.js"></script>
+<script defer src="assets/premium/vendor/lenis.min.js"></script>
+<script defer src="assets/premium/vendor/gsap.min.js"></script>
+<script defer src="assets/premium/vendor/ScrollTrigger.min.js"></script>
+<script defer src="assets/premium/premium.js"></script>
+</body>
+</html>

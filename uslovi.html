@@ -8,9 +8,9 @@
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,400..800&family=Manrope:wght@400;500;600;800&display=swap">
+<!-- premium-kit -->
+<link rel="stylesheet" href="assets/premium/fonts/fonts.css">
+<link rel="stylesheet" href="assets/premium/premium.css">
 <style>
 :root{--bela:#FFFFFF;--tekst:#141414;--sporedni:#5C5C5C;--ivica:#E5E2DD;
       --narandzasta:#E85A1E;--narandzasta-tamna:#B8430F;--polje:#F7F5F2}
@@ -37,7 +37,7 @@ a{color:var(--narandzasta-tamna)}
 footer{margin-top:44px;padding-top:20px;border-top:1px solid var(--ivica);font-size:13.5px;color:var(--sporedni)}
 </style>
 </head>
-<body>
+<body data-premium="auto">
 <main>
   <div class="vrh"><a class="nazad" href="index.html">← Nazad na sajt</a></div>
   <h1>Uslovi i podaci</h1>
@@ -83,5 +83,9 @@ footer{margin-top:44px;padding-top:20px;border-top:1px solid var(--ivica);font-s
     <p>Sajt Servis · <a href="index.html">sajtservis.github.io</a> · <a href="https://instagram.com/sajt_servis.rs">@sajt_servis.rs</a></p>
   </footer>
 </main>
+<script defer src="assets/premium/vendor/lenis.min.js"></script>
+<script defer src="assets/premium/vendor/gsap.min.js"></script>
+<script defer src="assets/premium/vendor/ScrollTrigger.min.js"></script>
+<script defer src="assets/premium/premium.js"></script>
 </body>
 </html>
