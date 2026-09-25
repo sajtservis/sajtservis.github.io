@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kafe Primer — meni</title>
+<meta name="description" content="Meni — Kafe Primer, Zmaj Jovina 1, Novi Sad">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1F5F4A">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%231F5F4A%22/><text x=%2216%22 y=%2222%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22Georgia%22>K</text></svg>">
+<style>
+:root{
+  --accent:#1F5F4A;
+  --bg:#FAFAF7; --card:#FFFFFF; --ink:#1B1D1C; --muted:#626966; --line:#E4E6E2;
+  --soft:color-mix(in srgb, var(--accent) 10%, #FFFFFF);
+  --accent-ink:var(--accent);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#121413; --card:#1A1D1C; --ink:#ECEEEA; --muted:#9DA4A0; --line:#2A2F2D;
+  --soft:color-mix(in srgb, var(--accent) 22%, #121413);
+  --accent-ink:color-mix(in srgb, var(--accent) 45%, #FFFFFF);
+  color-scheme:dark;
+}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:120px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 var(--sans);padding-bottom:env(safe-area-inset-bottom,0px)}
+.demo{background:var(--ink);color:var(--bg);text-align:center;font-size:.8rem;padding:6px 16px}
+header.top{padding:28px 16px 18px;max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:6px}
+h1{font:600 2rem/1.1 var(--serif);margin:0;letter-spacing:-.01em;text-wrap:balance}
+.sub{color:var(--muted);margin:0;font-size:.95rem}
+.hours{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;color:var(--muted)}
+.hours::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.langs{display:flex;gap:6px;margin-top:8px}
+.langs button{font:600 .8rem var(--sans);letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 12px;min-height:34px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.bar{position:sticky;top:0;z-index:10;background:color-mix(in srgb, var(--bg) 92%, transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.bar-in{max-width:680px;margin:0 auto;padding:10px 16px 0;display:flex;flex-direction:column;gap:8px}
+.search{width:100%;font:16px var(--sans);padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink)}
+.search:focus{outline:2px solid var(--accent);outline-offset:1px}
+nav.cats{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-bottom:8px;margin:0 -16px;padding-inline:16px}
+nav.cats::-webkit-scrollbar{display:none}
+nav.cats a{flex:none;text-decoration:none;color:var(--muted);font-weight:600;font-size:.88rem;padding:6px 12px;border-radius:999px;white-space:nowrap}
+nav.cats a.on{background:var(--soft);color:var(--accent-ink)}
+main{max-width:680px;margin:0 auto;padding:8px 16px 24px}
+section{padding-top:22px}
+h2{font:600 1.35rem/1.2 var(--serif);margin:0 0 2px}
+.note{color:var(--muted);font-size:.85rem;margin:0 0 6px}
+ul.items{list-style:none;margin:8px 0 0;padding:0}
+li.item{padding:12px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;column-gap:14px;row-gap:3px}
+li.item:last-child{border-bottom:0}
+.name{font-weight:600}
+.price{font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.desc{grid-column:1/-1;color:var(--muted);font-size:.9rem}
+.tags{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:5px}
+.tag{font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--soft);color:var(--accent-ink)}
+.tag.al{background:transparent;border:1px solid var(--line);color:var(--muted)}
+.star{color:var(--accent-ink)}
+.empty{color:var(--muted);text-align:center;padding:32px 0}
+footer{max-width:680px;margin:0 auto;padding:12px 16px 40px;display:flex;flex-direction:column;gap:12px;color:var(--muted);font-size:.85rem}
+.wifi{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;color:var(--ink)}
+.wifi code{font:600 .95rem ui-monospace,Menlo,Consolas,monospace}
+.wifi button{font:600 .82rem var(--sans);border:0;min-height:40px;background:var(--accent);color:#fff;border-radius:8px;padding:8px 12px;cursor:pointer}
+.contact{display:flex;flex-wrap:wrap;gap:6px 16px}
+.contact a{color:var(--accent-ink)}
+.made{font-size:.75rem}
+.made a{color:inherit}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
+</style>
+</head>
+<body>
+<div class="demo">Primer QR menija. Lokal je izmišljen. <a href="https://sajtservis.github.io/" style="color:inherit">Sajt Servis</a></div>
+<header class="top">
+  <h1 id="ime"></h1>
+  <p class="sub" id="sub"></p>
+  <span class="hours" id="sati"></span>
+  <div class="langs" id="langs" role="group" aria-label="Jezik / Language"></div>
+</header>
+<div class="bar">
+  <div class="bar-in">
+    <input class="search" id="q" type="search" autocomplete="off" aria-label="Pretraga">
+    <nav class="cats" id="cats" aria-label="Kategorije"></nav>
+  </div>
+</div>
+<main id="meni"></main>
+<footer id="foot"></footer>
+<script id="data" type="application/json">{"slug": "primer", "ime": "Kafe Primer", "podnaslov": {"sr": "Primer QR menija · izmišljen lokal", "en": "Sample QR menu · fictional venue"}, "adresa": "Zmaj Jovina 1, Novi Sad", "telefon": "+381 60 000 0000", "instagram": "sajt_servis.rs", "radno_vreme": {"sr": "Svaki dan 08–24", "en": "Daily 08–24"}, "wifi": "primer2026", "jezici": ["sr", "en"], "valuta": "RSD", "boja": "#1F5F4A", "demo": true, "kategorije": [{"naziv": {"sr": "Kafa", "en": "Coffee"}, "stavke": [{"naziv": {"sr": "Espreso", "en": "Espresso"}, "cena": 170}, {"naziv": {"sr": "Kapućino", "en": "Cappuccino"}, "opis": {"sr": "Dupli espreso i mleko", "en": "Double shot with milk"}, "cena": 240, "alergeni": "M", "preporuka": true}, {"naziv": {"sr": "Domaća kafa", "en": "Turkish-style coffee"}, "cena": 160}, {"naziv": {"sr": "Ledena kafa", "en": "Iced coffee"}, "opis": {"sr": "Sa sladoledom od vanile", "en": "With vanilla ice cream"}, "cena": 320, "alergeni": "M"}]}, {"naziv": {"sr": "Bezalkoholna pića", "en": "Soft drinks"}, "stavke": [{"naziv": {"sr": "Domaća limunada", "en": "Homemade lemonade"}, "opis": {"sr": "0,3 l, sa nanom", "en": "0.3 l, with mint"}, "cena": 290, "tagovi": ["vegan"]}, {"naziv": {"sr": "Ceđena pomorandža", "en": "Fresh orange juice"}, "opis": {"sr": "0,25 l", "en": "0.25 l"}, "cena": 330, "tagovi": ["vegan"]}, {"naziv": {"sr": "Kisela voda", "en": "Sparkling water"}, "opis": {"sr": "0,33 l", "en": "0.33 l"}, "cena": 190, "tagovi": ["vegan"]}]}, {"naziv": {"sr": "Pivo", "en": "Beer"}, "stavke": [{"naziv": {"sr": "Točeno svetlo", "en": "Draught lager"}, "opis": {"sr": "0,5 l", "en": "0.5 l"}, "cena": 320, "alergeni": "G"}, {"naziv": {"sr": "Kraft IPA", "en": "Craft IPA"}, "opis": {"sr": "Lokalna pivara, 0,33 l", "en": "Local brewery, 0.33 l"}, "cena": 450, "alergeni": "G", "preporuka": true}]}, {"naziv": {"sr": "Doručak", "en": "Breakfast"}, "napomena": {"sr": "Služi se do 12h", "en": "Served until noon"}, "stavke": [{"naziv": {"sr": "Omlet sa sirom", "en": "Cheese omelette"}, "opis": {"sr": "Tri jajeta, pečeni hleb", "en": "Three eggs, toast"}, "cena": 590, "alergeni": "J,M,G"}, {"naziv": {"sr": "Ovsena kaša", "en": "Porridge"}, "opis": {"sr": "Biljno mleko, sezonsko voće", "en": "Plant milk, seasonal fruit"}, "cena": 520, "alergeni": "G,O", "tagovi": ["vegan"]}]}], "izmena": "25.09.2026."}</script>
+<script>
+(function(){
+  "use strict";
+  var M = JSON.parse(document.getElementById("data").textContent);
+  var UI = {
+    sr:{trazi:"Pretražite meni…", nema:"Nema stavki za ovu pretragu.", preporuka:"Preporuka", vegan:"Vegansko", wifi:"Wi-Fi lozinka", kopiraj:"Kopiraj", kopirano:"Kopirano",
+        cene:"Cene su u dinarima, sa PDV-om.", alergeni:"Alergeni", izmena:"Poslednja izmena", napravio:"QR meni: "},
+    en:{trazi:"Search the menu…", nema:"Nothing matches your search.", preporuka:"Recommended", vegan:"Vegan", wifi:"Wi-Fi password", kopiraj:"Copy", kopirano:"Copied",
+        cene:"Prices in Serbian dinars (RSD), VAT included.", alergeni:"Allergens", izmena:"Last updated", napravio:"QR menu: "},
+    de:{trazi:"Menü durchsuchen…", nema:"Keine Treffer.", preporuka:"Empfehlung", vegan:"Vegan", wifi:"WLAN-Passwort", kopiraj:"Kopieren", kopirano:"Kopiert",
+        cene:"Preise in Dinar (RSD), inkl. MwSt.", alergeni:"Allergene", izmena:"Zuletzt aktualisiert", napravio:"QR-Menü: "}
+  };
+  var AL = {
+    G:{sr:"gluten",en:"gluten",de:"Gluten"}, M:{sr:"mleko",en:"milk",de:"Milch"}, J:{sr:"jaja",en:"eggs",de:"Eier"},
+    O:{sr:"orašasti plodovi",en:"nuts",de:"Nüsse"}, R:{sr:"riba",en:"fish",de:"Fisch"}, S:{sr:"soja",en:"soy",de:"Soja"},
+    K:{sr:"kikiriki",en:"peanuts",de:"Erdnüsse"}, L:{sr:"celer",en:"celery",de:"Sellerie"}
+  };
+  var langs = M.jezici && M.jezici.length ? M.jezici : ["sr"];
+  var KEY = "meni-" + M.slug + "-jezik";
+  var lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (langs.indexOf(lang) < 0) {
+    var nav = (navigator.language || "sr").slice(0, 2).toLowerCase();
+    lang = ["sr","hr","bs","sh","me"].indexOf(nav) >= 0 ? "sr" : (langs.indexOf(nav) >= 0 ? nav : (langs.indexOf("en") >= 0 ? "en" : langs[0]));
+    if (langs.indexOf(lang) < 0) lang = langs[0];
+  }
+  var q = "";
+  function t(o){ if (o == null) return ""; if (typeof o === "string") return o; return o[lang] || o.sr || o.en || ""; }
+  function u(k){ return (UI[lang] || UI.en)[k]; }
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+  function cena(n){
+    if (typeof n === "string") return esc(n);
+    var s = Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, lang === "en" ? "," : ".");
+    return s + " " + esc(M.valuta || "RSD");
+  }
+  function norm(s){ return String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/đ/g, "dj"); }
+
+  function renderHead(){
+    document.documentElement.lang = lang;
+    document.getElementById("ime").textContent = M.ime;
+    var sub = document.getElementById("sub"); sub.textContent = t(M.podnaslov); sub.hidden = !t(M.podnaslov);
+    var sati = document.getElementById("sati"); sati.textContent = t(M.radno_vreme); sati.hidden = !t(M.radno_vreme);
+    var L = document.getElementById("langs");
+    L.hidden = langs.length < 2;
+    L.innerHTML = langs.map(function(l){ return '<button type="button" data-l="' + l + '" aria-pressed="' + (l === lang) + '">' + l.toUpperCase() + '</button>'; }).join("");
+    document.getElementById("q").placeholder = u("trazi");
+  }
+
+  function matches(s){
+    if (!q) return true;
+    var hay = norm(t(s.naziv) + " " + t(s.opis) + " " + (s.naziv && s.naziv.sr || "") + " " + (s.naziv && s.naziv.en || ""));
+    return hay.indexOf(norm(q)) >= 0;
+  }
+
+  function renderMenu(){
+    var html = "", navh = "", any = false;
+    M.kategorije.forEach(function(k, i){
+      var st = k.stavke.filter(matches);
+      if (!st.length) return;
+      any = true;
+      var id = "k" + i;
+      navh += '<a href="#' + id + '" data-id="' + id + '">' + esc(t(k.naziv)) + '</a>';
+      html += '<section id="' + id + '"><h2>' + esc(t(k.naziv)) + '</h2>' + (k.napomena ? '<p class="note">' + esc(t(k.napomena)) + '</p>' : '') + '<ul class="items">';
+      st.forEach(function(s){
+        var tags = "";
+        if (s.preporuka) tags += '<span class="tag"><span class="star" aria-hidden="true">★</span> ' + u("preporuka") + '</span>';
+        (s.tagovi || []).forEach(function(tg){ if (tg === "vegan") tags += '<span class="tag">' + u("vegan") + '</span>'; });
+        if (s.alergeni) s.alergeni.split(",").forEach(function(a){ a = a.trim(); if (AL[a]) tags += '<span class="tag al" title="' + esc(AL[a][lang] || AL[a].en) + '">' + esc(AL[a][lang] || AL[a].en) + '</span>'; });
+        html += '<li class="item"><span class="name">' + esc(t(s.naziv)) + '</span><span class="price">' + cena(s.cena) + '</span>' +
+          (t(s.opis) ? '<span class="desc">' + esc(t(s.opis)) + '</span>' : '') + (tags ? '<span class="tags">' + tags + '</span>' : '') + '</li>';
+      });
+      html += '</ul></section>';
+    });
+    document.getElementById("meni").innerHTML = any ? html : '<p class="empty">' + u("nema") + '</p>';
+    document.getElementById("cats").innerHTML = navh;
+    var first = document.querySelector("#cats a"); if (first) first.classList.add("on");
+    spy();
+  }
+
+  function renderFoot(){
+    var f = "";
+    if (M.wifi) f += '<div class="wifi"><span>' + u("wifi") + ': <code id="wifipw">' + esc(M.wifi) + '</code></span><button type="button" id="copywifi">' + u("kopiraj") + '</button></div>';
+    f += '<div>' + u("cene") + '</div>';
+    var c = [];
+    if (M.adresa) c.push('<span>' + esc(M.adresa) + '</span>');
+    if (M.telefon) c.push('<a href="tel:' + esc(M.telefon.replace(/\s/g, "")) + '">' + esc(M.telefon) + '</a>');
+    if (M.instagram) c.push('<a href="https://instagram.com/' + esc(M.instagram) + '" target="_blank" rel="noopener">@' + esc(M.instagram) + '</a>');
+    if (c.length) f += '<div class="contact">' + c.join("") + '</div>';
+    if (M.izmena) f += '<div class="made">' + u("izmena") + ': ' + esc(M.izmena) + '</div>';
+    f += '<div class="made">' + u("napravio") + '<a href="https://sajtservis.github.io/" target="_blank" rel="noopener">Sajt Servis</a></div>';
+    document.getElementById("foot").innerHTML = f;
+  }
+
+  var io = null;
+  function spy(){
+    if (io) io.disconnect();
+    if (!("IntersectionObserver" in window)) return;
+    var links = document.querySelectorAll("#cats a");
+    io = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (!e.isIntersecting) return;
+        links.forEach(function(a){
+          var on = a.dataset.id === e.target.id;
+          a.classList.toggle("on", on);
+          if (on && a.scrollIntoView) { var n = document.getElementById("cats"); n.scrollTo({left: a.offsetLeft - 16, behavior: "smooth"}); }
+        });
+      });
+    }, {rootMargin: "-130px 0px -65% 0px"});
+    document.querySelectorAll("main section").forEach(function(s){ io.observe(s); });
+  }
+
+  document.addEventListener("click", function(e){
+    var b = e.target.closest("button");
+    if (!b) return;
+    if (b.dataset.l) { lang = b.dataset.l; try { localStorage.setItem(KEY, lang); } catch (_) {} render(); }
+    if (b.id === "copywifi") {
+      var done = function(){ b.textContent = u("kopirano"); setTimeout(function(){ b.textContent = u("kopiraj"); }, 1500); };
+      if (navigator.clipboard) navigator.clipboard.writeText(M.wifi).then(done, function(){});
+    }
+  });
+  document.getElementById("q").addEventListener("input", function(e){ q = e.target.value.trim(); renderMenu(); });
+  function render(){ renderHead(); renderMenu(); renderFoot(); }
+  render();
+})();
+</script>
+</body>
+</html>
