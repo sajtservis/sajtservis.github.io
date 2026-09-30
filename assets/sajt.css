@@ -541,3 +541,28 @@ section.bez-ivice{border-bottom:0}
 #qr-cena .rad{max-width:560px;width:100%;justify-self:end}
 .kontakt .h3-kompaktan{font-size:22px;margin-bottom:14px}
 .kontakt .brzo{margin-top:0}
+
+/* Ekskluzivna ponuda: pola cene veliko, redovna precrtana */
+.eks{display:inline-block;align-self:flex-start;margin-top:14px;padding:5px 10px;border-radius:999px;background:var(--narandzasta-tamna);color:#fff;font-family:Archivo,sans-serif;font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;line-height:1.2}
+.paket .eks+.cena{margin-top:10px}
+.paket .stara{font-size:14px;color:var(--sporedni);font-weight:600;margin-bottom:18px}
+s{text-decoration-thickness:2px;text-decoration-color:var(--narandzasta)}
+.paket .stara s,.ponuda-k .cena-mala s,.rad-info .cena-rad s,.qr-cena .b s,.bez-cene s{color:var(--sporedni);font-weight:600}
+.ponuda-k .cena-mala s{font-family:Manrope,sans-serif;font-size:16px;letter-spacing:0;margin-left:4px}
+.ponuda-k .cena-mala small{display:block;margin-top:2px}
+.rad-info .cena-rad s{font-family:Manrope,sans-serif;font-size:14px;letter-spacing:0}
+.qr-cena .b s{font-family:Manrope,sans-serif;font-size:16px;margin-left:4px}
+.stara-qr{font-size:14px;color:var(--sporedni);font-weight:600;margin-top:10px}
+.stara-qr .eks{margin:0 8px 0 0;vertical-align:middle}
+.stara-qr s{color:var(--sporedni)}
+.paket .cena small{margin-left:6px}
+.ponuda strong{color:var(--narandzasta-tamna)}
+.bez-odrz{margin-top:34px;border:1px dashed var(--ivica);border-radius:10px;padding:22px 24px;background:var(--bela)}
+.bez-odrz p{font-size:15px;margin-top:6px;max-width:68ch}
+.bez-cene{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0 10px}
+.bez-cene div{border:1px solid var(--ivica);border-radius:8px;padding:12px 14px;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px}
+.bez-cene span{flex-basis:100%;font-size:13.5px;color:var(--sporedni)}
+.bez-cene b{font-family:Archivo,sans-serif;font-weight:800;font-size:24px;letter-spacing:-0.02em}
+.bez-cene s{font-size:14px}
+.bez-odrz .sitno{font-size:13px;color:var(--sporedni)}
+@media (max-width:700px){.bez-cene{grid-template-columns:1fr}.bez-odrz{padding:18px 16px}}
