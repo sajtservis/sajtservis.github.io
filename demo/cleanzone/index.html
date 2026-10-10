@@ -1,352 +1,417 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
+<script>document.documentElement.classList.add('js','pm-pending');setTimeout(function(){document.documentElement.classList.remove('pm-pending')},2500)</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CleanZone Čačak · restauracija farova i detailing</title>
-<meta name="description" content="Restauracija farova, čišćenje klime, ozonizacija i detailing u Čačku. 5,0 na Google-u iz 50 recenzija.">
-<meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#0D1411">
+<title>CleanZone Čačak · restauracija farova · predlog sajta</title>
+<meta name="description" content="Restauracija farova, čišćenje klime, dezinfekcija i ozonizacija u Čačku. 5,0 na 50 recenzija na Google-u. Predlog sajta — nije još objavljen.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0B0D0E">
+<meta name="color-scheme" content="dark">
 <meta property="og:title" content="CleanZone Čačak · predlog sajta">
-<meta property="og:description" content="Farovi kao novi. Restauracija farova, klima, ozonizacija i detailing u Čačku.">
-<meta property="og:type" content="website">
+<meta property="og:description" content="Farovi kao novi. Restauracija farova, klima, dezinfekcija i ozonizacija u Čačku.">
+<meta property="og:image" content="https://sajtservis.github.io/demo/cleanzone/img/og.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%230B0D0E%22/><path d=%22M7 19c3-6 15-6 18 0%22 stroke=%22%2334E08A%22 stroke-width=%223%22 fill=%22none%22 stroke-linecap=%22round%22/><circle cx=%2216%22 cy=%2219%22 r=%223%22 fill=%22%2334E08A%22/></svg>">
+<link rel="preload" href="/egzampl/assets/premium/fonts/archivo-condensed.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/egzampl/assets/premium/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/hero-tel.webp" as="image" media="(max-width: 760px)" fetchpriority="high">
+<link rel="preload" href="img/hero.webp" as="image" media="(min-width: 761px)" fetchpriority="high">
+<link rel="stylesheet" href="/egzampl/assets/premium/fonts/fonts.css">
+<link rel="stylesheet" href="/egzampl/assets/premium/premium.css">
 <style>
-@font-face{font-family:'Archivo';font-style:normal;font-display:swap;font-weight:400 800;src:url(/assets/premium/fonts/archivo.woff2) format('woff2-variations'),url(/assets/premium/fonts/archivo.woff2) format('woff2')}
-@font-face{font-family:'Archivo Black';font-style:normal;font-display:swap;font-weight:400;src:url(/assets/premium/fonts/archivo-black.woff2) format('woff2')}
-@font-face{font-family:'Manrope';font-style:normal;font-display:swap;font-weight:400 800;src:url(/assets/premium/fonts/manrope.woff2) format('woff2-variations'),url(/assets/premium/fonts/manrope.woff2) format('woff2')}
-:root{--bg:#F3F5F1;--ink:#0D1411;--muted:#56615B;--card:#fff;--line:rgba(13,20,17,.11);--acc:#12B76A;--acc-d:#08824A;--acc-l:#DDF6E8;--dark:#0D1411;--dark2:#141C18}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--ink);font:400 17px/1.6 Manrope,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img,svg{display:block;max-width:100%}
+:root{--bg:#0B0D0E;--panel:#121518;--panel2:#191D21;--line:rgba(255,255,255,.1);--tekst:#F1F3F2;--siv:#9FA7AC;--acc:#34E08A;--acc2:#5BF0A4;--zuta:#E9C46A;
+  --pm-accent:var(--acc);--pm-line:var(--line)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{background:var(--bg);overflow-x:clip}
+body{background:var(--bg);color:var(--tekst);font:400 16.5px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+[id]{scroll-margin-top:76px}
+img{display:block;max-width:100%}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:6px}
-.w{max-width:1140px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:'Archivo Black',Archivo,sans-serif;font-weight:400;letter-spacing:-.025em;line-height:1}
-.kick{display:inline-flex;align-items:center;gap:10px;font:800 13px/1 Archivo,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--acc-d)}
-.kick::before{content:"";width:22px;height:3px;border-radius:2px;background:var(--acc)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 24px;border-radius:14px;font:800 16px/1 Manrope,sans-serif;text-decoration:none;border:2px solid transparent;transition:transform .15s,background .15s,box-shadow .15s;cursor:pointer;white-space:nowrap}
-.btn:hover{transform:translateY(-2px)}
-.btn svg{width:20px;height:20px;flex:none}
-.btn-g{background:var(--acc);color:#fff;box-shadow:0 10px 24px -10px rgba(18,183,106,.7)}
-.btn-g:hover{background:#10a660}
-.btn-o{border-color:var(--line);background:#fff;color:var(--ink)}
-.btn-d{background:var(--ink);color:#fff}
-/* demo banner */
-.demo{background:#0D1411;color:#CFE9DB;font-size:13.5px;line-height:1.45;text-align:center;padding:9px 16px}
-.demo b{color:#fff}
-/* header */
-header{position:sticky;top:0;z-index:40;background:rgba(243,245,241,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;gap:20px;height:68px}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 22px/1 Archivo,sans-serif;letter-spacing:-.02em}
-.logo i{width:36px;height:36px;border-radius:10px;background:var(--ink);display:grid;place-items:center;font-style:normal}
-.logo i svg{width:22px;height:22px}
-.logo .lt{font-weight:800}.logo span{color:var(--acc-d)}
-.nav nav{display:flex;gap:26px;margin-left:auto;font-weight:700;font-size:15px}
-.nav nav a{text-decoration:none;color:var(--muted)}
-.nav nav a:hover{color:var(--ink)}
-.nav .btn{min-height:44px;padding:0 16px;font-size:15px;border-radius:12px}
-@media(max-width:860px){.nav nav{display:none}.nav .btn{margin-left:auto}}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+h1,h2,h3{font-family:'Archivo Condensed',Archivo,system-ui,sans-serif;font-weight:800;text-transform:uppercase;line-height:.92;letter-spacing:-0.01em}
+.w{max-width:1240px;margin:0 auto;padding-inline:clamp(18px,4vw,40px)}
+.oz{display:inline-flex;align-items:center;gap:10px;font:700 12.5px/1 Inter,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--acc)}
+.oz::before{content:"";width:26px;height:2px;background:var(--acc)}
+.dugme{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:4px;border:2px solid var(--acc);background:var(--acc);color:#04140B;
+  font:800 15px/1 Inter,sans-serif;letter-spacing:.02em;text-decoration:none;cursor:pointer;transition:transform .15s,background .15s,color .15s}
+.dugme:hover{background:var(--acc2);transform:translateY(-2px)}
+.dugme.obrub{background:transparent;color:var(--tekst);border-color:rgba(255,255,255,.35)}
+.dugme.obrub:hover{border-color:var(--tekst);background:rgba(255,255,255,.06)}
+.dugme svg{width:19px;height:19px;flex:none}
+
+/* traka predloga */
+.predlog{position:relative;z-index:90;background:#050606;color:#DCE2DF;font:600 13px/1.35 Manrope,Inter,system-ui,sans-serif;border-bottom:1px solid var(--line)}
+.predlog .in{max-width:1240px;margin:0 auto;padding:9px clamp(18px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:8px 18px;flex-wrap:wrap}
+.predlog .t{display:flex;align-items:center;gap:8px;min-width:0}
+.predlog .t::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--acc);flex:none}
+.predlog a{color:var(--acc);text-decoration:none;white-space:nowrap}
+.predlog a:hover{text-decoration:underline}
+@media(max-width:560px){.predlog .sakri{display:none}.predlog .in{flex-wrap:nowrap}.predlog .t{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+.predlog a{padding:6px 0}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:60;background:rgba(11,13,14,.84);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .w{display:flex;align-items:center;gap:24px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:900 25px/1 'Archivo Condensed',sans-serif;letter-spacing:.03em}
+.logo b{color:var(--acc);font-weight:900}
+.logo svg{width:32px;height:32px}
+.nav-veze{display:flex;gap:26px;margin-left:auto;font-weight:600;font-size:15px}
+.nav-veze a{text-decoration:none;color:var(--siv)}
+.nav-veze a:hover{color:var(--tekst)}
+.nav .dugme{min-height:42px;padding:0 16px;font-size:14px}
+@media(max-width:860px){.nav-veze{display:none}.nav .dugme{margin-left:auto}}
+
 /* hero */
-.hero{padding:44px 0 30px}
-.hero .w{display:grid;grid-template-columns:1.02fr 1fr;gap:48px;align-items:center}
-.rate{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px 8px 10px;font-weight:700;font-size:14.5px;box-shadow:0 6px 18px -12px rgba(0,0,0,.3)}
-.rate .st{color:#F2A900;letter-spacing:2px;font-size:15px}
-.rate b{font-weight:800}
-.hero h1{font-size:clamp(52px,6.8vw,94px);margin:22px 0 18px}
-.hero h1 span{display:block;white-space:nowrap}
-.hero h1 em{font-style:normal;color:var(--acc)}
-.lead{font-size:19px;line-height:1.55;color:var(--muted);max-width:30ch}
-.lead b{color:var(--ink)}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.addr{display:flex;align-items:center;gap:8px;margin-top:18px;font-size:14.5px;color:var(--muted);font-weight:600}
-.addr svg{width:18px;height:18px;color:var(--acc-d)}
-/* before/after */
-.ba{position:relative;border-radius:28px;overflow:hidden;background:#0F1513;box-shadow:0 40px 80px -40px rgba(13,20,17,.65);aspect-ratio:600/420;touch-action:pan-y;user-select:none;-webkit-user-select:none}
-.ba svg{position:absolute;inset:0;width:100%;height:100%}
-.ba .pre{clip-path:inset(0 calc(100% - var(--x,50%)) 0 0)}
-.ba .div{position:absolute;top:0;bottom:0;left:var(--x,50%);width:3px;margin-left:-1.5px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.15)}
-.ba .knob{position:absolute;top:50%;left:50%;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.35)}
-.ba .knob svg{position:static;width:26px;height:26px}
-.ba .lbl{position:absolute;top:16px;padding:7px 12px;border-radius:999px;font:800 12px/1 Archivo,sans-serif;letter-spacing:.14em;background:rgba(13,20,17,.72);color:#fff}
-.ba .lbl.l{left:16px}.ba .lbl.r{right:16px;background:var(--acc)}
-.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
-.bacap{margin-top:12px;font-size:13.5px;color:var(--muted);text-align:center}
-@media(max-width:860px){.hero{padding:30px 0 20px}.hero .w{grid-template-columns:1fr;gap:30px}.lead{max-width:none}}
-/* stats */
-.stats{padding:26px 0 10px}
-.stats .w{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.stat{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 22px}
-.stat b{display:block;font:400 38px/1 'Archivo Black',sans-serif;letter-spacing:-.03em}
-.stat b em{font-style:normal;color:#F2A900;font-size:30px}
-.stat span{display:block;margin-top:8px;font-size:14.5px;color:var(--muted);font-weight:600}
-@media(max-width:700px){.stats .w{grid-template-columns:1fr 1fr}.stat:last-child{grid-column:1/-1}.stat b{font-size:32px}}
-/* sections */
-section.s{padding:84px 0}
-.sh{max-width:720px;margin-bottom:38px}
-.sh h2{font-size:clamp(38px,5.6vw,62px);margin-top:14px}
-.sh p{margin-top:16px;color:var(--muted);font-size:18px}
-/* services */
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.sv{position:relative;background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px 28px 24px;display:flex;flex-direction:column;gap:12px;overflow:hidden}
-.sv.top{background:var(--dark);color:#fff;border-color:transparent}
-.sv .ic{width:52px;height:52px;border-radius:14px;background:var(--acc-l);display:grid;place-items:center;color:var(--acc-d)}
-.sv.top .ic{background:rgba(18,183,106,.18);color:#5BE3A2}
-.sv .ic svg{width:28px;height:28px}
-.sv h3{font-size:27px;letter-spacing:-.02em}
-.sv p{color:var(--muted);font-size:16px}
-.sv.top p{color:#B8C7BF}
-.sv .pr{margin-top:auto;padding-top:14px;border-top:1px dashed var(--line);display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:15px}
-.sv.top .pr{border-color:rgba(255,255,255,.16)}
-.sv .pr span{color:var(--muted)}
-.sv.top .pr span{color:#B8C7BF}
-.sv .tag{position:absolute;top:22px;right:22px;background:var(--acc);color:#fff;font:800 11.5px/1 Archivo,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:7px 10px;border-radius:999px}
-.note{margin-top:16px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;border:2px dashed rgba(18,183,106,.45);border-radius:20px;padding:18px 22px;background:rgba(18,183,106,.06);font-weight:600;color:#2C3A33}
-@media(max-width:760px){.grid{grid-template-columns:1fr}}
-/* reviews */
-.rev{background:var(--dark);color:#fff}
-.rev .kick{color:#5BE3A2}.rev .kick::before{background:#5BE3A2}
-.rev .sh p{color:#B8C7BF}
-.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.rc{background:var(--dark2);border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:16px}
-.rc .st{color:#F2A900;letter-spacing:3px}
-.rc q{quotes:none;font-size:17.5px;line-height:1.55;color:#E7EFEA}
-.rc .who{margin-top:auto;display:flex;align-items:center;gap:12px;font-weight:700;font-size:15px}
-.rc .who i{width:38px;height:38px;border-radius:50%;background:#22302A;display:grid;place-items:center;font-style:normal;font-weight:800;color:#5BE3A2}
-.rc .who small{display:block;color:#8FA197;font-weight:600;font-size:13px}
-.marq{margin-top:22px;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.marq div{display:flex;gap:12px;width:max-content;animation:mq 38s linear infinite}
-.marq span{white-space:nowrap;border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:10px 18px;font-weight:600;font-size:15px;color:#CFDCD5}
-.marq span b{color:#F2A900;margin-right:6px}
-@keyframes mq{to{transform:translateX(-50%)}}
-.src{margin-top:22px;font-size:14px;color:#8FA197}
-.src a{color:#5BE3A2}
-@media(max-width:900px){.rgrid{grid-template-columns:1fr}}
-/* steps */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
-.step{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px}
-.step b{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--ink);color:#fff;font:400 20px/1 'Archivo Black',sans-serif}
-.step h3{font-size:24px;margin:18px 0 8px;letter-spacing:-.02em}
-.step p{color:var(--muted);font-size:16px}
-.coffee{margin-top:16px;display:flex;align-items:center;gap:14px;background:var(--acc-l);border-radius:20px;padding:18px 22px;font-weight:700}
-.coffee svg{width:28px;height:28px;color:var(--acc-d);flex:none}
-@media(max-width:860px){.steps{grid-template-columns:1fr}}
-/* contact */
-.ct{display:grid;grid-template-columns:1fr 1.15fr;gap:20px;align-items:stretch}
-.cbox{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:20px}
-.row{display:flex;gap:14px;align-items:flex-start}
-.row .ic{width:44px;height:44px;border-radius:12px;background:var(--acc-l);color:var(--acc-d);display:grid;place-items:center;flex:none}
-.row .ic svg{width:22px;height:22px}
-.row small{display:block;color:var(--muted);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
-.row a,.row span{font-weight:700;font-size:18px;text-decoration:none}
-.row .ph{color:var(--muted);font-weight:600;font-size:16px;border:1px dashed var(--line);border-radius:10px;padding:6px 10px;display:inline-block;margin-top:4px}
-.map{border-radius:24px;overflow:hidden;border:1px solid var(--line);min-height:340px;background:#e6ebe7}
-.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
-@media(max-width:860px){.ct{grid-template-columns:1fr}}
-/* final cta */
-.fin{padding:20px 0 90px}
-.finbox{background:var(--acc);color:#fff;border-radius:32px;padding:48px 40px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;position:relative;overflow:hidden}
-.finbox h2{font-size:clamp(34px,5vw,56px);max-width:14ch}
-.finbox .btn-d{min-height:58px}
-.finbox .btn-w{background:#fff;color:var(--ink)}
-footer{border-top:1px solid var(--line);padding:28px 0 110px;font-size:14px;color:var(--muted)}
-footer .w{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
-footer a{color:var(--acc-d);font-weight:700}
-/* sticky mobile bar */
-.mbar{position:fixed;left:10px;right:10px;bottom:10px;z-index:50;display:none;gap:8px;padding:8px;border-radius:18px;background:rgba(13,20,17,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 14px 30px rgba(0,0,0,.35);transform:translateY(130%);transition:transform .3s}
-.mbar.show{transform:none}
-.mbar .btn{flex:1;min-height:50px;font-size:15.5px;padding:0 10px}
-.mbar .btn-wa{background:#1FAF5A;color:#fff}
-@media(max-width:860px){.mbar{display:flex}}
-/* reveal */
-.rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
-.rv.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.marq div{animation:none}html{scroll-behavior:auto}}
+.hero{position:relative;min-height:min(94vh,900px);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero-slika{position:absolute;inset:0;z-index:-2}
+.hero-slika img{width:100%;height:100%;object-fit:cover;object-position:62% 45%}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(11,13,14,.92) 0%,rgba(11,13,14,.55) 38%,rgba(11,13,14,0) 62%),linear-gradient(180deg,rgba(11,13,14,0) 55%,var(--bg) 100%)}
+.hero .w{width:100%;padding-block:clamp(60px,10vh,120px) clamp(36px,6vh,64px)}
+.ocena{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;background:rgba(11,13,14,.72);border:1px solid var(--line);font-weight:700;font-size:14px;backdrop-filter:blur(6px)}
+.ocena .z{color:var(--zuta);letter-spacing:1px;font-size:13px}
+.hero h1{margin-top:22px;font-size:clamp(64px,13vw,190px);max-width:9ch}
+.hero h1 em{font-style:normal;color:var(--acc);display:block}
+.hero .uvod{margin-top:22px;max-width:44ch;font-size:clamp(17px,1.5vw,20px);color:#D3D9D6}
+.hero .radnje{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
+.cinjenice{margin-top:clamp(40px,7vh,72px);display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);max-width:860px}
+.cinjenice div{padding:18px 18px 0 0;font-size:14.5px;color:var(--siv)}
+.cinjenice b{display:block;color:var(--tekst);font:800 22px/1.05 'Archivo Condensed',sans-serif;text-transform:uppercase;letter-spacing:.01em;margin-bottom:4px}
+.cinjenice b span{color:var(--acc)}
+.ilu{position:absolute;right:clamp(18px,4vw,40px);bottom:18px;font:600 11.5px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.42)}
+@media(max-width:760px){
+  .hero{min-height:auto;display:block}
+  .hero-slika{position:relative;inset:auto;height:75vw;max-height:520px;margin-bottom:-12vw}
+  .hero-slika img{object-position:50% 64%}
+  .hero::before{background:linear-gradient(180deg,rgba(11,13,14,0) 0%,rgba(11,13,14,0) 38%,var(--bg) 62%)}
+  .hero .w{padding-top:0}
+  .cinjenice{grid-template-columns:1fr}.cinjenice div{padding:14px 0;border-bottom:1px solid var(--line)}
+  .ilu{top:12px;bottom:auto}
+}
+
+/* traka */
+.traka{background:var(--acc);color:#04140B;padding:16px 0;font:900 clamp(22px,3vw,34px)/1 'Archivo Condensed',sans-serif;text-transform:uppercase;--pm-gap:1.6rem;--pm-speed:32s}
+.traka span{display:inline-flex;align-items:center;gap:1.6rem}
+.traka span::after{content:"";width:.5em;height:.5em;background:#04140B;transform:rotate(45deg)}
+
+section{padding-block:clamp(80px,11vw,150px)}
+.zag{display:grid;grid-template-columns:1fr 1fr;gap:24px 60px;align-items:end;margin-bottom:clamp(40px,6vw,72px)}
+.zag h2{font-size:clamp(46px,7.4vw,108px);margin-top:16px}
+.zag h2 em{font-style:normal;color:var(--acc)}
+.zag p{color:var(--siv);font-size:17px;max-width:44ch}
+@media(max-width:860px){.zag{grid-template-columns:1fr}}
+
+/* pre/posle scrub */
+.pp{padding-bottom:0}
+.pm-scrub{--pm-pin:230vh}
+.pm-scrub-pin{flex-direction:column;gap:22px;padding-top:68px}
+.pm-scrub canvas,.pm-scrub .pm-scrub-poster{width:min(1180px,94vw);height:auto;-webkit-mask-image:radial-gradient(ellipse 64% 68% at 50% 50%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 64% 68% at 50% 50%,#000 55%,transparent 100%)}
+@media(max-width:760px){.pm-scrub canvas,.pm-scrub .pm-scrub-poster{width:150vw;max-width:none}.pp-oznake{width:calc(100vw - 36px)}}
+.pp-oznake{display:flex;justify-content:space-between;width:min(1180px,94vw);font:800 clamp(18px,2.4vw,26px)/1 'Archivo Condensed',sans-serif;text-transform:uppercase;letter-spacing:.04em}
+.pp-oznake span:first-child{color:var(--zuta)}
+.pp-oznake span:last-child{color:var(--acc)}
+.pp-oznake i{flex:1;height:2px;margin:auto 18px;background:linear-gradient(90deg,var(--zuta),var(--acc));opacity:.6}
+.pp-nap{font-size:13.5px;color:var(--siv);text-align:center;max-width:60ch;padding-inline:18px}
+
+/* usluge */
+.usluge{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+@media(max-width:1060px){.usluge{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.usluge{grid-template-columns:1fr}.usluga{padding:22px 20px;display:grid;grid-template-columns:auto 1fr;gap:0 14px}.usluga svg{width:30px;height:30px;grid-row:1/span 3}.usluga h3{margin-top:2px;font-size:26px}.usluga p{margin-top:6px}.usluga .od{margin-top:10px}.usluga .br{top:18px;right:18px}.usluga>*:not(svg):not(.br){grid-column:2}.usluga .tag{justify-self:start}}
+.usluga{background:var(--bg);padding:30px 28px 28px;position:relative;transition:background .25s}
+.usluga:hover{background:var(--panel)}
+.usluga .br{position:absolute;top:24px;right:26px;font:800 15px/1 'Archivo Condensed',sans-serif;color:#4B5257}
+.usluga svg{width:38px;height:38px;color:var(--acc)}
+.usluga h3{margin-top:22px;font-size:30px}
+.usluga p{margin-top:10px;color:var(--siv);font-size:15.5px}
+.usluga .od{margin-top:18px;font-weight:800;font-size:15px}
+.usluga .od span{color:var(--acc)}
+.usluga.glavna{background:var(--panel)}
+.usluga.glavna .tag{display:inline-block;margin-top:14px;font:700 11.5px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#04140B;background:var(--acc);padding:6px 9px;border-radius:3px}
+.napomena{margin-top:20px;color:var(--siv);font-size:14px}
+
+/* citat */
+.citat{background:var(--panel);text-align:left}
+.citat blockquote{font:800 clamp(52px,9.6vw,150px)/.9 'Archivo Condensed',sans-serif;text-transform:uppercase;letter-spacing:-0.01em;max-width:12ch}
+.citat blockquote em{font-style:normal;color:var(--acc)}
+.citat .navod{display:block;color:var(--acc);font:900 clamp(90px,14vw,200px)/.8 'Archivo Condensed',sans-serif;margin-bottom:.02em}
+.citat .ko{margin-top:28px;display:flex;align-items:center;gap:14px;color:var(--siv);font-size:15px}
+.citat .ko b{color:var(--tekst)}
+.citat .ko .z{color:var(--zuta);letter-spacing:1px}
+
+/* recenzije */
+.rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:960px){.rec-grid{grid-template-columns:1fr}}
+.rec{border:1px solid var(--line);border-radius:8px;padding:26px 24px;background:linear-gradient(180deg,var(--panel),var(--bg));display:flex;flex-direction:column;gap:18px}
+.rec .z{color:var(--zuta);letter-spacing:2px;font-size:15px}
+.rec p{font-size:16.5px;color:#DDE3E0;flex:1}
+.rec .ko{display:flex;align-items:center;gap:12px;font-size:14.5px}
+.rec .ko i{width:38px;height:38px;border-radius:50%;background:var(--panel2);border:1px solid var(--line);display:grid;place-items:center;font:800 16px/1 'Archivo Condensed',sans-serif;font-style:normal;color:var(--acc)}
+.rec .ko small{display:block;color:var(--siv);font-size:13px}
+.kratke{margin-top:clamp(36px,5vw,56px);border-block:1px solid var(--line);padding:18px 0;font:700 clamp(17px,1.8vw,21px)/1.2 Inter,sans-serif;color:#C9D0CD;--pm-gap:2.6rem;--pm-speed:60s}
+.kratke span{display:inline-flex;align-items:center;gap:2.6rem}
+.kratke span::after{content:"★";color:var(--zuta);font-size:.8em}
+.izvor{margin-top:16px;font-size:13.5px;color:var(--siv)}
+.izvor a{color:var(--acc)}
+
+/* broj blok */
+.broj{background:var(--acc);color:#04140B;padding-block:clamp(56px,8vw,100px)}
+.broj .w{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,64px);align-items:center}
+@media(max-width:760px){.broj .w{grid-template-columns:1fr}}
+.broj .veliko{font:900 clamp(130px,21vw,280px)/.8 'Archivo Condensed',sans-serif;letter-spacing:-0.03em;font-variant-numeric:tabular-nums}
+.broj h2{font-size:clamp(34px,4.6vw,64px)}
+.broj p{margin-top:14px;font-size:17px;max-width:52ch;color:#0E2A1A}
+
+/* koraci */
+.koraci{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+@media(max-width:960px){.koraci{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.koraci{grid-template-columns:1fr}}
+.korak{padding:26px 24px 0 0;border-top:2px solid var(--line);position:relative}
+.korak::before{content:"";position:absolute;left:0;top:-2px;width:48px;height:2px;background:var(--acc)}
+.korak .br{font:900 76px/1 'Archivo Condensed',sans-serif;color:transparent;-webkit-text-stroke:1.5px #59626A}
+.korak h3{font-size:28px;margin-top:10px}
+.korak p{margin-top:8px;color:var(--siv);font-size:15.5px;max-width:30ch}
+@media(max-width:560px){.korak{padding-bottom:26px}}
+
+/* foto traka */
+.foto{position:relative;height:min(80vh,740px);overflow:hidden;padding:0;display:flex;align-items:center;isolation:isolate}
+.foto .slika{position:absolute;inset:-12% 0;z-index:-2}
+.foto .slika img{width:100%;height:100%;object-fit:cover;object-position:70% 50%}
+.foto::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(11,13,14,.92),rgba(11,13,14,.4) 62%,rgba(11,13,14,.1))}
+.foto .w{width:100%}
+.foto h2{font-size:clamp(52px,9vw,140px);max-width:9ch}
+.foto h2 em{font-style:normal;color:var(--acc)}
+.foto .radnje{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:760px){.foto::before{background:linear-gradient(180deg,rgba(11,13,14,.25),rgba(11,13,14,.92) 70%)}.foto{align-items:flex-end;padding-bottom:48px}.foto .slika img{object-position:62% 40%}}
+
+/* kontakt */
+.kontakt-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px)}
+@media(max-width:900px){.kontakt-grid{grid-template-columns:1fr}}
+.adresa{font-size:18px}
+.adresa b{display:block;font:800 clamp(44px,6vw,72px)/.95 'Archivo Condensed',sans-serif;text-transform:uppercase;margin-bottom:8px}
+.adresa a{color:var(--acc);font-weight:700;text-decoration:none}
+.kont-lista{list-style:none;margin-top:26px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.kont-lista li{display:flex;justify-content:space-between;gap:16px;padding:15px 20px;border-top:1px solid var(--line);font-size:16px}
+.kont-lista li:first-child{border-top:0}
+.kont-lista span:first-child{color:var(--siv)}
+.kont-lista a{text-decoration:none;font-weight:700}
+.kont-lista .ceka{color:var(--siv);font-style:italic}
+.kontakt-radnje{margin-top:24px;display:flex;gap:10px;flex-wrap:wrap}
+.mapa{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#101315;min-height:400px;text-decoration:none;display:block}
+.mapa svg{position:absolute;inset:0;width:100%;height:100%}
+.mapa .igla{position:absolute;left:52%;top:48%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center}
+.mapa .igla span{background:var(--acc);color:#04140B;font:800 14px/1 Inter,sans-serif;padding:9px 12px;border-radius:4px;white-space:nowrap;box-shadow:0 10px 24px -8px rgba(0,0,0,.6)}
+.mapa .igla i{width:14px;height:14px;background:var(--acc);transform:rotate(45deg);margin-top:-8px}
+.mapa .otvori{position:absolute;left:14px;bottom:14px;background:rgba(11,13,14,.85);padding:9px 13px;border-radius:4px;font-weight:700;font-size:14px}
+
+footer{border-top:1px solid var(--line);padding-block:34px 110px;color:var(--siv);font-size:14px}
+footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--tekst)}
+@media(min-width:861px){footer{padding-bottom:34px}}
+
+/* mobilna traka */
+.mob{position:fixed;left:10px;right:10px;bottom:10px;z-index:70;display:none;grid-template-columns:1.25fr 1.25fr 1fr;gap:6px;padding:6px;border-radius:10px;background:rgba(18,21,24,.94);backdrop-filter:blur(10px);border:1px solid var(--line)}
+.mob a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border-radius:6px;text-decoration:none;font-weight:800;font-size:14.5px;background:var(--panel2)}
+.mob a:first-child{background:var(--acc);color:#04140B}
+.mob svg{width:18px;height:18px}
+@media(max-width:860px){.mob{display:grid}}
+@media (prefers-reduced-motion:reduce){.dugme:hover{transform:none}}
 </style>
 </head>
 <body>
-<div class="demo">Predlog sajta koji je za <b>CleanZone Čačak</b> napravio Sajt Servis. Nije još objavljen.</div>
-<header>
-  <div class="w nav">
-    <a class="logo" href="#" aria-label="CleanZone Čačak, početak"><i><svg viewBox="0 0 24 24" fill="none" stroke="#5BE3A2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15c1.5-5 5-8 9-8s7.5 3 9 8"/><path d="M7 15l2.2-3.2M12 15v-4M17 15l-2.2-3.2"/><path d="M3 18h18"/></svg></i><b class="lt">Clean<span>Zone</span></b></a>
-    <nav aria-label="Glavni meni"><a href="#usluge">Usluge</a><a href="#recenzije">Recenzije</a><a href="#kako">Kako radimo</a><a href="#kontakt">Kontakt</a></nav>
-    <a class="btn btn-d" href="tel:+381604131141"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg>Pozovite</a>
+<div class="predlog"><div class="in"><span class="t">Predlog sajta za CleanZone Čačak<span class="sakri">&nbsp;· nije još objavljen</span></span><a href="https://sajtservis.github.io/">Izradio Sajt Servis</a></div></div>
+<div class="pm-progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="w">
+    <a class="logo" href="#" aria-label="CleanZone — na vrh">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#34E08A"/><path d="M6.5 19.5c3.2-6.5 15.8-6.5 19 0" stroke="#04140B" stroke-width="2.8" fill="none" stroke-linecap="round"/><circle cx="16" cy="19.5" r="3.2" fill="#04140B"/><path d="M9 24.5h14" stroke="#04140B" stroke-width="2.4" stroke-linecap="round"/></svg>CLEAN<b>ZONE</b>
+    </a>
+    <nav class="nav-veze" aria-label="Sekcije">
+      <a href="#usluge">Usluge</a><a href="#pre-posle">Pre i posle</a><a href="#recenzije">Recenzije</a><a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="dugme" href="tel:+381604131141"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.4 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>060 413 1141</a>
   </div>
 </header>
 
 <main>
-<section class="hero">
+<section class="hero" aria-labelledby="naslov">
+  <div class="hero-slika"><picture><source media="(max-width: 760px)" srcset="img/hero-tel.webp" width="1200" height="900"><img src="img/hero.webp" alt="Restauriran far sa upaljenim LED svetlom, 3D ilustracija" width="1920" height="1080" fetchpriority="high"></picture></div>
+  <span class="ilu" aria-hidden="true">3D ilustracija</span>
   <div class="w">
+    <span class="ocena"><span class="z" aria-hidden="true">★★★★★</span>5,0 · 50 recenzija na Google-u</span>
+    <h1 id="naslov">Farovi <em>kao novi.</em></h1>
+    <p class="uvod" data-reveal data-reveal-delay=".2">Restauracija farova, čišćenje klime, dezinfekcija i ozonizacija. Bosanska 19, Čačak.</p>
+    <div class="radnje" data-reveal data-reveal-delay=".3">
+      <a class="dugme" href="tel:+381604131141">Pozovite i zakažite</a>
+      <a class="dugme obrub" href="https://wa.me/381604131141?text=Zdravo%2C%20%C5%A1aljem%20sliku%20farova." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.8 11.9 11.9 0 004.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 001.8-1.3 2.2 2.2 0 00.1-1.3c0-.1-.2-.2-.4-.3z"/></svg>Pošaljite sliku farova</a>
+    </div>
+    <div class="cinjenice" data-reveal data-reveal-delay=".4">
+      <div><b><span>5,0</span> na Google-u</b>Svih 50 recenzija sa pet zvezdica.</div>
+      <div><b>Procena preko slike</b>Slikajte far i pošaljite na WhatsApp.</div>
+      <div><b>U vašem terminu</b>Dogovor koji vama odgovara.</div>
+    </div>
+  </div>
+</section>
+
+<div class="traka" data-marquee aria-hidden="true">
+  <div><span>Restauracija farova</span><span>Čišćenje klime</span><span>Dezinfekcija</span><span>Ozonizacija</span><span>Detailing</span><span>Bosanska 19, Čačak</span></div>
+</div>
+
+<section id="usluge" aria-labelledby="h-usluge">
+  <div class="w">
+    <div class="zag">
+      <div><span class="oz" data-reveal>Usluge</span><h2 id="h-usluge" data-reveal="words">Šta radimo</h2></div>
+      <p data-reveal>Najviše nas zovu zbog farova, a auto može da dobije i čistu klimu i svežu kabinu u istom dolasku.</p>
+    </div>
+    <div class="usluge">
+      <article class="usluga glavna" data-reveal><span class="br">01</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 12c2.2-4.6 7-6.5 11.5-5.6L21 8v8l-6.5 1.6C10 18.5 5.2 16.6 3 12z"/><circle cx="11" cy="12" r="2.6"/><path d="M17 10.5v3"/></svg>
+        <h3>Restauracija farova</h3><p>Mutni i požuteli farovi postaju providni, uz savet kako da duže ostanu takvi.</p><span class="tag">Najtraženije</span><p class="od">Cena: <span>po dogovoru</span></p></article>
+      <article class="usluga" data-reveal data-reveal-delay=".08"><span class="br">02</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 2v20M4.9 7l14.2 10M4.9 17L19.1 7"/><path d="M9.5 3.5L12 6l2.5-2.5M9.5 20.5L12 18l2.5 2.5"/></svg>
+        <h3>Čišćenje klime</h3><p>Čišćenje i dezinfekcija sistema, bez neprijatnog mirisa kad uključite ventilaciju.</p><p class="od">Cena: <span>po dogovoru</span></p></article>
+      <article class="usluga" data-reveal data-reveal-delay=".16"><span class="br">03</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="8" cy="9" r="3"/><circle cx="16.5" cy="7" r="2"/><circle cx="15" cy="15.5" r="4"/><circle cx="6.5" cy="17" r="1.6"/></svg>
+        <h3>Dezinfekcija i ozonizacija</h3><p>Brz tretman kabine protiv neprijatnih mirisa i bakterija. Razlika se oseti čim sednete.</p><p class="od">Cena: <span>po dogovoru</span></p></article>
+      <article class="usluga" data-reveal data-reveal-delay=".24"><span class="br">04</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l1.8 4.6L18.5 9l-4.7 1.4L12 15l-1.8-4.6L5.5 9l4.7-1.4z"/><path d="M18.5 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg>
+        <h3>Detailing i čišćenje</h3><p>Pedantno čišćenje spolja i unutra, do poslednjeg detalja.</p><p class="od">Cena: <span>po dogovoru</span></p></article>
+    </div>
+    <p class="napomena">Cene i spisak usluga upisujem kad ih pošaljete. Sve se menja kad god kažete.</p>
+  </div>
+</section>
+
+<section id="pre-posle" class="pp" aria-labelledby="h-pp">
+  <div class="w">
+    <div class="zag">
+      <div><span class="oz" data-reveal>Restauracija farova</span><h2 id="h-pp" data-reveal="words">Od žutog <em>do kristalnog</em></h2></div>
+      <p data-reveal>Požuteo, mutan far smanjuje svetlo noću i stari ceo auto. Skrolujte i pogledajte šta se dešava kad ga obradimo.</p>
+    </div>
+  </div>
+  <div class="pm-scrub" data-scrub-src="img/pp/f-{i}.webp" data-scrub-count="48" data-scrub-pad="2" aria-hidden="true">
+    <div class="pm-scrub-pin">
+      <div class="pp-oznake"><span>Pre</span><i></i><span>Posle</span></div>
+      <img class="pm-scrub-poster" src="img/pp/f-00.webp" alt="" width="1200" height="720">
+      <canvas></canvas>
+      <p class="pp-nap">3D ilustracija. Na pravom sajtu ovde idu vaše slike farova pre i posle obrade.</p>
+    </div>
+  </div>
+</section>
+
+<section class="citat" aria-label="Recenzija">
+  <div class="w">
+    <span class="navod" aria-hidden="true" data-reveal>„</span>
+    <blockquote data-reveal="words">Klinika i doktor <em>za farove.</em></blockquote>
+    <p class="ko" data-reveal><span class="z" aria-hidden="true">★★★★★</span><b>Miljan D.</b> · Google recenzija</p>
+  </div>
+</section>
+
+<section id="recenzije" aria-labelledby="h-rec">
+  <div class="w">
+    <div class="zag">
+      <div><span class="oz" data-reveal>Recenzije</span><h2 id="h-rec" data-reveal="words">Šta kažu <em>vozači</em></h2></div>
+      <p data-reveal>Pedeset recenzija na Google-u, svih pedeset sa pet zvezdica. Ovo su tri, prenete doslovno.</p>
+    </div>
+    <div class="rec-grid">
+      <figure class="rec" data-reveal><span class="z" aria-hidden="true">★★★★★</span><p>Malopre bio kod čoveka,farovi odrađeni vrhunski,plus očišćena klima, za taj novac dobijete više od očekivanog.Velika preporuka i hvala</p><figcaption class="ko"><i aria-hidden="true">G</i><span>gagis976<small>Google recenzija</small></span></figcaption></figure>
+      <figure class="rec" data-reveal data-reveal-delay=".1"><span class="z" aria-hidden="true">★★★★★</span><p>Mnogo vodi računa o detaljima i da mu ništa ne promakne […] Proces dezinfekcije i ozonizacije je brz i oseti se razlika. Dao mi je i preporuke za zaštitu farova u narednom periodu i slično. Kafa je vrhunska 😁</p><figcaption class="ko"><i aria-hidden="true">M</i><span>Milan R.<small>Google recenzija</small></span></figcaption></figure>
+      <figure class="rec" data-reveal data-reveal-delay=".2"><span class="z" aria-hidden="true">★★★★★</span><p>Izuzetna saradnja, sve pohvale. Sem što mi je uradio vrhunski, ugostio me kao da se znamo 100godina.</p><figcaption class="ko"><i aria-hidden="true">I</i><span>Ivan M.<small>Google recenzija</small></span></figcaption></figure>
+    </div>
+  </div>
+  <div class="kratke" data-marquee aria-label="Kratke recenzije sa Google-a">
+    <div><span>Farovi kao novi nakon obrade, vredi svaki dinar</span><span>Najbolji u gradu, maksimalno profesionalno !</span><span>Savršeno, farovi kao novi. Za preporuku.</span><span>Vratio farove u fabricko stanje</span><span>Izuzetno pedantno i precizno odradjeno, za svaku preporuku.</span><span>Usluga profesionalna, farovi kao novi! Moja preporuka.</span></div>
+  </div>
+  <div class="w"><p class="izvor">Izvor: <a href="https://www.google.com/maps/place/?q=place_id:ChIJYeJ939pzV0cRw_1fmjIKoaI" target="_blank" rel="noopener">Google profil CleanZone Čačak</a></p></div>
+</section>
+
+<section class="broj" aria-labelledby="h-broj">
+  <div class="w">
+    <div class="veliko" aria-hidden="true" data-reveal="scale">5,0</div>
     <div>
-      <span class="rate"><span class="st" aria-hidden="true">★★★★★</span><b>5,0</b> · 50 recenzija na Google-u</span>
-      <h1><span>Farovi kao</span><span><em>novi.</em></span></h1>
-      <p class="lead">Restauracija farova, čišćenje klime, ozonizacija i detailing u Čačku. <b>Pedantno, brzo i u terminu koji vama odgovara.</b></p>
-      <div class="cta" id="heroCta">
-        <a class="btn btn-g" href="tel:+381604131141"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg>060 413 1141</a>
-        <a class="btn btn-o" href="https://wa.me/381604131141?text=Zdravo%2C%20%C5%A1aljem%20sliku%20farova%20za%20procenu." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#1FAF5A"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.8 11.9 11.9 0 004.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 001.8-1.3 2.2 2.2 0 00.1-1.3c0-.1-.2-.2-.4-.3z"/></svg>Pošaljite sliku farova</a>
+      <h2 id="h-broj" data-reveal="words">Pedeset recenzija. Svih pedeset sa pet zvezdica.</h2>
+      <p data-reveal>Na sajtu to ljudi vide pre nego što pozovu, zajedno sa slikama vaših radova, cenama i mapom do Bosanske 19.</p>
+    </div>
+  </div>
+</section>
+
+<section id="proces" aria-labelledby="h-proces">
+  <div class="w">
+    <div class="zag">
+      <div><span class="oz" data-reveal>Kako radimo</span><h2 id="h-proces" data-reveal="words">Četiri koraka</h2></div>
+      <p data-reveal>Od slike na WhatsApp-u do farova koji opet sijaju.</p>
+    </div>
+    <div class="koraci">
+      <div class="korak" data-reveal><div class="br">01</div><h3>Pošaljete sliku</h3><p>Slikajte far ili recite šta vam treba, pozivom ili na WhatsApp.</p></div>
+      <div class="korak" data-reveal data-reveal-delay=".08"><div class="br">02</div><h3>Dogovorimo termin</h3><p>U terminu koji vama odgovara, i dogovor se poštuje.</p></div>
+      <div class="korak" data-reveal data-reveal-delay=".16"><div class="br">03</div><h3>Obrada</h3><p>Pedantno, detalj po detalj, dok far ne bude providan.</p></div>
+      <div class="korak" data-reveal data-reveal-delay=".24"><div class="br">04</div><h3>Preuzmete auto</h3><p>Uz savet kako da farovi što duže ostanu kao novi.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="foto" aria-label="Poziv">
+  <div class="slika" data-parallax="0.18"><img src="img/traka.webp" alt="" width="1920" height="1100" loading="lazy"></div>
+  <div class="w">
+    <h2 data-reveal="words">Vreme je da farovi <em>opet sijaju.</em></h2>
+    <div class="radnje" data-reveal>
+      <a class="dugme" href="tel:+381604131141">Pozovite: 060 413 1141</a>
+      <a class="dugme obrub" href="https://wa.me/381604131141?text=Zdravo%2C%20%C5%A1aljem%20sliku%20farova." target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" aria-labelledby="h-kontakt">
+  <div class="w">
+    <div class="zag">
+      <div><span class="oz" data-reveal>Kontakt</span><h2 id="h-kontakt" data-reveal="words">Gde smo</h2></div>
+      <p data-reveal>Pozovite ili pošaljite sliku farova, pa se dogovorimo za termin.</p>
+    </div>
+    <div class="kontakt-grid">
+      <div data-reveal>
+        <p class="adresa"><b>Bosanska 19</b>32104 Čačak</p>
+        <ul class="kont-lista">
+          <li><span>Telefon i WhatsApp</span><a href="tel:+381604131141">060 413 1141</a></li>
+          <li><span>Radno vreme</span><span class="ceka">upisujem kad pošaljete</span></li>
+          <li><span>Google ocena</span><span>5,0 ★ · 50 recenzija</span></li>
+        </ul>
+        <div class="kontakt-radnje">
+          <a class="dugme" href="tel:+381604131141">Pozovite</a>
+          <a class="dugme obrub" href="https://www.google.com/maps/dir/?api=1&amp;destination=43.880572,20.3527745" target="_blank" rel="noopener">Navigacija do nas</a>
+        </div>
       </div>
-      <p class="addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Bosanska 19, Čačak</p>
-    </div>
-    <div>
-      <div class="ba" id="ba" style="--x:50%">
-        <svg class="post" viewBox="0 0 600 420" aria-hidden="true"><use href="#scene"/><use href="#lensClear"/></svg>
-        <svg class="pre" viewBox="0 0 600 420" aria-hidden="true"><use href="#scene" filter="url(#haze)"/><use href="#lensDirty"/></svg>
-        <span class="lbl l">PRE</span><span class="lbl r">POSLE</span>
-        <div class="div"><span class="knob"><svg viewBox="0 0 24 24" fill="none" stroke="#0D1411" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-5 6 5 6M15 6l5 6-5 6"/></svg></span></div>
-        <input type="range" min="0" max="100" value="50" id="baIn" aria-label="Uporedite far pre i posle obrade">
-      </div>
-      <p class="bacap">Povucite liniju: požuteo far pre i posle restauracije. Ovde stavljamo vaše prave slike.</p>
-    </div>
-  </div>
-</section>
-
-<section class="stats" aria-label="Brojke">
-  <div class="w">
-    <div class="stat rv"><b>5,0 <em>★</em></b><span>prosečna ocena na Google-u</span></div>
-    <div class="stat rv"><b>50/50</b><span>recenzija sa 5 zvezdica</span></div>
-    <div class="stat rv"><b>Čačak</b><span>Bosanska 19, 32104 Čačak</span></div>
-  </div>
-</section>
-
-<section class="s" id="usluge">
-  <div class="w">
-    <div class="sh rv"><span class="kick">Usluge</span><h2>Šta radimo</h2><p>Najviše nas zovu zbog farova, ali auto dobija kompletnu negu, od klime do poslednjeg detalja u kabini.</p></div>
-    <div class="grid">
-      <article class="sv top rv"><span class="tag">Najtraženije</span>
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5c4 0 7 3 7 7s-3 7-7 7c-1.5 0-2-1-2-2V7c0-1 .5-2 2-2z"/><path d="M8 8H3M8 12H3M8 16H3"/></svg></span>
-        <h3>Restauracija farova</h3><p>Mutni i požuteli farovi postaju providni kao novi, uz zaštitni sloj i savet kako da duže ostanu takvi. Bolje svetlo noću i lepši auto.</p>
-        <div class="pr"><span>Cena</span><b>po dogovoru</b></div></article>
-      <article class="sv rv">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1L19.1 4.9"/></svg></span>
-        <h3>Čišćenje klime</h3><p>Čišćenje i dezinfekcija sistema klimatizacije. Bez neprijatnih mirisa kad uključite ventilaciju.</p>
-        <div class="pr"><span>Cena</span><b>po dogovoru</b></div></article>
-      <article class="sv rv">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="7" r="2"/><circle cx="15" cy="15" r="4"/><path d="M5 19h3"/></svg></span>
-        <h3>Dezinfekcija i ozonizacija</h3><p>Brz tretman kabine koji uklanja neprijatne mirise i bakterije. Razlika se oseti čim sednete u auto.</p>
-        <div class="pr"><span>Cena</span><b>po dogovoru</b></div></article>
-      <article class="sv rv">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></span>
-        <h3>Detailing i čišćenje</h3><p>Pedantno čišćenje spolja i unutra, dok ne ostane ni zrno prašine. Radimo po dogovoru, bez žurbe i bez iznenađenja.</p>
-        <div class="pr"><span>Cena</span><b>po dogovoru</b></div></article>
-    </div>
-    <div class="note rv"><span>Ovde upisujemo vaše cene i dodajemo usluge koje fale. Sve menjamo kako vi kažete.</span><a class="btn btn-g" style="min-height:46px;font-size:15px" href="https://wa.me/381604131141?text=Zdravo%2C%20%C5%A1aljem%20sliku%20farova%20za%20procenu." target="_blank" rel="noopener">Procena preko WhatsApp-a</a></div>
-  </div>
-</section>
-
-<section class="s rev" id="recenzije">
-  <div class="w">
-    <div class="sh rv"><span class="kick">Recenzije</span><h2>Šta kažu vozači</h2><p>Svih 50 recenzija na Google-u ima 5 zvezdica. Evo nekoliko, prenetih doslovno.</p></div>
-    <div class="rgrid">
-      <figure class="rc rv"><span class="st" aria-label="5 zvezdica">★★★★★</span><q>Malopre bio kod čoveka, farovi odrađeni vrhunski, plus očišćena klima, za taj novac dobijete više od očekivanog. Velika preporuka i hvala</q><figcaption class="who"><i>G</i><span>gagis976<small>Google recenzija</small></span></figcaption></figure>
-      <figure class="rc rv"><span class="st" aria-label="5 zvezdica">★★★★★</span><q>Mnogo vodi računa o detaljima i da mu ništa ne promakne […] Proces dezinfekcije i ozonizacije je brz i oseti se razlika.</q><figcaption class="who"><i>M</i><span>Milan R.<small>Google recenzija</small></span></figcaption></figure>
-      <figure class="rc rv"><span class="st" aria-label="5 zvezdica">★★★★★</span><q>Profesionalizam<br>Expeditivnost<br>Kvalitet<br>Sve preporuke<br>Klinika i doktor za farove.</q><figcaption class="who"><i>M</i><span>Miljan Đ.<small>Google recenzija</small></span></figcaption></figure>
-    </div>
-    <div class="marq" aria-hidden="true"><div>
-      <span><b>★</b>Farovi kao novi nakon obrade, vredi svaki dinar</span><span><b>★</b>Najbolji u gradu, maksimalno profesionalno !</span><span><b>★</b>Savršeno, farovi kao novi. Za preporuku.</span><span><b>★</b>Izuzetna saradnja, sve pohvale.</span><span><b>★</b>Izuzetno pedantno i precizno odradjeno, za svaku preporuku.</span>
-      <span><b>★</b>Farovi kao novi nakon obrade, vredi svaki dinar</span><span><b>★</b>Najbolji u gradu, maksimalno profesionalno !</span><span><b>★</b>Savršeno, farovi kao novi. Za preporuku.</span><span><b>★</b>Izuzetna saradnja, sve pohvale.</span><span><b>★</b>Izuzetno pedantno i precizno odradjeno, za svaku preporuku.</span>
-    </div></div>
-    <p class="src rv">Izvor: <a href="https://www.google.com/maps/place/?q=place_id:ChIJYeJ939pzV0cRw_1fmjIKoaI" target="_blank" rel="noopener">Google profil CleanZone Čačak</a></p>
-  </div>
-</section>
-
-<section class="s" id="kako">
-  <div class="w">
-    <div class="sh rv"><span class="kick">Kako radimo</span><h2>Tri koraka do auta kao iz salona</h2></div>
-    <div class="steps">
-      <div class="step rv"><b>1</b><h3>Pošaljete sliku</h3><p>Pozovite ili pošaljite sliku farova na WhatsApp. Brzo dobijate procenu.</p></div>
-      <div class="step rv"><b>2</b><h3>Dogovorimo termin</h3><p>Biramo termin koji vama odgovara, a svaki dogovor se poštuje.</p></div>
-      <div class="step rv"><b>3</b><h3>Preuzimate auto</h3><p>Uz kratak savet kako da farovi i kabina duže ostanu kao novi.</p></div>
-    </div>
-    <div class="coffee rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h14v5a6 6 0 01-6 6H9a6 6 0 01-6-6z"/><path d="M17 11h1.5a2.5 2.5 0 010 5H17M7 2v3M11 2v3"/></svg>Dok radimo na vašem autu, kafa je na nama.</div>
-  </div>
-</section>
-
-<section class="s" id="kontakt" style="padding-top:20px">
-  <div class="w">
-    <div class="sh rv"><span class="kick">Kontakt</span><h2>Gde smo</h2></div>
-    <div class="ct">
-      <div class="cbox rv">
-        <div class="row"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><small>Adresa</small><span>Bosanska 19, 32104 Čačak</span></div></div>
-        <div class="row"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg></span><div><small>Telefon i WhatsApp</small><a href="tel:+381604131141">060 413 1141</a></div></div>
-        <div class="row"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><small>Radno vreme</small><span class="ph">Upisujemo vaše radno vreme</span></div></div>
-        <div class="cta" style="margin-top:4px"><a class="btn btn-g" href="tel:+381604131141">Pozovite</a><a class="btn btn-o" href="https://www.google.com/maps/dir/?api=1&amp;destination=43.880572,20.3527745" target="_blank" rel="noopener">Navigacija do nas</a></div>
-      </div>
-      <div class="map rv"><iframe title="Mapa: CleanZone, Bosanska 19, Čačak" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=43.880572,20.3527745&amp;z=16&amp;output=embed"></iframe></div>
+      <a class="mapa" href="https://www.google.com/maps/place/?q=place_id:ChIJYeJ939pzV0cRw_1fmjIKoaI" target="_blank" rel="noopener" data-reveal="scale" aria-label="Otvorite CleanZone u Google mapama">
+        <svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="600" height="420" fill="#101315"/>
+          <g fill="#171B1E"><rect x="30" y="30" width="150" height="110" rx="4"/><rect x="210" y="30" width="170" height="110" rx="4"/><rect x="410" y="30" width="170" height="160" rx="4"/><rect x="30" y="170" width="150" height="220" rx="4"/><rect x="210" y="170" width="170" height="100" rx="4"/><rect x="210" y="300" width="170" height="90" rx="4"/><rect x="410" y="220" width="170" height="170" rx="4"/></g>
+          <g stroke="#262C31" stroke-width="14" fill="none"><path d="M0 155h600M195 0v420M395 0v420M0 285h395"/></g>
+          <path d="M-20 400C120 330 220 360 300 250S470 90 640 60" stroke="#30373D" stroke-width="22" fill="none"/>
+          <path d="M-20 400C120 330 220 360 300 250S470 90 640 60" stroke="#34E08A" stroke-opacity=".5" stroke-width="2" stroke-dasharray="10 12" fill="none"/>
+          <g fill="#646D74" font-family="Inter,sans-serif" font-size="13" font-weight="600"><text x="40" y="150">BOSANSKA</text><text x="420" y="85">ČAČAK</text></g>
+        </svg>
+        <span class="igla"><span>CleanZone · Bosanska 19</span><i></i></span>
+        <span class="otvori">Otvorite u Google mapama →</span>
+      </a>
     </div>
   </div>
-</section>
-
-<section class="fin">
-  <div class="w"><div class="finbox rv"><h2>Vreme je da farovi opet sijaju.</h2><div class="cta" style="margin:0"><a class="btn btn-d" href="tel:+381604131141">Pozovite 060 413 1141</a><a class="btn btn-w" href="https://wa.me/381604131141?text=Zdravo%2C%20%C5%A1aljem%20sliku%20farova%20za%20procenu." target="_blank" rel="noopener">WhatsApp</a></div></div></div>
 </section>
 </main>
 
-<footer><div class="w"><span>© CleanZone Čačak · Bosanska 19, Čačak</span><span>Predlog sajta: <a href="https://sajtservis.github.io/" target="_blank" rel="noopener">Sajt Servis</a></span></div></footer>
+<footer>
+  <div class="w">
+    <span>© CleanZone Čačak · Bosanska 19 — <strong>predlog sajta</strong>, nije zvanična stranica.</span>
+    <span>Izradio <a href="https://sajtservis.github.io/">Sajt Servis</a> · 3D ilustracije: Sajt Servis</span>
+  </div>
+</footer>
 
-<div class="mbar" id="mbar">
-  <a class="btn btn-g" href="tel:+381604131141">Pozovite</a>
-  <a class="btn btn-wa" href="https://wa.me/381604131141?text=Zdravo%2C%20%C5%A1aljem%20sliku%20farova%20za%20procenu." target="_blank" rel="noopener">WhatsApp</a>
-</div>
+<nav class="mob" aria-label="Brzi kontakt">
+  <a href="tel:+381604131141"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.4 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Pozovite</a>
+  <a href="https://wa.me/381604131141?text=Zdravo%2C%20%C5%A1aljem%20sliku%20farova." target="_blank" rel="noopener">WhatsApp</a>
+  <a href="#kontakt">Mapa</a>
+</nav>
 
-<!-- headlight scene, shared by the before/after slider -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B3631"/><stop offset=".55" stop-color="#18201C"/><stop offset="1" stop-color="#0C110F"/></linearGradient>
-    <linearGradient id="chrome" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C9D2CE"/><stop offset=".35" stop-color="#5E6A65"/><stop offset=".6" stop-color="#E3EAE6"/><stop offset="1" stop-color="#47524D"/></linearGradient>
-    <radialGradient id="proj" cx=".42" cy=".38" r=".7"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".25" stop-color="#DDEBFF"/><stop offset=".55" stop-color="#6F86A3"/><stop offset="1" stop-color="#1A2230"/></radialGradient>
-    <radialGradient id="ring" cx=".5" cy=".5" r=".5"><stop offset=".78" stop-color="#0B0F14"/><stop offset=".9" stop-color="#9AA6B2"/><stop offset="1" stop-color="#2A333C"/></radialGradient>
-    <linearGradient id="gloss" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".35" stop-color="#fff" stop-opacity=".08"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/><stop offset=".85" stop-color="#fff" stop-opacity=".12"/></linearGradient>
-    <linearGradient id="yellow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E9C766" stop-opacity=".62"/><stop offset=".5" stop-color="#CF9F3E" stop-opacity=".5"/><stop offset="1" stop-color="#9A7228" stop-opacity=".68"/></linearGradient>
-    <clipPath id="lensClip"><path d="M66 198C68 156 124 120 212 106L470 78C524 72 552 98 547 140L532 234C524 284 488 310 430 316L172 330C110 334 68 296 66 250Z"/></clipPath>
-    <filter id="haze" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation="1.8"/></filter>
-    <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9 .35" numOctaves="3" seed="7" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 .55  0 0 0 0 .42  0 0 0 0 .2  0 0 0 1.4 -.55"/></filter>
-    <g id="scene">
-      <rect width="600" height="420" fill="url(#body)"/>
-      <path d="M0 44C160 30 320 26 600 34" stroke="#3B4842" stroke-width="2" fill="none"/>
-      <path d="M0 392C180 374 380 370 600 380" stroke="#2C3833" stroke-width="2" fill="none"/>
-      <path d="M58 196C60 150 120 112 210 98L470 70C530 64 562 92 556 140L540 236C532 290 492 318 430 324L170 338C104 342 60 300 58 250Z" fill="#070A09" stroke="#46534D" stroke-width="4"/>
-      <g clip-path="url(#lensClip)">
-        <rect x="50" y="60" width="520" height="290" fill="#10161D"/>
-        <rect x="50" y="60" width="520" height="290" fill="url(#chrome)" opacity=".32"/>
-        <path d="M92 196C118 150 190 124 300 110L512 88" stroke="#9FD8FF" stroke-width="24" stroke-linecap="round" fill="none" opacity=".2"/>
-        <path d="M92 196C118 150 190 124 300 110L512 88" stroke="#F2FAFF" stroke-width="8" stroke-linecap="round" fill="none"/>
-        <circle cx="250" cy="224" r="70" fill="url(#ring)"/>
-        <circle cx="250" cy="224" r="54" fill="url(#proj)"/>
-        <circle cx="422" cy="206" r="60" fill="url(#ring)"/>
-        <circle cx="422" cy="206" r="45" fill="url(#proj)"/>
-        <g fill="#2B3540" stroke="#7F8C98" stroke-width="2"><rect x="160" y="292" width="70" height="16" rx="8"/><rect x="246" y="290" width="70" height="16" rx="8"/><rect x="332" y="286" width="70" height="16" rx="8"/></g>
-      </g>
-    </g>
-    <g id="lensClear" clip-path="url(#lensClip)">
-      <rect x="50" y="60" width="520" height="290" fill="url(#gloss)"/>
-      <path d="M120 150C200 116 320 100 470 86" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".5" fill="none"/>
-      <circle cx="230" cy="202" r="9" fill="#fff" opacity=".85"/>
-      <circle cx="406" cy="188" r="7" fill="#fff" opacity=".8"/>
-    </g>
-    <g id="lensDirty" clip-path="url(#lensClip)">
-      <rect x="50" y="60" width="520" height="290" fill="url(#yellow)"/>
-      <rect x="50" y="60" width="520" height="290" filter="url(#grain)" opacity=".55"/>
-      <path d="M80 300c120-24 280-36 470-40" stroke="#6B4E1E" stroke-width="22" opacity=".22" fill="none"/>
-    </g>
-  </defs>
-</svg>
-
-<script>
-(function(){
-  var els=[].slice.call(document.querySelectorAll('.rv'));
-  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});}
-  else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});els.forEach(function(e){io.observe(e)});}
-  var bar=document.getElementById('mbar'),hc=document.getElementById('heroCta');
-  if(bar&&hc&&'IntersectionObserver' in window){new IntersectionObserver(function(es){bar.classList.toggle('show',!es[0].isIntersecting&&es[0].boundingClientRect.top<0)}).observe(hc);}else if(bar){bar.classList.add('show');}
-  // before/after slider with a gentle automatic sweep until the visitor touches it
-  var ba=document.getElementById('ba'),inp=document.getElementById('baIn'),touched=false,t0=null;
-  function setX(v){ba.style.setProperty('--x',v+'%');inp.value=v;}
-  inp.addEventListener('input',function(){touched=true;setX(inp.value)});
-  ['pointerdown','touchstart','keydown'].forEach(function(ev){inp.addEventListener(ev,function(){touched=true},{passive:true})});
-  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function sweep(ts){if(touched||reduce)return;if(t0===null)t0=ts;var p=((ts-t0)/1000)%6;var v=50+32*Math.sin(p/6*2*Math.PI);setX(v.toFixed(1));requestAnimationFrame(sweep);}
-  if(!reduce)requestAnimationFrame(sweep);
-})();
-</script>
+<script defer src="/egzampl/assets/premium/vendor/lenis.min.js"></script>
+<script defer src="/egzampl/assets/premium/vendor/gsap.min.js"></script>
+<script defer src="/egzampl/assets/premium/vendor/ScrollTrigger.min.js"></script>
+<script defer src="/egzampl/assets/premium/premium.js"></script>
 </body>
 </html>
