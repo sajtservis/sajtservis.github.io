@@ -566,3 +566,14 @@ s{text-decoration-thickness:2px;text-decoration-color:var(--narandzasta)}
 .bez-cene s{font-size:14px}
 .bez-odrz .sitno{font-size:13px;color:var(--sporedni)}
 @media (max-width:700px){.bez-cene{grid-template-columns:1fr}.bez-odrz{padding:18px 16px}}
+
+/* ---------- vodiči ---------- */
+.vodici-mreza{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media(max-width:760px){.vodici-mreza{grid-template-columns:1fr}}
+.vodic-kartica{display:flex;flex-direction:column;gap:10px;padding:26px 24px;border:1px solid var(--ivica);border-radius:14px;background:var(--bela);text-decoration:none;color:inherit;transition:transform .3s cubic-bezier(.2,.7,.2,1),border-color .3s}
+.vodic-kartica:hover{transform:translateY(-3px);border-color:var(--narandzasta)}
+.vodic-oznaka{font:700 12.5px/1.2 Manrope,Inter,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--narandzasta-tamna)}
+.vodic-kartica h2,.vodic-kartica h3{font-family:Archivo,sans-serif;font-size:clamp(21px,2.2vw,26px);line-height:1.15;letter-spacing:-.02em;margin:0}
+.vodic-kartica p{margin:0;color:var(--sporedni);font-size:16px;line-height:1.6}
+.vodic-kartica .link-strelica{margin-top:auto;padding-top:6px}
+@media (prefers-reduced-motion:reduce){.vodic-kartica:hover{transform:none}}
