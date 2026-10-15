@@ -58,7 +58,7 @@
   if (forma) {
     // ?paket=galerija u adresi unapred bira paket (dugmad "Zatražite" sa strane Cene)
     var izbor = new URLSearchParams(location.search).get('paket');
-    var mapa = { jednostrani: 1, galerija: 2, zakazivanje: 3, qr: 4 };
+    var mapa = { jednostrani: 1, galerija: 2, zakazivanje: 3, qr: 4, profil: 5, vodjenje: 6 };
     if (izbor && mapa[izbor] && $('pPaket')) $('pPaket').selectedIndex = mapa[izbor];
     forma.addEventListener('submit', function (e) {
       e.preventDefault();

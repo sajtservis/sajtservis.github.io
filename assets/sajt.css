@@ -577,3 +577,5 @@ s{text-decoration-thickness:2px;text-decoration-color:var(--narandzasta)}
 .vodic-kartica p{margin:0;color:var(--sporedni);font-size:16px;line-height:1.6}
 .vodic-kartica .link-strelica{margin-top:auto;padding-top:6px}
 @media (prefers-reduced-motion:reduce){.vodic-kartica:hover{transform:none}}
+.paketi.dva{grid-template-columns:repeat(2,1fr);max-width:860px}
+@media(max-width:900px){.paketi.dva{grid-template-columns:1fr}}
