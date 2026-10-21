@@ -103,8 +103,17 @@ section{padding:clamp(72px,10vw,130px) 0}
 .korak.akt .br{-webkit-text-stroke-color:var(--y)}
 
 /* usluge */
-.usluge{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-@media(max-width:860px){.usluge{grid-template-columns:1fr}}
+/* na terenu: prave slike */
+.galerija{display:grid;grid-template-columns:1.2fr 1fr;gap:14px}
+.galerija figure{margin:0;position:relative;border-radius:22px;overflow:hidden;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line)}
+.galerija img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.g-vel{grid-row:span 2;aspect-ratio:4/5}
+.galerija figcaption{position:absolute;left:0;right:0;bottom:0;padding:56px 22px 20px;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.78));color:#fff;font-size:15.5px;line-height:1.45;font-weight:600}
+.galerija figcaption b{display:block;font:400 13px/1 "Archivo Black",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--y);margin-bottom:8px}
+@media(max-width:760px){.galerija{grid-template-columns:1fr}.g-vel{grid-row:auto}.g-mal{aspect-ratio:4/3}.galerija figcaption{padding:48px 18px 16px;font-size:15px}}
+
+.usluge{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:600px){.usluge{grid-template-columns:1fr}}
 .usluga{background:var(--panel);border-radius:18px;padding:24px;box-shadow:inset 0 0 0 1px var(--line);display:flex;flex-direction:column;gap:8px}
 .usluga .red{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
 .usluga h3{margin:0;font-size:20px;font-weight:800}
@@ -163,7 +172,7 @@ footer a{color:var(--ink)}
 <header class="nav">
   <div class="wrap">
     <a class="logo" href="#"><i aria-hidden="true"></i>VULKANIZER <span>SEKI</span></a>
-    <nav aria-label="Glavna"><a href="#kako">Kako radi</a><a href="#usluge">Usluge</a><a href="#lokacija">Lokacija</a><a href="#kontakt">Kontakt</a></nav>
+    <nav aria-label="Glavna"><a href="#kako">Kako radi</a><a href="#teren">Na terenu</a><a href="#usluge">Usluge</a><a href="#lokacija">Lokacija</a><a href="#kontakt">Kontakt</a></nav>
     <a class="btn y" href="tel:+381695069702">Pozovi</a>
   </div>
 </header>
@@ -206,7 +215,7 @@ footer a{color:var(--ink)}
   </section>
 
   <div class="traka" data-marquee aria-label="Ukratko">
-    <div><span>0–24</span><span>7 dana u nedelji</span><span>Dolazimo na lokaciju</span><span>Popravka guma</span><span>Zamena guma</span><span>Novi Sad</span></div>
+    <div><span>0–24</span><span>Dolazimo na adresu</span><span>Čepovanje fleke</span><span>Montaža i balansiranje</span><span>Nove i polovne gume</span><span>Novi Sad i okolina</span></div>
   </div>
 
   <section id="kako" aria-labelledby="h-kako">
@@ -223,19 +232,44 @@ footer a{color:var(--ink)}
     </div>
   </section>
 
+  <section id="teren" aria-labelledby="h-teren" style="padding-top:0">
+    <div class="wrap">
+      <div class="naslov-sek">
+        <div class="pm-frame" data-reveal>Na terenu</div>
+        <h2 id="h-teren" class="disp" data-reveal="words">Radionica na točkovima</h2>
+        <p data-reveal>Oprema za montažu i balansiranje je u kombiju, pa se posao završava na licu mesta.</p>
+      </div>
+      <div class="galerija">
+        <figure class="g-vel" data-reveal>
+          <img src="img/kombi-most.webp" width="800" height="1000" loading="lazy" decoding="async" alt="Beli kombi Mobilni vulkanizer Seki parkiran kod mosta u Novom Sadu">
+          <figcaption><b>Seki kombi</b>Ovim kombijem dolazimo do vas.</figcaption>
+        </figure>
+        <figure class="g-mal" data-reveal data-reveal-delay=".1">
+          <img src="img/kombi-radionica.webp" width="720" height="540" loading="lazy" decoding="async" alt="Otvorena bočna vrata kombija, unutra mašina za montažu guma">
+          <figcaption><b>Unutra</b>Montaža i balansiranje, na licu mesta.</figcaption>
+        </figure>
+        <figure class="g-mal" data-reveal data-reveal-delay=".2">
+          <img src="img/zamena-ulica.webp" width="720" height="540" loading="lazy" decoding="async" alt="Automobil podignut dizalicom na ulici, bez jednog točka, tokom zamene gume">
+          <figcaption><b>Na ulici</b>Zamena gume tamo gde je auto stao.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <section id="usluge" aria-labelledby="h-usluge" style="padding-top:0">
     <div class="wrap">
       <div class="naslov-sek">
         <div class="pm-frame" data-reveal>Usluge i cene</div>
         <h2 id="h-usluge" class="disp" data-reveal="words">Šta radimo</h2>
-        <p data-reveal>Cene na jednom mestu, da znate unapred koliko košta.</p>
+        <p data-reveal>Sve radimo na vašoj adresi. Cene su na jednom mestu, da unapred znate koliko košta.</p>
       </div>
       <div class="usluge">
-        <article class="usluga pm-lift" data-reveal><div class="red"><h3>Popravka gume</h3><span class="cena">— <small>din</small></span></div><p>Probušena guma, popravljena na licu mesta.</p></article>
-        <article class="usluga pm-lift" data-reveal data-reveal-delay=".1"><div class="red"><h3>Zamena gume</h3><span class="cena">— <small>din</small></span></div><p>Skidanje oštećene i montaža rezervne ili nove gume.</p></article>
-        <article class="usluga pm-lift" data-reveal data-reveal-delay=".2"><div class="red"><h3>Dolazak na lokaciju</h3><span class="cena">— <small>din</small></span></div><p>Novi Sad, <span class="nb">0–24</span>, svakog dana u nedelji.</p></article>
+        <article class="usluga pm-lift" data-reveal><div class="red"><h3>Čepovanje fleke</h3><span class="cena">— <small>din</small></span></div><p>Probušenu gumu krpimo na licu mesta, bez vuče do radnje.</p></article>
+        <article class="usluga pm-lift" data-reveal data-reveal-delay=".08"><div class="red"><h3>Montaža guma</h3><span class="cena">— <small>din</small></span></div><p>Skidanje oštećene i montaža nove ili rezervne gume.</p></article>
+        <article class="usluga pm-lift" data-reveal data-reveal-delay=".16"><div class="red"><h3>Balansiranje</h3><span class="cena">— <small>din</small></span></div><p>Točak izbalansiran odmah, da vožnja bude mirna.</p></article>
+        <article class="usluga pm-lift" data-reveal data-reveal-delay=".24"><div class="red"><h3>Nove i polovne gume</h3><span class="cena">— <small>din</small></span></div><p>Prodaja novih i polovnih guma. Pitajte za vašu dimenziju.</p></article>
       </div>
-      <p class="napomena" data-reveal><b>Za vas:</b> ovde idu vaše usluge i cene. Pošaljete ih na WhatsApp i upisujemo ih isti dan.</p>
+      <p class="napomena" data-reveal><b>Za vas:</b> ovde idu cene za svaku uslugu i za dolazak. Pošaljete ih na WhatsApp i upisujemo ih isti dan.</p>
     </div>
   </section>
 
@@ -286,7 +320,7 @@ footer a{color:var(--ink)}
       <ul class="lista" data-reveal="right">
         <li><span>Telefon</span><a href="tel:+381695069702">069 506 9702</a></li>
         <li><span>Radno vreme</span><b>Ponedeljak–nedelja, <span class="nb">0–24</span></b></li>
-        <li><span>Gde radimo</span><b>Novi Sad, na vašoj lokaciji</b></li>
+        <li><span>Gde radimo</span><b>Novi Sad i okolina, <span class="nb">do 200 km</span></b></li>
         <li><span>Google ocena</span><a href="https://www.google.com/maps/place/?q=place_id:ChIJo4LzNNEpkQ4RDZOZD6oizAU" target="_blank" rel="noopener">5,0 ★ · Google profil</a></li>
       </ul>
     </div>
