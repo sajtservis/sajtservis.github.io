@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Aleksandar frizerski studio | Frizer u Pirotu od 1972.</title>
 <meta name="description" content="Šišanje, bojenje i nega kose preparatima Revlon Professional, Olaplex i QIQI, Takovska 1, Pirot. Porodični frizerski zanat od 1972. Ocena 4,9 na Google-u iz 160 recenzija. Zakažite na 062 451 452.">
-<meta name="theme-color" content="#EDEBE7">
+<meta name="theme-color" content="#0A0A09">
 <meta name="robots" content="noindex">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Aleksandar frizerski studio, Pirot">
 <meta property="og:description" content="Porodični frizerski zanat od 1972. Takovska 1, Pirot.">
 <meta property="og:url" content="https://sajtservis.github.io/demo/aleksandar-pirot/">
 <link rel="canonical" href="https://sajtservis.github.io/demo/aleksandar-pirot/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-8 -8 126.4 116'%3E%3Crect x='-8' y='-8' width='126.4' height='116' fill='%230A0A09'/%3E%3Cpath fill='%23CBB98A' d='M37.1 5.4 32.8 7.3 28.7 9.7 24.9 12.3 19.4 16.9 14.4 22.3 10.6 27.3 5.9 35.5 3.9 40.3 1.4 48.8 0.6 53.5 0.2 57.8 0.1 65.0 0.5 69.8 1.7 75.9 3.8 83.0 5.4 86.9 7.6 91.5 9.8 94.8 10.4 96.0 12.4 98.8 13.0 99.5 13.8 99.8 56.2 99.8 56.5 99.5 56.1 99.0 48.0 93.8 41.3 89.2 35.1 84.5 33.1 82.5 32.8 81.3 33.1 80.9 33.8 80.5 44.0 80.5 46.7 79.5 49.1 77.7 50.5 75.6 51.1 74.1 51.3 73.0 51.1 70.2 50.4 68.4 49.0 66.4 45.7 64.2 43.9 63.8 36.6 63.9 32.4 63.6 30.7 62.9 28.7 61.5 28.2 60.6 27.7 59.1 27.9 56.2 27.7 55.0 27.3 54.1 26.0 52.8 25.7 52.2 25.7 51.4 26.4 49.5 25.5 47.4 26.0 44.5 25.5 43.9 22.3 41.8 21.6 41.0 21.2 40.3 21.3 39.4 21.7 38.5 25.6 34.6 27.1 32.6 28.2 30.3 28.5 27.9 28.2 22.3 28.4 18.9 30.1 14.2 32.2 11.1 37.0 6.0 37.2 5.6ZM45.4 2.3 45.0 2.9 44.6 5.9 44.6 12.3 44.9 17.2 46.2 25.8 48.1 34.5 49.5 39.3 54.0 49.9 56.8 55.3 60.3 60.9 67.1 69.9 75.7 78.7 86.7 87.0 92.8 90.7 107.4 98.1 109.6 98.6 108.6 97.4 102.0 91.8 98.9 88.7 95.1 84.5 91.7 80.1 86.4 72.2 83.4 66.8 80.9 61.4 78.4 54.5 76.4 47.9 75.5 43.7 74.2 34.9 73.8 30.2 73.8 23.1 74.5 14.4 76.8 2.9 76.6 2.2 75.7 1.6 70.5 0.6 65.1 0.1 58.8 0.1 52.0 0.8Z'/%3E%3C/svg%3E">
 <meta property="og:locale" content="sr_RS">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,16 +20,19 @@
 <style>
 
 :root{
-  /* boje iz salona: zid, koža stolica, hrastov pod, biljke u izlogu */
-  --kreda:#EDEBE7;
-  --koza:#E3D7C6;
-  --hrast:#B9AB97;
-  --zid:#4A4440;
-  --ugalj:#26231F;
-  --tiho:#5E5751;
-  --zalfija:#55634E;
-  --zalfija-tamna:#46523F;
-  --zalfija-svetla:#B7C4AC;
+  /* boje sa logoa: crna, zlatna, bela */
+  --kreda:#F6F3EC;
+  --koza:#ECE4D3;
+  --hrast:#CBB98A;
+  --zid:#0A0A09;
+  --ugalj:#151311;
+  --tiho:#5B564D;
+  --zalfija:#151311;
+  --zalfija-tamna:#000000;
+  --zalfija-svetla:#CBB98A;
+  --zlato:#CBB98A;
+  --zlato-svetlo:#E0D3AE;
+  --zlato-tamno:#97834F;
 
   --display:"Marcellus","Times New Roman",serif;
   --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -243,6 +247,37 @@ p{margin:0 0 1em;max-width:62ch}
 
 /* jedan orkestrirani trenutak: ulaz naslovne */
 .js .n-slika img{clip-path:inset(0 0 0 0)}
+
+/* logo: crna i zlatna */
+.predlog{background:var(--zlato);color:#0A0A09}
+.zag{background:var(--zid);color:#fff}
+.zag.skrol{border-bottom-color:#2b2824}
+.znak{flex-direction:row;align-items:center;gap:12px}
+.simbol{display:block;flex:none;width:42px;height:38px;color:var(--zlato)}
+.znak .znak-t{display:flex;flex-direction:column;font-size:inherit;color:inherit;margin-top:0}
+.znak .znak-t span{font-size:.8125rem;color:var(--zlato);margin-top:4px}
+.zag-tel{border-color:var(--zlato);color:#fff}
+.zag-tel:hover{background:var(--zlato);color:#0A0A09}
+.meni-btn{border-color:rgba(255,255,255,.7);color:#fff}
+.meni{background:var(--zid);border-top-color:#2b2824}
+.meni a{border-bottom-color:#2b2824}
+.naslovna{background:var(--zid);color:#fff}
+.naslovna .n-tekst .uvod{color:#E6E0D5}
+.naslovna h1 span:last-child{color:var(--zlato)}
+.naslovna .dokaz{color:#B8B1A5}
+.naslovna .dug-glavno,.tamno .dug-glavno,.traka .dug-glavno{background:var(--zlato);color:#0A0A09}
+.naslovna .dug-glavno:hover,.tamno .dug-glavno:hover,.traka .dug-glavno:hover{background:var(--zlato-svetlo)}
+.naslovna .dug-drugo,.traka .dug-drugo{border-color:#F6F3EC;color:#F6F3EC}
+.naslovna .dug-drugo:hover,.traka .dug-drugo:hover{background:#F6F3EC;color:#0A0A09}
+.zag :focus-visible,.naslovna :focus-visible,.traka :focus-visible,.tamno :focus-visible{outline-color:var(--zlato)}
+.prica.tamno{background:var(--koza);color:var(--ugalj)}
+.prica .godina{color:var(--zlato-tamno);opacity:1}
+.prica .portret figcaption,.prica .citat-mali footer{color:var(--tiho)}
+.prica .portret figcaption b{color:var(--ugalj)}
+.prica.tamno :focus-visible{outline-color:var(--ugalj)}
+.ocena b{color:var(--zlato-tamno)}
+.podnozje{background:#000;border-top:1px solid #2b2824}
+.traka{background:var(--zid);border-top-color:#2b2824}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
@@ -286,7 +321,7 @@ p{margin:0 0 1em;max-width:62ch}
 
 <header class="zag" id="zag">
   <div class="okvir">
-    <a class="znak" href="#sadrzaj" aria-label="Aleksandar frizerski studio, početak stranice"><b>Aleksandar</b><span>frizerski studio, Pirot</span></a>
+    <a class="znak" href="#sadrzaj" aria-label="Aleksandar frizerski studio, početak stranice"><svg class="simbol" viewBox="0 0 110.4 100" aria-hidden="true" focusable="false"><path fill="currentColor" d="M37.1 5.4 32.8 7.3 28.7 9.7 24.9 12.3 19.4 16.9 14.4 22.3 10.6 27.3 5.9 35.5 3.9 40.3 1.4 48.8 0.6 53.5 0.2 57.8 0.1 65.0 0.5 69.8 1.7 75.9 3.8 83.0 5.4 86.9 7.6 91.5 9.8 94.8 10.4 96.0 12.4 98.8 13.0 99.5 13.8 99.8 56.2 99.8 56.5 99.5 56.1 99.0 48.0 93.8 41.3 89.2 35.1 84.5 33.1 82.5 32.8 81.3 33.1 80.9 33.8 80.5 44.0 80.5 46.7 79.5 49.1 77.7 50.5 75.6 51.1 74.1 51.3 73.0 51.1 70.2 50.4 68.4 49.0 66.4 45.7 64.2 43.9 63.8 36.6 63.9 32.4 63.6 30.7 62.9 28.7 61.5 28.2 60.6 27.7 59.1 27.9 56.2 27.7 55.0 27.3 54.1 26.0 52.8 25.7 52.2 25.7 51.4 26.4 49.5 25.5 47.4 26.0 44.5 25.5 43.9 22.3 41.8 21.6 41.0 21.2 40.3 21.3 39.4 21.7 38.5 25.6 34.6 27.1 32.6 28.2 30.3 28.5 27.9 28.2 22.3 28.4 18.9 30.1 14.2 32.2 11.1 37.0 6.0 37.2 5.6ZM45.4 2.3 45.0 2.9 44.6 5.9 44.6 12.3 44.9 17.2 46.2 25.8 48.1 34.5 49.5 39.3 54.0 49.9 56.8 55.3 60.3 60.9 67.1 69.9 75.7 78.7 86.7 87.0 92.8 90.7 107.4 98.1 109.6 98.6 108.6 97.4 102.0 91.8 98.9 88.7 95.1 84.5 91.7 80.1 86.4 72.2 83.4 66.8 80.9 61.4 78.4 54.5 76.4 47.9 75.5 43.7 74.2 34.9 73.8 30.2 73.8 23.1 74.5 14.4 76.8 2.9 76.6 2.2 75.7 1.6 70.5 0.6 65.1 0.1 58.8 0.1 52.0 0.8Z"/></svg><span class="znak-t"><b>Aleksandar</b><span>frizerski studio, Pirot</span></span></a>
     <nav class="nav" aria-label="Glavni meni">
       <ul>
         <li><a href="#usluge">Usluge</a></li>
