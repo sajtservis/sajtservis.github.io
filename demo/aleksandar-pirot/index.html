@@ -288,6 +288,18 @@ p{margin:0 0 1em;max-width:62ch}
 .znak-hd{display:block;width:92px;height:11px;color:var(--zlato)}
 @media (min-width:900px){.prostor-okvir{grid-template-columns:1fr}}
 @media (min-width:900px){.naslovna .okvir{align-items:center}.n-tekst{position:static}}
+/* naslovna: logo u sredini, dolazi iz dubine */
+.naslovna{padding-top:clamp(44px,7vw,104px);overflow:hidden}
+.naslovna .okvir{grid-template-columns:1fr;justify-items:center;text-align:center;gap:clamp(40px,6vw,72px)}
+@media (min-width:900px){.naslovna .okvir{grid-template-columns:1fr;align-items:start;gap:72px}}
+.n-tekst{display:flex;flex-direction:column;align-items:center}
+.n-tekst h1{position:relative;isolation:isolate}
+.n-tekst h1::before{content:"";position:absolute;inset:-45% -40%;z-index:-1;pointer-events:none;background:radial-gradient(closest-side,rgba(203,185,138,.13),rgba(203,185,138,0))}
+.logo-veliki{width:min(58vw,240px)}
+@media (min-width:900px){.logo-veliki{width:300px}}
+.n-tekst .uvod{margin:32px auto 30px;max-width:40ch}
+.n-tekst .dugmad{justify-content:center}
+.n-slike{width:100%;max-width:1100px}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
@@ -547,9 +559,9 @@ p{margin:0 0 1em;max-width:62ch}
   var tiho = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (window.gsap && !tiho) {
     var tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-    tl.from('.n-slika img', { clipPath: 'inset(100% 0 0 0)', duration: 1.2 })
-      .from('.n-tekst h1 span', { y: 16, opacity: 0, duration: .8, stagger: .12 }, '-=.85')
-      .from('.n-tekst .uvod, .n-tekst .dugmad, .n-tekst .dokaz', { y: 12, opacity: 0, duration: .6, stagger: .08 }, '-=.5');
+    tl.from('.logo-veliki', { scale: .4, opacity: 0, filter: 'blur(18px)', transformOrigin: '50% 50%', duration: 2.2, ease: 'power3.out' })
+      .from('.n-tekst .uvod, .n-tekst .dugmad, .n-tekst .dokaz', { y: 14, opacity: 0, duration: .7, stagger: .1 }, '-=1.1')
+      .from('.n-slika img', { clipPath: 'inset(100% 0 0 0)', duration: 1.2 }, '-=.4');
   }
 })();
 });</script>
